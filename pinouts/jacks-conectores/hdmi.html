@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDMI Pinout - ElectroTools</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/pinouts.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../../index-principal.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                    <span class="logo-icon">⚡</span>
+                    <h1>ElectroTools</h1>
+                </a>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav" id="mainNav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="../../index-principal.html#inicio" class="nav-link">Inicio</a></li>
+                    <li class="nav-item has-dropdown">
+                        <a href="../../calculadoras/index-calculadoras.html" class="nav-link">Calculadoras <span class="arrow">▼</span></a>
+                        <ul class="dropdown">
+                            <li><a href="../../calculadoras/index-calculadoras.html">Ver todas las Calculadoras</a></li>
+                            <li><a href="../../calculadoras/color-code.html">Código de colores</a></li>
+                            <li><a href="../../calculadoras/buscar-color-resistencia.html">Buscar colores</a></li>
+                            <li><a href="../../calculadoras/ley-de-ohm.html">Ley de Ohm</a></li>
+                            <li><a href="../../calculadoras/filtros.html">Filtros RC/RL/RLC</a></li>
+                            <li><a href="../../calculadoras/divisor-resistivo.html">Divisor resistivo</a></li>
+                            <li><a href="../../calculadoras/serie-paralelo.html">Serie-Paralelo</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="../index-pinouts.html" class="nav-link">
+                            Pinouts <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="../index-pinouts.html">Ver todos los Pinouts</a></li>
+                            <li><a href="../arduino/index-arduino.html">Arduino</a></li>
+                            <li><a href="../raspberry/index-raspberry.html">Raspberry Pi</a></li>
+                            <li><a href="../displays/index-displays.html">Displays</a></li>
+                            <li><a href="../jacks-conectores/index-jacks.html">Jacks y Conectores</a></li>
+                            <li><a href="../sensores-modulos/index-sensores.html">Sensores y Modulos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="../../recursos/index-recursos.html" class="nav-link">Recursos <span class="arrow">▼</span></a>
+                        <ul class="dropdown">
+                            <li><a href="../../recursos/index-recursos.html">Ver todos los Recursos</a></li>
+                            <li><a href="../../recursos/datasheet/index-datasheet.html">Datasheets</a></li>
+                            <li><a href="../../recursos/tutoriales/index-tutoriales.html">Tutoriales</a></li>
+                            <li><a href="../../recursos/herramientas/index-herramientas.html">Herramientas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="../../index-principal.html#acerca" class="nav-link">Acerca de nosotros</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content pinout-detail-page">
+        <div class="pinout-detail-container">
+            <div class="breadcrumb">
+                <a href="../../index-principal.html">Inicio</a> → 
+                <a href="../index-pinouts.html">Pinouts</a> → 
+                <a href="index-jacks.html">Jacks y Conectores</a> → 
+                <span>HDMI</span>
+            </div>
+
+            <div class="pinout-header">
+                <h1>📺 HDMI Pinout (19 pines)</h1>
+                <p class="subtitle">High-Definition Multimedia Interface - Video + Audio digital</p>
+            </div>
+
+            <div class="pinout-image-section">
+                <div class="image-placeholder">
+                    <p style="font-size: 4rem; margin: 0;">📺</p>
+                    <p style="font-size: 1.1rem; color: #95a5a6; margin-top: 15px;">Coloca aquí el diagrama del conector HDMI</p>
+                    <p style="font-size: 0.9rem; color: #7f8c8d; margin-top: 5px;">Ruta: <code>../../img/hdmi.png</code></p>
+                </div>
+            </div>
+
+            <div class="spec-section">
+                <h2>📋 Tipos de Conectores HDMI</h2>
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <h3>HDMI Type-A (Estándar)</h3>
+                        <p><strong>Uso:</strong> TVs, monitores, consolas, PCs</p>
+                        <p><strong>Pines:</strong> 19 contactos</p>
+                        <p><strong>Tamaño:</strong> 13.9mm × 4.45mm</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Mini-HDMI (Type-C)</h3>
+                        <p><strong>Uso:</strong> Cámaras DSLR, tablets</p>
+                        <p><strong>Pines:</strong> 19 contactos (igual que Type-A)</p>
+                        <p><strong>Tamaño:</strong> 10.42mm × 2.42mm (más pequeño)</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Micro-HDMI (Type-D)</h3>
+                        <p><strong>Uso:</strong> Smartphones, Raspberry Pi 4</p>
+                        <p><strong>Pines:</strong> 19 contactos</p>
+                        <p><strong>Tamaño:</strong> 6.4mm × 2.8mm (muy compacto)</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Versiones HDMI</h3>
+                        <p><strong>1.4:</strong> 1080p 60Hz, 4K 30Hz, ARC</p>
+                        <p><strong>2.0:</strong> 4K 60Hz, HDR, 32 canales audio</p>
+                        <p><strong>2.1:</strong> 8K 60Hz, 4K 120Hz, eARC, VRR</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pinout-table-section">
+                <h2>🔌 Pinout HDMI Type-A (19 pines)</h2>
+                <table class="pinout-table">
+                    <thead>
+                        <tr><th>Pin</th><th>Nombre</th><th>Función</th><th>Categoría</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="pin-num">1</td><td class="pin-name">TMDS Data2+</td><td>Canal de datos 2 positivo</td><td>Video</td></tr>
+                        <tr><td class="pin-num">2</td><td class="pin-name">TMDS Data2 Shield</td><td>Blindaje canal 2</td><td>GND</td></tr>
+                        <tr><td class="pin-num">3</td><td class="pin-name">TMDS Data2-</td><td>Canal de datos 2 negativo</td><td>Video</td></tr>
+                        <tr><td class="pin-num">4</td><td class="pin-name">TMDS Data1+</td><td>Canal de datos 1 positivo</td><td>Video</td></tr>
+                        <tr><td class="pin-num">5</td><td class="pin-name">TMDS Data1 Shield</td><td>Blindaje canal 1</td><td>GND</td></tr>
+                        <tr><td class="pin-num">6</td><td class="pin-name">TMDS Data1-</td><td>Canal de datos 1 negativo</td><td>Video</td></tr>
+                        <tr><td class="pin-num">7</td><td class="pin-name">TMDS Data0+</td><td>Canal de datos 0 positivo</td><td>Video</td></tr>
+                        <tr><td class="pin-num">8</td><td class="pin-name">TMDS Data0 Shield</td><td>Blindaje canal 0</td><td>GND</td></tr>
+                        <tr><td class="pin-num">9</td><td class="pin-name">TMDS Data0-</td><td>Canal de datos 0 negativo</td><td>Video</td></tr>
+                        <tr><td class="pin-num">10</td><td class="pin-name">TMDS Clock+</td><td>Reloj TMDS positivo</td><td>Clock</td></tr>
+                        <tr><td class="pin-num">11</td><td class="pin-name">TMDS Clock Shield</td><td>Blindaje reloj</td><td>GND</td></tr>
+                        <tr><td class="pin-num">12</td><td class="pin-name">TMDS Clock-</td><td>Reloj TMDS negativo</td><td>Clock</td></tr>
+                        <tr><td class="pin-num">13</td><td class="pin-name">CEC</td><td>Consumer Electronics Control</td><td>Control</td></tr>
+                        <tr><td class="pin-num">14</td><td class="pin-name">Reserved (N.C.)</td><td>No conectado / HEC en 1.4</td><td>-</td></tr>
+                        <tr><td class="pin-num">15</td><td class="pin-name">SCL</td><td>I2C Clock (DDC)</td><td>I2C</td></tr>
+                        <tr><td class="pin-num">16</td><td class="pin-name">SDA</td><td>I2C Data (DDC)</td><td>I2C</td></tr>
+                        <tr><td class="pin-num">17</td><td class="pin-name">DDC/CEC Ground</td><td>Tierra DDC y CEC</td><td>GND</td></tr>
+                        <tr><td class="pin-num">18</td><td class="pin-name">+5V Power</td><td>Alimentación 5V @ 55mA</td><td>Potencia</td></tr>
+                        <tr><td class="pin-num">19</td><td class="pin-name">Hot Plug Detect</td><td>Detección de conexión</td><td>Control</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pinout-table-section">
+                <h2>📊 Comparación de Versiones HDMI</h2>
+                <table class="pinout-table">
+                    <thead>
+                        <tr><th>Versión</th><th>Año</th><th>Ancho de banda</th><th>Resoluciones máximas</th><th>Características</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>HDMI 1.0</strong></td><td>2002</td><td>4.95 Gbps</td><td>1080p 60Hz</td><td>Video + Audio digital básico</td></tr>
+                        <tr><td><strong>HDMI 1.4</strong></td><td>2009</td><td>10.2 Gbps</td><td>4K 30Hz, 1080p 120Hz</td><td>ARC, Ethernet, 3D</td></tr>
+                        <tr><td><strong>HDMI 2.0</strong></td><td>2013</td><td>18 Gbps</td><td>4K 60Hz</td><td>HDR, 32 canales audio, BT.2020</td></tr>
+                        <tr><td><strong>HDMI 2.1</strong></td><td>2017</td><td>48 Gbps</td><td>8K 60Hz, 4K 120Hz, 10K</td><td>eARC, VRR, ALLM, DSC</td></tr>
+                    </tbody>
+                </table>
+                <p style="margin-top: 10px; color: #2ecc71;"><strong>VRR:</strong> Variable Refresh Rate (gaming sin tearing). <strong>eARC:</strong> Enhanced Audio Return Channel (Dolby Atmos).</p>
+            </div>
+
+            <div class="info-section">
+                <div class="info-card">
+                    <h3>🎮 HDMI 2.1 para Gaming</h3>
+                    <p>HDMI 2.1 añade <strong>VRR (Variable Refresh Rate)</strong> para eliminar tearing, <strong>ALLM (Auto Low Latency Mode)</strong> que reduce input lag automáticamente, y soporte para <strong>4K @ 120Hz</strong> (PS5, Xbox Series X). Requiere cable HDMI Ultra High Speed certificado.</p>
+                </div>
+                <div class="info-card">
+                    <h3>🔊 ARC vs eARC</h3>
+                    <p><strong>ARC (Audio Return Channel):</strong> Permite enviar audio desde TV a soundbar por el mismo cable HDMI. Soporta Dolby Digital 5.1. <strong>eARC (HDMI 2.1):</strong> Mayor ancho de banda, soporta Dolby Atmos, DTS:X, audio sin comprimir.</p>
+                </div>
+                <div class="info-card">
+                    <h3>🔌 HDMI vs DVI</h3>
+                    <p>HDMI usa <strong>TMDS (igual que DVI)</strong>, por lo que es compatible con adaptadores pasivos HDMI-DVI. Sin embargo, DVI <strong>no transmite audio</strong> (solo video). HDMI 1.0 es eléctricamente compatible con DVI Single-Link.</p>
+                </div>
+                <div class="info-card">
+                    <h3>📏 Limitaciones de Cables</h3>
+                    <p>Cables HDMI <strong>sin amplificación</strong> funcionan bien hasta <strong>5 metros</strong> para 1080p, 3 metros para 4K. Para distancias mayores, usa cables activos (con chip amplificador), extenders HDMI sobre Cat6, o fibra óptica HDMI (hasta 100m).</p>
+                </div>
+            </div>
+
+            <div class="back-button-container">
+                <a href="index-jacks.html" class="back-btn">← Volver a Jacks y Conectores</a>
+                <a href="../index-pinouts.html" class="back-btn">📌 Todos los Pinouts</a>
+                <a href="../../index-principal.html" class="back-btn">🏠 Inicio</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container"><p>&copy; 2025 ElectroTools. HDMI Pinout Reference.</p></div>
+    </footer>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

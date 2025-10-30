@@ -1,0 +1,303 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MQ-2 Sensor de Gas Pinout - ElectroTools</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/pinouts.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../../index-principal.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                    <span class="logo-icon">⚡</span>
+                    <h1>ElectroTools</h1>
+                </a>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav class="nav" id="mainNav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../../index-principal.html#inicio" class="nav-link">Inicio</a>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="../../calculadoras/index-calculadoras.html" class="nav-link">
+                            Calculadoras <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="../../calculadoras/index-calculadoras.html">Ver todas las Calculadoras</a></li>
+                            <li><a href="../../calculadoras/color-code.html">Código de colores</a></li>
+                            <li><a href="../../calculadoras/buscar-color-resistencia.html">Buscar colores</a></li>
+                            <li><a href="../../calculadoras/ley-de-ohm.html">Ley de Ohm</a></li>
+                            <li><a href="../../calculadoras/filtros.html">Filtros RC/RL/RLC</a></li>
+                            <li><a href="../../calculadoras/divisor-resistivo.html">Divisor resistivo</a></li>
+                            <li><a href="../../calculadoras/serie-paralelo.html">Serie-Paralelo</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="../index-pinouts.html" class="nav-link">
+                            Pinouts <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="../index-pinouts.html">Ver todos los Pinouts</a></li>
+                            <li><a href="../arduino/index-arduino.html">Arduino</a></li>
+                            <li><a href="../raspberry/index-raspberry.html">Raspberry Pi</a></li>
+                            <li><a href="../displays/index-displays.html">Displays</a></li>
+                            <li><a href="../jacks-conectores/index-jacks.html">Jacks y Conectores</a></li>
+                            <li><a href="index-sensores.html">Sensores y Modulos</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="../../recursos/index-recursos.html" class="nav-link">Recursos <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="../../recursos/index-recursos.html">Ver todos los Recursos</a></li>
+                            <li><a href="../../recursos/datasheet/index-datasheet.html">Datasheets</a></li>
+                            <li><a href="../../recursos/tutoriales/index-tutoriales.html">Tutoriales</a></li>
+                            <li><a href="../../recursos/herramientas/index-herramientas.html">Herramientas</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="../../index-principal.html#acerca" class="nav-link">Acerca de nosotros</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="pinout-detail-container">
+            <div class="breadcrumb">
+                <a href="../../index-principal.html">Inicio</a> → 
+                <a href="../index-pinouts.html">Pinouts</a> → 
+                <a href="index-sensores.html">Sensores y Modulos</a> → 
+                <span>MQ-2</span>
+            </div>
+
+            <div class="detail-header">
+                <h1>💨 MQ-2 Sensor de Gas</h1>
+                <p class="detail-subtitle">Detector Analógico de Gases Inflamables y Humo</p>
+            </div>
+
+            <div class="pinout-image-section">
+                <div class="image-placeholder-large">
+                    <p style="font-size: 4rem; margin: 0;">💨</p>
+                    <p style="font-size: 1.1rem; color: #95a5a6; margin-top: 15px; font-weight: 500;">[ESPACIO PARA IMAGEN: mq2.png]</p>
+                    <p style="font-size: 0.9rem; color: #7f8c8d; margin-top: 8px;">Diagrama de pinout MQ-2</p>
+                </div>
+            </div>
+
+            <div class="pinout-content">
+                <div class="pinout-table-section">
+                    <h2>📌 Pinout MQ-2 Módulo Digital (4 pines)</h2>
+                    <table class="pinout-table">
+                        <thead>
+                            <tr>
+                                <th>Pin</th>
+                                <th>Etiqueta</th>
+                                <th>Función</th>
+                                <th>Conexión Arduino</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>1</strong></td>
+                                <td>VCC</td>
+                                <td>Alimentación</td>
+                                <td>5V (consume ~150mA en calentamiento)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2</strong></td>
+                                <td>GND</td>
+                                <td>Tierra</td>
+                                <td>GND Arduino</td>
+                            </tr>
+                            <tr>
+                                <td><strong>3</strong></td>
+                                <td>DOUT (DO)</td>
+                                <td>Salida digital</td>
+                                <td>Cualquier pin digital (ej: D8) - HIGH cuando supera umbral</td>
+                            </tr>
+                            <tr>
+                                <td><strong>4</strong></td>
+                                <td>AOUT (AO)</td>
+                                <td>Salida analógica</td>
+                                <td>Cualquier pin analógico (ej: A0) - Lectura 0-1023</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2 style="margin-top: 40px;">🔧 Controles del Módulo</h2>
+                    <table class="pinout-table">
+                        <thead>
+                            <tr>
+                                <th>Control</th>
+                                <th>Función</th>
+                                <th>Efecto</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Potenciómetro</strong></td>
+                                <td>Ajuste de sensibilidad</td>
+                                <td>Controla el umbral para activar salida digital DOUT. Girar horario = menos sensible (requiere más gas)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>LED de Power</strong></td>
+                                <td>Indicador de alimentación</td>
+                                <td>Enciende cuando el módulo recibe 5V</td>
+                            </tr>
+                            <tr>
+                                <td><strong>LED de Detección</strong></td>
+                                <td>Indicador de gas detectado</td>
+                                <td>Enciende cuando DOUT está en HIGH (gas supera umbral)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>🔍 Gases Detectables por MQ-2</h3>
+                        <p>El MQ-2 puede detectar múltiples gases mediante cambios en resistencia de su elemento sensor (óxido de estaño SnO2):</p>
+                        <ul style="margin-top: 10px; line-height: 1.8;">
+                            <li><strong>GLP (Gas Licuado de Petróleo):</strong> 200-5000 ppm</li>
+                            <li><strong>Propano:</strong> 200-5000 ppm</li>
+                            <li><strong>Butano:</strong> 300-5000 ppm</li>
+                            <li><strong>Metano (gas natural):</strong> 5000-20000 ppm</li>
+                            <li><strong>Hidrógeno:</strong> 300-5000 ppm</li>
+                            <li><strong>Humo:</strong> Detección cualitativa (no cuantitativa)</li>
+                            <li><strong>Alcohol:</strong> 100-2000 ppm</li>
+                        </ul>
+                        <p style="margin-top: 10px;">⚠️ <strong>No es específico:</strong> Reacciona a varios gases simultáneamente. Para detección específica usa MQ-3 (alcohol), MQ-4 (metano), MQ-7 (CO), etc.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>⚙️ Especificaciones Técnicas</h3>
+                        <p><strong>Voltaje:</strong> 5V DC (±0.1V)<br>
+                        <strong>Corriente:</strong> 150mA en precalentamiento, 60-150mA en operación<br>
+                        <strong>Voltaje de calentamiento:</strong> 5.0V ± 0.1V (resistencia de calentamiento interna)<br>
+                        <strong>Resistencia de carga:</strong> 20kΩ (ajustable)<br>
+                        <strong>Rango de detección:</strong> 200-10000 ppm (partes por millón)<br>
+                        <strong>Tiempo de respuesta:</strong> <10s<br>
+                        <strong>Tiempo de precalentamiento:</strong> 24-48 horas ideal, mínimo 20 segundos<br>
+                        <strong>Temperatura operativa:</strong> -10°C a +50°C<br>
+                        <strong>Humedad:</strong> <95% RH (Relative Humidity)<br>
+                        <strong>Vida útil:</strong> >5 años</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>🔥 Tiempo de Precalentamiento (Preheat)</h3>
+                        <p>⚠️ <strong>CRÍTICO:</strong> El sensor MQ-2 requiere <strong>calentamiento</strong> del elemento sensor (resistencia de SnO2) para funcionar correctamente.</p>
+                        <p style="margin-top: 10px;"><strong>Precalentamiento mínimo:</strong> 20-30 segundos (lecturas inestables)</p>
+                        <p style="margin-top: 10px;"><strong>Precalentamiento recomendado:</strong> 24-48 horas continuas para estabilización completa y calibración en aire limpio</p>
+                        <p style="margin-top: 10px;"><strong>Durante el precalentamiento:</strong></p>
+                        <ul style="margin-top: 10px; line-height: 1.8;">
+                            <li>El sensor se calienta a ~200-300°C</li>
+                            <li>Lecturas analógicas varían aleatoriamente</li>
+                            <li>El módulo puede sentirse tibio al tacto (normal)</li>
+                        </ul>
+                        <p style="margin-top: 10px;">✅ <strong>Solución:</strong> Ignora las primeras lecturas durante 60 segundos en tu código después del setup().</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>⚠️ Limitaciones y Advertencias</h3>
+                        <p><strong>No es un medidor calibrado:</strong> Valores analógicos son relativos, no absolutos. No confíes en ppm exactos sin calibración profesional.</p>
+                        <p style="margin-top: 10px;"><strong>Humedad afecta lecturas:</strong> Vapor de agua puede activar falsas alarmas (baño después de ducha).</p>
+                        <p style="margin-top: 10px;"><strong>Deriva térmica:</strong> Cambios de temperatura ambiente alteran las lecturas (requiere recalibración).</p>
+                        <p style="margin-top: 10px;"><strong>No apto para espacios confinados:</strong> No es sensor certificado para uso industrial en áreas peligrosas (ATEX/IECEx).</p>
+                        <p style="margin-top: 10px;"><strong>Consumo alto:</strong> 150mA puede agotar baterías rápidamente (no ideal para proyectos a batería).</p>
+                        <p style="margin-top: 10px;"><strong>Ventilación necesaria:</strong> Coloca el sensor en área ventilada, no en caja cerrada.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>💻 Código Arduino Básico</h3>
+                        <pre style="background: #2c3e50; padding: 15px; border-radius: 8px; overflow-x: auto; color: #ecf0f1; font-size: 0.85rem;">
+#define MQ2_AOUT A0
+#define MQ2_DOUT 8
+#define BUZZER 9
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(MQ2_DOUT, INPUT);
+  pinMode(BUZZER, OUTPUT);
+  
+  Serial.println("Calentando sensor MQ-2...");
+  delay(20000); // Esperar 20s mínimo
+  Serial.println("Sensor listo!");
+}
+
+void loop() {
+  int analogValue = analogRead(MQ2_AOUT);
+  int digitalValue = digitalRead(MQ2_DOUT);
+  
+  Serial.print("Gas analógico: ");
+  Serial.print(analogValue);
+  Serial.print(" | Digital: ");
+  Serial.println(digitalValue);
+  
+  if (digitalValue == HIGH) {
+    Serial.println("¡ALERTA GAS DETECTADO!");
+    digitalWrite(BUZZER, HIGH);
+  } else {
+    digitalWrite(BUZZER, LOW);
+  }
+  
+  delay(1000);
+}</pre>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>📊 Interpretación de Valores Analógicos</h3>
+                        <p><strong>En aire limpio:</strong> Lectura típica ~100-200 (valor bajo)</p>
+                        <p style="margin-top: 10px;"><strong>Presencia de gas ligera:</strong> 300-500 (gas detectado pero seguro)</p>
+                        <p style="margin-top: 10px;"><strong>Concentración media:</strong> 500-700 (activar ventilación)</p>
+                        <p style="margin-top: 10px;"><strong>Concentración peligrosa:</strong> >700 (activar alarma, evacuar)</p>
+                        <p style="margin-top: 10px;">⚠️ <strong>Nota:</strong> Valores varían según calibración del potenciómetro, temperatura ambiente, humedad. Estos son aproximados.</p>
+                        <p style="margin-top: 10px;"><strong>Calibración:</strong> En aire limpio, ajusta potenciómetro hasta que LED de detección esté apagado. Luego, acerca gas ligero (encendedor sin encender) para probar umbral.</p>
+                    </div>
+                </div>
+
+                <div class="info-card" style="margin-top: 30px; background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); color: #2c3e50;">
+                    <h3>🎯 Aplicaciones Comunes</h3>
+                    <ul style="line-height: 1.8; margin-top: 15px;">
+                        <li><strong>Alarma de fugas de gas:</strong> Detectar GLP en cocinas, calefones, calderas</li>
+                        <li><strong>Detector de humo casero:</strong> Alarma temprana de incendios (complemento a detector de humo certificado)</li>
+                        <li><strong>Monitoreo de garajes:</strong> Detectar monóxido de carbono (CO) de vehículos (mejor usar MQ-7 específico CO)</li>
+                        <li><strong>Sistemas de ventilación automática:</strong> Activar extractor cuando detecta gas</li>
+                        <li><strong>Proyectos educativos:</strong> Aprender sobre sensores químicos y ADC</li>
+                        <li><strong>Alcoholímetro casero:</strong> Detección de alcohol en aliento (usar MQ-3 es más preciso)</li>
+                    </ul>
+                    <p style="margin-top: 15px; font-weight: bold;">⚠️ ADVERTENCIA: Este sensor NO sustituye detectores de gas certificados para uso residencial/industrial. Úsalo solo con fines educativos o como complemento.</p>
+                </div>
+            </div>
+
+            <div class="back-button-container">
+                <a href="index-sensores.html" class="back-btn">← Volver a Sensores y Modulos</a>
+                <a href="../index-pinouts.html" class="back-btn">← Volver a Pinouts</a>
+                <a href="../../index-principal.html" class="back-btn">🏠 Inicio</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ElectroTools. Pinout MQ-2 - Sensor de Gas y Humo.</p>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+</body>
+</html>

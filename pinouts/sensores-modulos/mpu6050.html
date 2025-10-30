@@ -1,0 +1,334 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPU6050 Pinout - ElectroTools</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/pinouts.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../../index-principal.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                    <span class="logo-icon">⚡</span>
+                    <h1>ElectroTools</h1>
+                </a>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav class="nav" id="mainNav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../../index-principal.html#inicio" class="nav-link">Inicio</a>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="../../calculadoras/index-calculadoras.html" class="nav-link">
+                            Calculadoras <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="../../calculadoras/index-calculadoras.html">Ver todas las Calculadoras</a></li>
+                            <li><a href="../../calculadoras/color-code.html">Código de colores</a></li>
+                            <li><a href="../../calculadoras/buscar-color-resistencia.html">Buscar colores</a></li>
+                            <li><a href="../../calculadoras/ley-de-ohm.html">Ley de Ohm</a></li>
+                            <li><a href="../../calculadoras/filtros.html">Filtros RC/RL/RLC</a></li>
+                            <li><a href="../../calculadoras/divisor-resistivo.html">Divisor resistivo</a></li>
+                            <li><a href="../../calculadoras/serie-paralelo.html">Serie-Paralelo</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="../index-pinouts.html" class="nav-link">
+                            Pinouts <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="../index-pinouts.html">Ver todos los Pinouts</a></li>
+                            <li><a href="../arduino/index-arduino.html">Arduino</a></li>
+                            <li><a href="../raspberry/index-raspberry.html">Raspberry Pi</a></li>
+                            <li><a href="../displays/index-displays.html">Displays</a></li>
+                            <li><a href="../jacks-conectores/index-jacks.html">Jacks y Conectores</a></li>
+                            <li><a href="index-sensores.html">Sensores y Modulos</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="../../recursos/index-recursos.html" class="nav-link">Recursos <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="../../recursos/index-recursos.html">Ver todos los Recursos</a></li>
+                            <li><a href="../../recursos/datasheet/index-datasheet.html">Datasheets</a></li>
+                            <li><a href="../../recursos/tutoriales/index-tutoriales.html">Tutoriales</a></li>
+                            <li><a href="../../recursos/herramientas/index-herramientas.html">Herramientas</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="../../index-principal.html#acerca" class="nav-link">Acerca de nosotros</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="pinout-detail-container">
+            <div class="breadcrumb">
+                <a href="../../index-principal.html">Inicio</a> → 
+                <a href="../index-pinouts.html">Pinouts</a> → 
+                <a href="index-sensores.html">Sensores y Modulos</a> → 
+                <span>MPU6050</span>
+            </div>
+
+            <div class="detail-header">
+                <h1>🎯 MPU6050</h1>
+                <p class="detail-subtitle">Acelerómetro y Giroscopio de 6 Ejes (IMU)</p>
+            </div>
+
+            <div class="pinout-image-section">
+                <div class="image-placeholder-large">
+                    <p style="font-size: 4rem; margin: 0;">🎯</p>
+                    <p style="font-size: 1.1rem; color: #95a5a6; margin-top: 15px; font-weight: 500;">[ESPACIO PARA IMAGEN: mpu6050.png]</p>
+                    <p style="font-size: 0.9rem; color: #7f8c8d; margin-top: 8px;">Diagrama de pinout MPU6050</p>
+                </div>
+            </div>
+
+            <div class="pinout-content">
+                <div class="pinout-table-section">
+                    <h2>📌 Pinout MPU6050 (8 pines)</h2>
+                    <table class="pinout-table">
+                        <thead>
+                            <tr>
+                                <th>Pin</th>
+                                <th>Nombre</th>
+                                <th>Función</th>
+                                <th>Conexión Arduino Uno</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>1</strong></td>
+                                <td>VCC</td>
+                                <td>Alimentación</td>
+                                <td>3.3V o 5V (módulo GY-521 tiene regulador)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2</strong></td>
+                                <td>GND</td>
+                                <td>Tierra</td>
+                                <td>GND Arduino</td>
+                            </tr>
+                            <tr>
+                                <td><strong>3</strong></td>
+                                <td>SCL</td>
+                                <td>Serial Clock (I2C)</td>
+                                <td>A5 (SCL en Uno) o pin SCL dedicado</td>
+                            </tr>
+                            <tr>
+                                <td><strong>4</strong></td>
+                                <td>SDA</td>
+                                <td>Serial Data (I2C)</td>
+                                <td>A4 (SDA en Uno) o pin SDA dedicado</td>
+                            </tr>
+                            <tr>
+                                <td><strong>5</strong></td>
+                                <td>XDA</td>
+                                <td>Auxiliary I2C Data</td>
+                                <td>Opcional - Para sensores externos (magnetómetro)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>6</strong></td>
+                                <td>XCL</td>
+                                <td>Auxiliary I2C Clock</td>
+                                <td>Opcional - No usar en aplicaciones básicas</td>
+                            </tr>
+                            <tr>
+                                <td><strong>7</strong></td>
+                                <td>AD0</td>
+                                <td>I2C Address Select</td>
+                                <td>GND = 0x68, VCC = 0x69 (cambiar dirección I2C)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>8</strong></td>
+                                <td>INT</td>
+                                <td>Interrupt Output</td>
+                                <td>Opcional - Pin digital para interrupciones</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2 style="margin-top: 40px;">📌 Conexión Mínima (4 pines)</h2>
+                    <table class="pinout-table">
+                        <thead>
+                            <tr>
+                                <th>MPU6050</th>
+                                <th>Arduino Uno</th>
+                                <th>ESP32</th>
+                                <th>Raspberry Pi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>VCC</td>
+                                <td>5V (o 3.3V)</td>
+                                <td>3.3V</td>
+                                <td>3.3V (Pin 1)</td>
+                            </tr>
+                            <tr>
+                                <td>GND</td>
+                                <td>GND</td>
+                                <td>GND</td>
+                                <td>GND (Pin 6)</td>
+                            </tr>
+                            <tr>
+                                <td>SCL</td>
+                                <td>A5</td>
+                                <td>GPIO 22 (default)</td>
+                                <td>GPIO 3 (SCL)</td>
+                            </tr>
+                            <tr>
+                                <td>SDA</td>
+                                <td>A4</td>
+                                <td>GPIO 21 (default)</td>
+                                <td>GPIO 2 (SDA)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>🔍 ¿Qué es un IMU?</h3>
+                        <p><strong>IMU</strong> = Inertial Measurement Unit (Unidad de Medición Inercial)</p>
+                        <p style="margin-top: 10px;">El MPU6050 combina:</p>
+                        <ul style="margin-top: 10px; line-height: 1.8;">
+                            <li><strong>Acelerómetro de 3 ejes:</strong> Mide aceleración en X, Y, Z (gravedad, movimiento)</li>
+                            <li><strong>Giroscopio de 3 ejes:</strong> Mide velocidad angular (rotación) en X, Y, Z</li>
+                            <li><strong>DMP (Digital Motion Processor):</strong> Procesa datos internamente para calcular orientación</li>
+                        </ul>
+                        <p style="margin-top: 10px;">Total: <strong>6 DOF</strong> (6 Degrees of Freedom) = 6 ejes de medición</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>⚙️ Especificaciones Técnicas</h3>
+                        <p><strong>Voltaje:</strong> 3.3V - 5V (módulo GY-521 tiene regulador LDO)<br>
+                        <strong>Corriente:</strong> 3.9mA en operación, 500µA en sleep mode<br>
+                        <strong>Protocolo:</strong> I2C (hasta 400kHz Fast Mode)<br>
+                        <strong>Dirección I2C:</strong> 0x68 (AD0=LOW) o 0x69 (AD0=HIGH)<br>
+                        <strong>Rango acelerómetro:</strong> ±2g, ±4g, ±8g, ±16g (configurable)<br>
+                        <strong>Rango giroscopio:</strong> ±250°/s, ±500°/s, ±1000°/s, ±2000°/s<br>
+                        <strong>ADC interno:</strong> 16 bits (alta precisión)<br>
+                        <strong>Temperatura:</strong> -40°C a +85°C<br>
+                        <strong>Dimensiones:</strong> 21mm x 16mm (módulo GY-521)</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>🔌 Dirección I2C (Pin AD0)</h3>
+                        <p>El MPU6050 puede tener 2 direcciones I2C diferentes:</p>
+                        <ul style="margin-top: 10px; line-height: 1.8;">
+                            <li><strong>AD0 conectado a GND (o flotante):</strong> Dirección = <code>0x68</code></li>
+                            <li><strong>AD0 conectado a VCC:</strong> Dirección = <code>0x69</code></li>
+                        </ul>
+                        <p style="margin-top: 10px;">Esto permite usar <strong>2 MPU6050</strong> en el mismo bus I2C.</p>
+                        <p style="margin-top: 10px;"><strong>¿Cómo verificar?</strong> Usa el I2C Scanner de Arduino para detectar la dirección activa.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>⚠️ Resistencias Pull-Up I2C</h3>
+                        <p>El protocolo I2C requiere <strong>resistencias pull-up de 4.7kΩ</strong> en SDA y SCL.</p>
+                        <p style="margin-top: 10px;"><strong>¿Debo agregarlas?</strong></p>
+                        <ul style="margin-top: 10px; line-height: 1.8;">
+                            <li>✅ Módulo GY-521: Ya incluye pull-ups en la PCB (no necesitas agregar)</li>
+                            <li>⚠️ Chip MPU6050 solo: Debes agregar 2 resistencias de 4.7kΩ (SDA→VCC, SCL→VCC)</li>
+                            <li>✅ Arduino Uno: También tiene pull-ups internas débiles (puede funcionar sin externas)</li>
+                        </ul>
+                        <p style="margin-top: 10px;"><strong>Problema:</strong> Si tienes múltiples dispositivos I2C, demasiadas pull-ups pueden causar problemas (usar 2.2kΩ en lugar de 4.7kΩ).</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>💻 Código Arduino Básico</h3>
+                        <pre style="background: #2c3e50; padding: 15px; border-radius: 8px; overflow-x: auto; color: #ecf0f1; font-size: 0.85rem;">
+#include &lt;Wire.h&gt;
+#include &lt;MPU6050.h&gt;
+
+MPU6050 mpu;
+
+void setup() {
+  Serial.begin(9600);
+  Wire.begin();
+  
+  Serial.println("Inicializando MPU6050...");
+  mpu.initialize();
+  
+  if (mpu.testConnection()) {
+    Serial.println("MPU6050 conectado!");
+  } else {
+    Serial.println("Error de conexión");
+  }
+}
+
+void loop() {
+  int16_t ax, ay, az;
+  int16_t gx, gy, gz;
+  
+  mpu.getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
+  
+  Serial.print("Accel: ");
+  Serial.print(ax); Serial.print(" ");
+  Serial.print(ay); Serial.print(" ");
+  Serial.print(az); Serial.print(" | Gyro: ");
+  Serial.print(gx); Serial.print(" ");
+  Serial.print(gy); Serial.print(" ");
+  Serial.println(gz);
+  
+  delay(100);
+}</pre>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>📚 Librerías Recomendadas</h3>
+                        <p><strong>1. MPU6050 by Electronic Cats</strong> (Básica - Recomendada para principiantes)</p>
+                        <p style="margin-top: 10px;"><strong>2. MPU6050_tockn</strong> (Incluye cálculos de ángulos roll/pitch/yaw)</p>
+                        <p style="margin-top: 10px;"><strong>3. MPU6050 by jrowberg (i2cdevlib)</strong> (Avanzada - Con DMP para procesamiento interno)</p>
+                        <p style="margin-top: 10px;"><strong>Instalación:</strong> Arduino IDE → Sketch → Include Library → Manage Libraries → Buscar "MPU6050"</p>
+                        <p style="margin-top: 10px;"><strong>I2C Scanner:</strong> Para detectar dirección I2C, usa el sketch de ejemplo File → Examples → Wire → i2c_scanner</p>
+                    </div>
+                </div>
+
+                <div class="info-card" style="margin-top: 30px; background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white;">
+                    <h3 style="color: white;">🎯 Aplicaciones Comunes</h3>
+                    <ul style="line-height: 1.8; margin-top: 15px;">
+                        <li><strong>Drones y cuadricópteros:</strong> Estabilización automática de vuelo</li>
+                        <li><strong>Gimbal de 2/3 ejes:</strong> Estabilizador de cámara para video</li>
+                        <li><strong>Robot balancín:</strong> Self-balancing robot (como Segway)</li>
+                        <li><strong>VR/AR headsets:</strong> Tracking de movimiento de cabeza</li>
+                        <li><strong>Wearables:</strong> Detectar caídas, contar pasos, postura corporal</li>
+                        <li><strong>Gaming:</strong> Controladores de movimiento para juegos</li>
+                        <li><strong>Navegación inercial:</strong> Tracking de posición sin GPS</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="back-button-container">
+                <a href="index-sensores.html" class="back-btn">← Volver a Sensores y Modulos</a>
+                <a href="../index-pinouts.html" class="back-btn">← Volver a Pinouts</a>
+                <a href="../../index-principal.html" class="back-btn">🏠 Inicio</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ElectroTools. Pinout MPU6050 - Acelerómetro y Giroscopio 6-Axis IMU.</p>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+</body>
+</html>

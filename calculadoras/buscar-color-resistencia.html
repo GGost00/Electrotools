@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Colores de Resistencia - ElectroTools</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/buscar-color-resistencia.css">
+</head>
+<body>
+    <!-- Header fijo -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index-principal.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                    <span class="logo-icon">⚡</span>
+                    <h1>ElectroTools</h1>
+                </a>
+            </div>
+            
+            <!-- Botón hamburguesa para móvil -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- Navegación principal -->
+            <nav class="nav" id="mainNav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../index-principal.html#inicio" class="nav-link">Inicio</a>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="index-calculadoras.html" class="nav-link">
+                            Calculadoras <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="index-calculadoras.html">Ver todas las Calculadoras</a></li>
+                            <li><a href="color-code.html">Código de colores</a></li>
+                            <li><a href="buscar-color-resistencia.html">Buscar colores</a></li>
+                            <li><a href="ley-de-ohm.html">Ley de Ohm</a></li>
+                            <li><a href="filtros.html">Filtros RC/RL/RLC</a></li>
+                            <li><a href="divisor-resistivo.html">Divisor resistivo</a></li>
+                            <li><a href="serie-paralelo.html">Serie-Paralelo</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="../pinouts/index-pinouts.html" class="nav-link">
+                            Pinouts <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="../pinouts/index-pinouts.html">Ver todos los Pinouts</a></li>
+                            <li><a href="../pinouts/arduino/index-arduino.html">Arduino</a></li>
+                            <li><a href="../pinouts/raspberry/index-raspberry.html">Raspberry Pi</a></li>
+                            <li><a href="../pinouts/displays/index-displays.html">Displays</a></li>
+                            <li><a href="../pinouts/jacks-conectores/index-jacks.html">Jacks y Conectores</a></li>
+                            <li><a href="../pinouts/sensores.html">Sensores</a></li>
+                            <li><a href="../pinouts/modulos-comunicacion.html">Módulos de Comunicación</a></li>
+                            <li><a href="../pinouts/componentes-basicos.html">Componentes Básicos</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="../recursos/index-recursos.html" class="nav-link">Recursos <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="../recursos/datasheet/index-datasheet.html">Datasheets</a></li>
+                            <li><a href="../recursos/tutoriales/index-tutoriales.html">Tutoriales</a></li>
+                            <li><a href="../recursos/herramientas/index-herramientas.html">Herramientas</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="../index.html#acerca" class="nav-link">Acerca de nosotros</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="main-content calculator-page">
+        <div class="calculator-container">
+            <div class="calculator-header">
+                <h1>🔍 Buscar Colores de una Resistencia</h1>
+                <p>Ingresa el valor de la resistencia y descubre los colores de sus bandas</p>
+            </div>
+
+            <!-- Controles de entrada -->
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="resistanceValue">Valor de la resistencia:</label>
+                    <div class="input-with-button">
+                        <input 
+                            type="text" 
+                            id="resistanceValue" 
+                            placeholder="Ej: 4.7k, 470, 1M, 22"
+                            class="resistance-input"
+                        >
+                        <select id="unitSelector" class="unit-select">
+                            <option value="ohm">Ω</option>
+                            <option value="kohm" selected>kΩ</option>
+                            <option value="mohm">MΩ</option>
+                        </select>
+                    </div>
+                    <small class="input-hint">Puedes escribir: 4.7k, 470Ω, 1M, 22, etc.</small>
+                </div>
+
+                <div class="controls-group">
+                    <div class="control-item">
+                        <label for="bandCount">Número de bandas:</label>
+                        <select id="bandCount" class="band-select">
+                            <option value="4" selected>4 bandas</option>
+                            <option value="5">5 bandas</option>
+                            <option value="6">6 bandas</option>
+                        </select>
+                    </div>
+
+                    <div class="control-item">
+                        <label for="toleranceSelect">Tolerancia:</label>
+                        <select id="toleranceSelect" class="tolerance-select">
+                            <option value="brown">±1% (Marrón)</option>
+                            <option value="red">±2% (Rojo)</option>
+                            <option value="green">±0.5% (Verde)</option>
+                            <option value="blue">±0.25% (Azul)</option>
+                            <option value="violet">±0.1% (Violeta)</option>
+                            <option value="gray">±0.05% (Gris)</option>
+                            <option value="gold" selected>±5% (Dorado)</option>
+                            <option value="silver">±10% (Plateado)</option>
+                        </select>
+                    </div>
+
+                    <div class="control-item" id="tempCoefControl" style="display: none;">
+                        <label for="tempCoefSelect">Coef. Térmico:</label>
+                        <select id="tempCoefSelect" class="tempcoef-select">
+                            <option value="black">250 ppm/K (Negro)</option>
+                            <option value="brown" selected>100 ppm/K (Marrón)</option>
+                            <option value="red">50 ppm/K (Rojo)</option>
+                            <option value="orange">15 ppm/K (Naranja)</option>
+                            <option value="yellow">25 ppm/K (Amarillo)</option>
+                            <option value="blue">10 ppm/K (Azul)</option>
+                            <option value="violet">5 ppm/K (Violeta)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button id="calculateBtn" class="calculate-btn">
+                    🎨 Mostrar Colores
+                </button>
+            </div>
+
+            <!-- Mensaje de error -->
+            <div id="errorMessage" class="error-message" style="display: none;"></div>
+
+            <!-- Resultado validado -->
+            <div class="result-display" id="resultDisplay" style="display: none;">
+                <div class="result-value" id="resultValue">Resistencia = 0 Ω</div>
+                <div class="result-tolerance" id="resultTolerance">Tolerancia: ±5%</div>
+                <div class="result-tempco" id="resultTempco" style="display: none;">Coef. Térmico: 100 ppm/K</div>
+            </div>
+
+            <!-- Resistencia visual -->
+            <div class="resistor-display" id="resistorDisplay" style="display: none;">
+                <div class="resistor-body">
+                    <div class="resistor-lead resistor-lead-left"></div>
+                    <div class="resistor-main">
+                        <div class="band band-1" id="band1" data-color="brown"></div>
+                        <div class="band band-2" id="band2" data-color="black"></div>
+                        <div class="band band-3" id="band3" data-color="black"></div>
+                        <div class="band band-4" id="band4" data-color="gold"></div>
+                        <div class="band band-5" id="band5" data-color="brown" style="display: none;"></div>
+                        <div class="band band-6" id="band6" data-color="brown" style="display: none;"></div>
+                    </div>
+                    <div class="resistor-lead resistor-lead-right"></div>
+                </div>
+            </div>
+
+            <!-- Explicación de bandas -->
+            <div class="band-explanation" id="bandExplanation" style="display: none;">
+                <h3>📊 Significado de cada banda:</h3>
+                <div class="explanation-list" id="explanationList">
+                    <!-- Se llenará dinámicamente con JavaScript -->
+                </div>
+            </div>
+
+            <!-- Sección informativa -->
+            <div class="info-section">
+                <h2>💡 Cómo usar esta calculadora</h2>
+                <div class="info-cards">
+                    <div class="info-card">
+                        <span class="info-icon">1️⃣</span>
+                        <h3>Ingresa el valor</h3>
+                        <p>Escribe el valor de la resistencia con o sin unidades (Ej: 4.7k, 470, 1M)</p>
+                    </div>
+                    <div class="info-card">
+                        <span class="info-icon">2️⃣</span>
+                        <h3>Selecciona opciones</h3>
+                        <p>Elige el número de bandas y la tolerancia deseada</p>
+                    </div>
+                    <div class="info-card">
+                        <span class="info-icon">3️⃣</span>
+                        <h3>Ver resultado</h3>
+                        <p>Haz clic en "Mostrar Colores" para ver la resistencia con sus bandas coloreadas</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabla de referencia rápida -->
+            <div class="reference-section">
+                <h2>📚 Referencia Rápida de Colores</h2>
+                <div class="quick-reference">
+                    <div class="ref-column">
+                        <h4>Dígitos (0-9)</h4>
+                        <div class="ref-items">
+                            <div class="ref-item"><span class="color-mini" style="background: #000;"></span> Negro = 0</div>
+                            <div class="ref-item"><span class="color-mini" style="background: #8B4513;"></span> Marrón = 1</div>
+                            <div class="ref-item"><span class="color-mini" style="background: #FF0000;"></span> Rojo = 2</div>
+                            <div class="ref-item"><span class="color-mini" style="background: #FFA500;"></span> Naranja = 3</div>
+                            <div class="ref-item"><span class="color-mini" style="background: #FFFF00;"></span> Amarillo = 4</div>
+                            <div class="ref-item"><span class="color-mini" style="background: #008000;"></span> Verde = 5</div>
+                            <div class="ref-item"><span class="color-mini" style="background: #0000FF;"></span> Azul = 6</div>
+                            <div class="ref-item"><span class="color-mini" style="background: #8B00FF;"></span> Violeta = 7</div>
+                            <div class="ref-item"><span class="color-mini" style="background: #808080;"></span> Gris = 8</div>
+                            <div class="ref-item"><span class="color-mini" style="background: #FFF; border: 1px solid #ccc;"></span> Blanco = 9</div>
+                        </div>
+                    </div>
+                    <div class="ref-column">
+                        <h4>Multiplicadores</h4>
+                        <div class="ref-items">
+                            <div class="ref-item"><span class="color-mini" style="background: #000;"></span> Negro = ×1</div>
+                            <div class="ref-item"><span class="color-mini" style="background: #8B4513;"></span> Marrón = ×10</div>
+                            <div class="ref-item"><span class="color-mini" style="background: #FF0000;"></span> Rojo = ×100</div>
+                            <div class="ref-item"><span class="color-mini" style="background: #FFA500;"></span> Naranja = ×1k</div>
+                            <div class="ref-item"><span class="color-mini" style="background: #FFFF00;"></span> Amarillo = ×10k</div>
+                            <div class="ref-item"><span class="color-mini" style="background: #008000;"></span> Verde = ×100k</div>
+                            <div class="ref-item"><span class="color-mini" style="background: #0000FF;"></span> Azul = ×1M</div>
+                            <div class="ref-item"><span class="color-mini" style="background: #FFD700;"></span> Dorado = ×0.1</div>
+                            <div class="ref-item"><span class="color-mini" style="background: #C0C0C0;"></span> Plateado = ×0.01</div>
+                        </div>
+                    </div>
+                    <div class="ref-column">
+                        <h4>Tolerancias</h4>
+                        <div class="ref-items">
+                            <div class="ref-item"><span class="color-mini" style="background: #808080;"></span> Gris = ±0.05%</div>
+                            <div class="ref-item"><span class="color-mini" style="background: #8B00FF;"></span> Violeta = ±0.1%</div>
+                            <div class="ref-item"><span class="color-mini" style="background: #0000FF;"></span> Azul = ±0.25%</div>
+                            <div class="ref-item"><span class="color-mini" style="background: #008000;"></span> Verde = ±0.5%</div>
+                            <div class="ref-item"><span class="color-mini" style="background: #8B4513;"></span> Marrón = ±1%</div>
+                            <div class="ref-item"><span class="color-mini" style="background: #FF0000;"></span> Rojo = ±2%</div>
+                            <div class="ref-item"><span class="color-mini" style="background: #FFD700;"></span> Dorado = ±5%</div>
+                            <div class="ref-item"><span class="color-mini" style="background: #C0C0C0;"></span> Plateado = ±10%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ElectroTools. Todos los derechos reservados.</p>
+            <p>Calculadora de búsqueda de colores de resistencias</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/buscar-color-resistencia.js" defer></script>
+</body>
+</html>

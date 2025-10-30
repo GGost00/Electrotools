@@ -1,0 +1,570 @@
+/* ========== LEY DE OHM - ESTILOS ========== */
+
+/* Página de calculadora */
+.calculator-page {
+    background: linear-gradient(135deg, #e8eef3 0%, #d4dce5 100%);
+    min-height: 100vh;
+    padding: 40px 0;
+}
+
+.calculator-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.calculator-header {
+    text-align: center;
+    margin-bottom: 40px;
+    background: linear-gradient(135deg, #1a2332, #2c3e50);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.calculator-header h1 {
+    color: #f1c40f;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.calculator-header p {
+    color: #ecf0f1;
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* ========== LAYOUT PRINCIPAL ========== */
+.main-wrapper {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* ========== SECCIÓN DEL CIRCUITO ========== */
+.circuit-section {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.circuit-card {
+    padding: 30px;
+}
+
+.circuit-card h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+/* ========== CIRCUITO ========== */
+.circuit-container {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    border: 2px solid #dee2e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circuit-image {
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 100px auto 0 auto; /* arriba, derecha, abajo, izquierda */
+}
+
+/* Posicionamiento de inputs sobre la imagen del circuito */
+.voltage-input-wrapper {
+    position: absolute;
+    left: 5%;
+    top: calc(50% + 60px);
+    transform: translateY(-50%);
+}
+
+.current-input-wrapper {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.resistance-input-wrapper {
+    position: absolute;
+    right: 5%;
+    top: calc(50% + 65px);
+    transform: translateY(-50%);
+}
+
+/* ========== INPUTS DEL CIRCUITO ========== */
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.input-wrapper label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #2c3e50;
+    white-space: nowrap;
+}
+
+.circuit-input {
+    width: 100px;
+    padding: 8px 10px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    background: white;
+    transition: all 0.3s ease;
+    font-family: 'Courier New', monospace;
+}
+
+.circuit-input:focus {
+    outline: none;
+    border-color: #2ecc71;
+    box-shadow: 0 0 10px rgba(46, 204, 113, 0.3);
+}
+
+.circuit-input::placeholder {
+    color: #bdc3c7;
+}
+
+.circuit-input:disabled {
+    background: #e8f8f5;
+    border-color: #2ecc71;
+    color: #27ae60;
+    cursor: not-allowed;
+}
+
+/* ========== RESULTADO DE POTENCIA ========== */
+.power-result {
+    background: linear-gradient(135deg, #2c3e50, #1a2332);
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.power-result h3 {
+    color: #f1c40f;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.power-value {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.power-number {
+    font-size: 36px;
+    font-weight: 700;
+    color: #2ecc71;
+    font-family: 'Courier New', monospace;
+}
+
+.power-unit {
+    font-size: 18px;
+    color: #ecf0f1;
+    font-weight: 500;
+}
+
+.power-formula {
+    display: block;
+    color: #95a5a6;
+    font-style: italic;
+    font-size: 14px;
+}
+
+/* ========== BOTÓN LIMPIAR ========== */
+.clear-btn {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+.clear-btn:hover {
+    background: linear-gradient(135deg, #c0392b, #a93226);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+}
+
+.clear-btn:active {
+    transform: translateY(0);
+}
+
+/* ========== SECCIÓN DE REFERENCIA ========== */
+.reference-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ohm-circle-card,
+.formulas-card,
+.variables-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.ohm-circle-card h3,
+.formulas-card h3,
+.variables-card h3 {
+    color: #2c3e50;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #f1c40f;
+}
+
+/* ========== CÍRCULO DE OHM ========== */
+.ohm-circle-container {
+    max-width: 250px;
+    margin: 0 auto 15px;
+}
+
+.ohm-circle-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.circle-description {
+    text-align: center;
+    font-size: 13px;
+    color: #7f8c8d;
+    line-height: 1.5;
+}
+
+/* ========== FÓRMULAS ========== */
+.formulas-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.formula-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    transition: all 0.3s ease;
+}
+
+.formula-item:hover {
+    background: #e9ecef;
+    transform: translateX(5px);
+}
+
+.formula {
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    font-size: 15px;
+    color: #2c3e50;
+}
+
+.formula-desc {
+    font-size: 13px;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* ========== VARIABLES ========== */
+.variables-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.variable-item {
+    display: flex;
+    gap: 10px;
+    padding: 8px 12px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.variable-item:hover {
+    background: #e9ecef;
+}
+
+.var-symbol {
+    font-weight: 700;
+    color: #e74c3c;
+    font-size: 16px;
+    min-width: 25px;
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+}
+
+.var-name {
+    font-size: 14px;
+    color: #2c3e50;
+}
+
+/* ========== BOTÓN VOLVER ========== */
+.back-button-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.back-btn:hover {
+    background: linear-gradient(135deg, #2980b9, #21618c);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+/* ========== SECCIÓN INFORMATIVA ========== */
+.info-section {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.info-section h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 26px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.info-box {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.info-box:hover {
+    border-color: #2ecc71;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(46, 204, 113, 0.2);
+}
+
+.info-number {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.info-box h4 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.info-box p {
+    color: #7f8c8d;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1200px) {
+    .main-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .reference-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .calculator-header h1 {
+        font-size: 24px;
+    }
+
+    .calculator-header p {
+        font-size: 14px;
+    }
+
+    .circuit-container {
+        padding: 15px;
+    }
+
+    .circuit-image {
+        max-width: 100%;
+    }
+
+    .circuit-input {
+        width: 85px;
+        font-size: 13px;
+        padding: 6px 8px;
+    }
+
+    .input-wrapper label {
+        font-size: 11px;
+    }
+
+    .voltage-input-wrapper {
+        left: 2%;
+    }
+
+    .resistance-input-wrapper {
+        right: 2%;
+    }
+
+    .current-input-wrapper {
+        top: 8%;
+    }
+
+    .power-number {
+        font-size: 28px;
+    }
+
+    .power-unit {
+        font-size: 16px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reference-section {
+        grid-template-columns: 1fr;
+    }
+
+    .ohm-circle-container {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .calculator-header {
+        padding: 20px;
+    }
+
+    .circuit-card {
+        padding: 15px;
+    }
+
+    .circuit-container {
+        padding: 10px;
+    }
+
+    .circuit-image {
+        max-width: 100%;
+    }
+
+    .circuit-input {
+        width: 75px;
+        font-size: 12px;
+        padding: 5px 6px;
+    }
+
+    .input-wrapper label {
+        font-size: 10px;
+    }
+
+    .voltage-input-wrapper {
+        left: 1%;
+    }
+
+    .resistance-input-wrapper {
+        right: 1%;
+    }
+
+    .current-input-wrapper {
+        top: 5%;
+    }
+
+    .ohm-circle-container {
+        max-width: 180px;
+    }
+}
+
+/* ========== ANIMACIONES ========== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.circuit-card,
+.ohm-circle-card,
+.formulas-card,
+.variables-card {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.circuit-input:focus {
+    animation: pulse 0.3s ease;
+}

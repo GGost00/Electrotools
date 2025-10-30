@@ -1,0 +1,288 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Código de Colores - ElectroTools</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/color-code.css">
+</head>
+<body>
+    <!-- Header fijo -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index-principal.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                    <span class="logo-icon">⚡</span>
+                    <h1>ElectroTools</h1>
+                </a>
+            </div>
+            
+            <!-- Botón hamburguesa para móvil -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- Navegación principal -->
+            <nav class="nav" id="mainNav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../index-principal.html#inicio" class="nav-link">Inicio</a>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="index-calculadoras.html" class="nav-link">
+                            Calculadoras <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="index-calculadoras.html">Ver todas las Calculadoras</a></li>
+                            <li><a href="color-code.html">Código de colores</a></li>
+                            <li><a href="buscar-color-resistencia.html">Buscar colores</a></li>
+                            <li><a href="ley-de-ohm.html">Ley de Ohm</a></li>
+                            <li><a href="filtros.html">Filtros RC/RL/RLC</a></li>
+                            <li><a href="divisor-resistivo.html">Divisor resistivo</a></li>
+                            <li><a href="serie-paralelo.html">Serie-Paralelo</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="../pinouts/index-pinouts.html" class="nav-link">
+                            Pinouts <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="../pinouts/index-pinouts.html">Ver todos los Pinouts</a></li>
+                            <li><a href="../pinouts/arduino/index-arduino.html">Arduino</a></li>
+                            <li><a href="../pinouts/raspberry/index-raspberry.html">Raspberry Pi</a></li>
+                            <li><a href="../pinouts/displays/index-displays.html">Displays</a></li>
+                            <li><a href="../pinouts/jacks-conectores/index-jacks.html">Jacks y Conectores</a></li>
+                            <li><a href="../pinouts/sensores.html">Sensores</a></li>
+                            <li><a href="../pinouts/modulos-comunicacion.html">Módulos de Comunicación</a></li>
+                            <li><a href="../pinouts/componentes-basicos.html">Componentes Básicos</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="../recursos/index-recursos.html" class="nav-link">Recursos <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="../recursos/datasheet/index-datasheet.html">Datasheets</a></li>
+                            <li><a href="../recursos/tutoriales/index-tutoriales.html">Tutoriales</a></li>
+                            <li><a href="../recursos/herramientas/index-herramientas.html">Herramientas</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="../index.html#acerca" class="nav-link">Acerca de nosotros</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="main-content calculator-page">
+        <div class="calculator-container">
+            <div class="calculator-header">
+                <h1>🎨 Calculadora de Código de Colores de Resistencias</h1>
+                <p>Selecciona el número de bandas y los colores para calcular el valor de la resistencia</p>
+            </div>
+
+            <!-- Selector de número de bandas -->
+            <div class="band-selector-section">
+                <label for="bandCount">Número de bandas:</label>
+                <select id="bandCount" class="band-count-select">
+                    <option value="4" selected>4 bandas</option>
+                    <option value="5">5 bandas</option>
+                    <option value="6">6 bandas</option>
+                </select>
+            </div>
+
+            <!-- Resultado -->
+            <div class="result-display" id="resultDisplay">
+                <div class="result-value" id="resultValue">Resistencia = 0 Ω</div>
+                <div class="result-tolerance" id="resultTolerance">Tolerancia: ±20%</div>
+                <div class="result-tempco" id="resultTempco" style="display: none;">Coef. Térmico: 0 ppm/K</div>
+            </div>
+
+            <!-- Resistencia visual -->
+            <div class="resistor-display">
+                <div class="resistor-body">
+                    <div class="resistor-lead resistor-lead-left"></div>
+                    <div class="resistor-main">
+                        <div class="band band-1" id="band1" data-color="brown"></div>
+                        <div class="band band-2" id="band2" data-color="black"></div>
+                        <div class="band band-3" id="band3" data-color="black"></div>
+                        <div class="band band-4" id="band4" data-color="gold"></div>
+                        <div class="band band-5" id="band5" data-color="brown" style="display: none;"></div>
+                        <div class="band band-6" id="band6" data-color="brown" style="display: none;"></div>
+                    </div>
+                    <div class="resistor-lead resistor-lead-right"></div>
+                </div>
+            </div>
+
+            <!-- Selectores de colores -->
+            <div class="color-selectors" id="colorSelectors">
+                <!-- Banda 1 -->
+                <div class="selector-group">
+                    <label for="color1">1ª Banda (Dígito)</label>
+                    <select id="color1" class="color-select">
+                        <option value="black">Negro (0)</option>
+                        <option value="brown" selected>Marrón (1)</option>
+                        <option value="red">Rojo (2)</option>
+                        <option value="orange">Naranja (3)</option>
+                        <option value="yellow">Amarillo (4)</option>
+                        <option value="green">Verde (5)</option>
+                        <option value="blue">Azul (6)</option>
+                        <option value="violet">Violeta (7)</option>
+                        <option value="gray">Gris (8)</option>
+                        <option value="white">Blanco (9)</option>
+                    </select>
+                </div>
+
+                <!-- Banda 2 -->
+                <div class="selector-group">
+                    <label for="color2">2ª Banda (Dígito)</label>
+                    <select id="color2" class="color-select">
+                        <option value="black" selected>Negro (0)</option>
+                        <option value="brown">Marrón (1)</option>
+                        <option value="red">Rojo (2)</option>
+                        <option value="orange">Naranja (3)</option>
+                        <option value="yellow">Amarillo (4)</option>
+                        <option value="green">Verde (5)</option>
+                        <option value="blue">Azul (6)</option>
+                        <option value="violet">Violeta (7)</option>
+                        <option value="gray">Gris (8)</option>
+                        <option value="white">Blanco (9)</option>
+                    </select>
+                </div>
+
+                <!-- Banda 3 (Multiplicador para 4 bandas, Dígito para 5-6) -->
+                <div class="selector-group" id="selector3">
+                    <label for="color3">3ª Banda (Multiplicador)</label>
+                    <select id="color3" class="color-select">
+                        <option value="black" selected>Negro (×1)</option>
+                        <option value="brown">Marrón (×10)</option>
+                        <option value="red">Rojo (×100)</option>
+                        <option value="orange">Naranja (×1k)</option>
+                        <option value="yellow">Amarillo (×10k)</option>
+                        <option value="green">Verde (×100k)</option>
+                        <option value="blue">Azul (×1M)</option>
+                        <option value="violet">Violeta (×10M)</option>
+                        <option value="gray">Gris (×100M)</option>
+                        <option value="white">Blanco (×1G)</option>
+                        <option value="gold">Dorado (×0.1)</option>
+                        <option value="silver">Plateado (×0.01)</option>
+                    </select>
+                </div>
+
+                <!-- Banda 4 (Tolerancia para 4 bandas, Multiplicador para 5-6) -->
+                <div class="selector-group" id="selector4">
+                    <label for="color4">4ª Banda (Tolerancia)</label>
+                    <select id="color4" class="color-select">
+                        <option value="brown">Marrón (±1%)</option>
+                        <option value="red">Rojo (±2%)</option>
+                        <option value="green">Verde (±0.5%)</option>
+                        <option value="blue">Azul (±0.25%)</option>
+                        <option value="violet">Violeta (±0.1%)</option>
+                        <option value="gray">Gris (±0.05%)</option>
+                        <option value="gold" selected>Dorado (±5%)</option>
+                        <option value="silver">Plateado (±10%)</option>
+                    </select>
+                </div>
+
+                <!-- Banda 5 (solo para 5-6 bandas) -->
+                <div class="selector-group" id="selector5" style="display: none;">
+                    <label for="color5">5ª Banda (Tolerancia)</label>
+                    <select id="color5" class="color-select">
+                        <option value="brown">Marrón (±1%)</option>
+                        <option value="red">Rojo (±2%)</option>
+                        <option value="green">Verde (±0.5%)</option>
+                        <option value="blue">Azul (±0.25%)</option>
+                        <option value="violet">Violeta (±0.1%)</option>
+                        <option value="gray">Gris (±0.05%)</option>
+                        <option value="gold" selected>Dorado (±5%)</option>
+                        <option value="silver">Plateado (±10%)</option>
+                    </select>
+                </div>
+
+                <!-- Banda 6 (solo para 6 bandas - coeficiente térmico) -->
+                <div class="selector-group" id="selector6" style="display: none;">
+                    <label for="color6">6ª Banda (Coef. Térmico)</label>
+                    <select id="color6" class="color-select">
+                        <option value="black">Negro (250 ppm/K)</option>
+                        <option value="brown" selected>Marrón (100 ppm/K)</option>
+                        <option value="red">Rojo (50 ppm/K)</option>
+                        <option value="orange">Naranja (15 ppm/K)</option>
+                        <option value="yellow">Amarillo (25 ppm/K)</option>
+                        <option value="blue">Azul (10 ppm/K)</option>
+                        <option value="violet">Violeta (5 ppm/K)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Tabla de referencia -->
+            <div class="reference-section">
+                <h2>📊 Tabla de Referencia de Colores</h2>
+                <div class="reference-tables">
+                    <div class="reference-table">
+                        <h3>Dígitos</h3>
+                        <table>
+                            <tr><td><span class="color-dot" style="background: #000;"></span> Negro</td><td>0</td></tr>
+                            <tr><td><span class="color-dot" style="background: #8B4513;"></span> Marrón</td><td>1</td></tr>
+                            <tr><td><span class="color-dot" style="background: #FF0000;"></span> Rojo</td><td>2</td></tr>
+                            <tr><td><span class="color-dot" style="background: #FFA500;"></span> Naranja</td><td>3</td></tr>
+                            <tr><td><span class="color-dot" style="background: #FFFF00;"></span> Amarillo</td><td>4</td></tr>
+                            <tr><td><span class="color-dot" style="background: #008000;"></span> Verde</td><td>5</td></tr>
+                            <tr><td><span class="color-dot" style="background: #0000FF;"></span> Azul</td><td>6</td></tr>
+                            <tr><td><span class="color-dot" style="background: #8B00FF;"></span> Violeta</td><td>7</td></tr>
+                            <tr><td><span class="color-dot" style="background: #808080;"></span> Gris</td><td>8</td></tr>
+                            <tr><td><span class="color-dot" style="background: #FFF;"></span> Blanco</td><td>9</td></tr>
+                        </table>
+                    </div>
+
+                    <div class="reference-table">
+                        <h3>Multiplicadores</h3>
+                        <table>
+                            <tr><td><span class="color-dot" style="background: #000;"></span> Negro</td><td>×1</td></tr>
+                            <tr><td><span class="color-dot" style="background: #8B4513;"></span> Marrón</td><td>×10</td></tr>
+                            <tr><td><span class="color-dot" style="background: #FF0000;"></span> Rojo</td><td>×100</td></tr>
+                            <tr><td><span class="color-dot" style="background: #FFA500;"></span> Naranja</td><td>×1k</td></tr>
+                            <tr><td><span class="color-dot" style="background: #FFFF00;"></span> Amarillo</td><td>×10k</td></tr>
+                            <tr><td><span class="color-dot" style="background: #008000;"></span> Verde</td><td>×100k</td></tr>
+                            <tr><td><span class="color-dot" style="background: #0000FF;"></span> Azul</td><td>×1M</td></tr>
+                            <tr><td><span class="color-dot" style="background: #FFD700;"></span> Dorado</td><td>×0.1</td></tr>
+                            <tr><td><span class="color-dot" style="background: #C0C0C0;"></span> Plateado</td><td>×0.01</td></tr>
+                        </table>
+                    </div>
+
+                    <div class="reference-table">
+                        <h3>Tolerancia</h3>
+                        <table>
+                            <tr><td><span class="color-dot" style="background: #8B4513;"></span> Marrón</td><td>±1%</td></tr>
+                            <tr><td><span class="color-dot" style="background: #FF0000;"></span> Rojo</td><td>±2%</td></tr>
+                            <tr><td><span class="color-dot" style="background: #008000;"></span> Verde</td><td>±0.5%</td></tr>
+                            <tr><td><span class="color-dot" style="background: #0000FF;"></span> Azul</td><td>±0.25%</td></tr>
+                            <tr><td><span class="color-dot" style="background: #8B00FF;"></span> Violeta</td><td>±0.1%</td></tr>
+                            <tr><td><span class="color-dot" style="background: #808080;"></span> Gris</td><td>±0.05%</td></tr>
+                            <tr><td><span class="color-dot" style="background: #FFD700;"></span> Dorado</td><td>±5%</td></tr>
+                            <tr><td><span class="color-dot" style="background: #C0C0C0;"></span> Plateado</td><td>±10%</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ElectroTools. Todos los derechos reservados.</p>
+            <p>Calculadora de código de colores de resistencias</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/color-code.js" defer></script>
+</body>
+</html>

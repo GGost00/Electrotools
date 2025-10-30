@@ -1,0 +1,151 @@
+╔═══════════════════════════════════════════════════════════════╗
+║           📱 ELECTROTOOLS - MAPA DE NAVEGACIÓN                ║
+╚═══════════════════════════════════════════════════════════════╝
+
+┌─────────────────────────────────────────────────────────────┐
+│  📁 ARCHIVOS INDEX (Nombres descriptivos únicos)            │
+└─────────────────────────────────────────────────────────────┘
+
+  ⚠️  IMPORTANTE: Los archivos index.html fueron ELIMINADOS
+  
+  ✅ index-principal.html              → PÁGINA PRINCIPAL DEL SITIO
+     Abrir este archivo para comenzar
+     
+  ✅ calculadoras/index-calculadoras.html   → HUB DE CALCULADORAS
+     Muestra las 6 calculadoras disponibles
+     
+  ✅ pinouts/index-pinouts.html        → HUB DE PINOUTS
+     Muestra las 7 categorías de pinouts
+     
+  ✅ pinouts/arduino/index-arduino.html  → HUB DE ARDUINO
+     Muestra las 4 placas Arduino disponibles
+  
+  📌 Ya NO existen archivos "index.html" genéricos
+  📌 Todos los links han sido actualizados para usar los nombres
+     descriptivos (index-###.html)
+
+
+┌─────────────────────────────────────────────────────────────┐
+│  🔗 FLUJO DE NAVEGACIÓN                                     │
+└─────────────────────────────────────────────────────────────┘
+
+INICIO (index.html)
+  │
+  ├─── CALCULADORAS (menú dropdown)
+  │    ├─── "Ver todas las Calculadoras" → /calculadoras/index.html
+  │    ├─── Código de colores
+  │    ├─── Buscar colores
+  │    ├─── Ley de Ohm
+  │    ├─── Filtros RC/RL/RLC
+  │    ├─── Divisor resistivo
+  │    └─── Serie-Paralelo
+  │
+  ├─── PINOUTS (menú dropdown)
+  │    ├─── "Ver todos los Pinouts" → /pinouts/index.html
+  │    │
+  │    ├─── ⚡ ARDUINO → /pinouts/arduino/index.html ✨ NUEVO
+  │    │    ├─── Arduino Uno → /pinouts/arduino/uno.html
+  │    │    ├─── Arduino Mega → /pinouts/arduino/mega.html
+  │    │    ├─── Arduino Nano → /pinouts/arduino/nano.html
+  │    │    └─── Arduino Leonardo → /pinouts/arduino/leonardo.html
+  │    │
+  │    ├─── Raspberry Pi (pendiente)
+  │    ├─── Displays (pendiente)
+  │    ├─── Jacks y Conectores (pendiente)
+  │    ├─── Sensores (pendiente)
+  │    ├─── Módulos de Comunicación (pendiente)
+  │    └─── Componentes Básicos (pendiente)
+  │
+  └─── RECURSOS (menú dropdown)
+       ├─── Datasheets (pendiente)
+       ├─── Tutoriales (pendiente)
+       └─── Herramientas (pendiente)
+
+
+┌─────────────────────────────────────────────────────────────┐
+│  🎯 RUTAS DIRECTAS (para testing)                           │
+└─────────────────────────────────────────────────────────────┘
+
+  Página principal:
+  → file:///C:/Users/Gabriel%20Restrepo/Desktop/web_seminario/electrotools/index-principal.html
+
+  Hub de calculadoras:
+  → file:///C:/Users/Gabriel%20Restrepo/Desktop/web_seminario/electrotools/calculadoras/index-calculadoras.html
+
+  Hub de pinouts:
+  → file:///C:/Users/Gabriel%20Restrepo/Desktop/web_seminario/electrotools/pinouts/index-pinouts.html
+
+  ⭐ Hub de Arduino:
+  → file:///C:/Users/Gabriel%20Restrepo/Desktop/web_seminario/electrotools/pinouts/arduino/index-arduino.html
+
+  Ejemplo pinout - Arduino Uno:
+  → file:///C:/Users/Gabriel%20Restrepo/Desktop/web_seminario/electrotools/pinouts/arduino/uno.html
+
+
+┌─────────────────────────────────────────────────────────────┐
+│  ✅ CAMBIOS REALIZADOS - ACTUALIZACIÓN FINAL                │
+└─────────────────────────────────────────────────────────────┘
+
+  1. ✓ Archivos index.html ELIMINADOS (4 archivos):
+     - ❌ index.html → ✅ index-principal.html
+     - ❌ calculadoras/index.html → ✅ index-calculadoras.html
+     - ❌ pinouts/index.html → ✅ index-pinouts.html
+     - ❌ pinouts/arduino/index.html → ✅ index-arduino.html
+
+  2. ✓ TODOS los links actualizados en 15 archivos:
+     - index-principal.html
+     - calculadoras/index-calculadoras.html
+     - calculadoras/color-code.html
+     - calculadoras/buscar-color-resistencia.html
+     - calculadoras/ley-de-ohm.html
+     - calculadoras/filtros.html
+     - calculadoras/divisor-resistivo.html
+     - calculadoras/serie-paralelo.html
+     - pinouts/index-pinouts.html
+     - pinouts/arduino/index-arduino.html
+     - pinouts/arduino/uno.html
+     - pinouts/arduino/mega.html
+     - pinouts/arduino/nano.html
+     - pinouts/arduino/leonardo.html
+
+  3. ✓ Tipos de links corregidos:
+     href="../index.html" → href="../index-principal.html"
+     href="index.html" (en calculadoras) → href="index-calculadoras.html"
+     href="index.html" (en pinouts) → href="index-pinouts.html"
+     href="index.html" (en arduino) → href="index-arduino.html"
+     
+  4. ✓ Navegación completa en todos los pinouts de Arduino:
+     - Menú header completo (no se pierde al navegar)
+     - Breadcrumb actualizado con links correctos
+     - Botones de regreso con rutas correctas
+
+
+┌─────────────────────────────────────────────────────────────┐
+│  📋 PRÓXIMOS PASOS SUGERIDOS                                │
+└─────────────────────────────────────────────────────────────┘
+
+  1. Agregar imágenes PNG de pinouts Arduino en /img/:
+     - arduino-uno.png
+     - arduino-mega.png
+     - arduino-nano.png
+     - arduino-leonardo.png
+
+  2. Crear páginas de otras categorías de pinouts:
+     - raspberry-pi.html
+     - displays.html
+     - conectores.html
+     - sensores.html
+     - modulos-comunicacion.html
+     - componentes-basicos.html
+
+  3. Crear sección de Recursos:
+     - /recursos/datasheets.html
+     - /recursos/tutoriales.html
+     - /recursos/herramientas.html
+
+
+╔═══════════════════════════════════════════════════════════════╗
+║  Estado: ✅ SIN ARCHIVOS INDEX.HTML - TODO USA INDEX-###.HTML║
+║  Fecha: 27 de octubre de 2025                                ║
+║  Archivos actualizados: 15                                   ║
+╚═══════════════════════════════════════════════════════════════╝

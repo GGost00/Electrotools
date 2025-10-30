@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display 7 Segmentos - ElectroTools</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/pinouts.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../../index-principal.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                    <span class="logo-icon">⚡</span>
+                    <h1>ElectroTools</h1>
+                </a>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav" id="mainNav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="../../index-principal.html#inicio" class="nav-link">Inicio</a></li>
+                    <li class="nav-item has-dropdown">
+                        <a href="../../calculadoras/index-calculadoras.html" class="nav-link">Calculadoras <span class="arrow">▼</span></a>
+                        <ul class="dropdown">
+                            <li><a href="../../calculadoras/index-calculadoras.html">Ver todas las Calculadoras</a></li>
+                            <li><a href="../../calculadoras/color-code.html">Código de colores</a></li>
+                            <li><a href="../../calculadoras/buscar-color-resistencia.html">Buscar colores</a></li>
+                            <li><a href="../../calculadoras/ley-de-ohm.html">Ley de Ohm</a></li>
+                            <li><a href="../../calculadoras/filtros.html">Filtros RC/RL/RLC</a></li>
+                            <li><a href="../../calculadoras/divisor-resistivo.html">Divisor resistivo</a></li>
+                            <li><a href="../../calculadoras/serie-paralelo.html">Serie-Paralelo</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="../index-pinouts.html" class="nav-link">
+                            Pinouts <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="../index-pinouts.html">Ver todos los Pinouts</a></li>
+                            <li><a href="../arduino/index-arduino.html">Arduino</a></li>
+                            <li><a href="../raspberry/index-raspberry.html">Raspberry Pi</a></li>
+                            <li><a href="../displays/index-displays.html">Displays</a></li>
+                            <li><a href="../jacks-conectores/index-jacks.html">Jacks y Conectores</a></li>
+                            <li><a href="../sensores-modulos/index-sensores.html">Sensores y Modulos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="../../recursos/index-recursos.html" class="nav-link">Recursos <span class="arrow">▼</span></a>
+                        <ul class="dropdown">
+                            <li><a href="../../recursos/index-recursos.html">Ver todos los Recursos</a></li>
+                            <li><a href="../../recursos/datasheet/index-datasheet.html">Datasheets</a></li>
+                            <li><a href="../../recursos/tutoriales/index-tutoriales.html">Tutoriales</a></li>
+                            <li><a href="../../recursos/herramientas/index-herramientas.html">Herramientas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="../../index-principal.html#acerca" class="nav-link">Acerca de nosotros</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content pinout-detail-page">
+        <div class="pinout-detail-container">
+            <div class="breadcrumb">
+                <a href="../../index-principal.html">Inicio</a> → 
+                <a href="../index-pinouts.html">Pinouts</a> → 
+                <a href="index-displays.html">Displays</a> → 
+                <span>7 Segmentos</span>
+            </div>
+
+            <div class="pinout-header">
+                <h1>🔢 Display 7 Segmentos MAX7219</h1>
+                <p class="subtitle">Módulo de 8 dígitos LED con controlador SPI</p>
+            </div>
+
+            <div class="pinout-image-section">
+                <div class="image-placeholder">
+                    <p style="font-size: 4rem; margin: 0;">🔢</p>
+                    <p style="font-size: 1.1rem; color: #95a5a6; margin-top: 15px;">Coloca aquí el diagrama de conexión</p>
+                    <p style="font-size: 0.9rem; color: #7f8c8d; margin-top: 5px;">Ruta: <code>../../img/display-7seg.png</code></p>
+                </div>
+            </div>
+
+            <div class="spec-section">
+                <h2>📋 Especificaciones Técnicas</h2>
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <h3>Display</h3>
+                        <p><strong>Tipo:</strong> LED 7 segmentos + punto decimal</p>
+                        <p><strong>Dígitos:</strong> 8 por módulo (cascadeable hasta 64)</p>
+                        <p><strong>Color:</strong> Rojo (típico), verde, azul disponibles</p>
+                        <p><strong>Altura:</strong> 0.56" (14.2mm) típico</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Controlador</h3>
+                        <p><strong>Chip:</strong> MAX7219 / MAX7221</p>
+                        <p><strong>Interfaz:</strong> SPI (3 cables)</p>
+                        <p><strong>Multiplexación:</strong> Automática (8 dígitos)</p>
+                        <p><strong>Decodificador:</strong> BCD integrado (0-9, -, E, H, L, P, espacios)</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Alimentación</h3>
+                        <p><strong>Voltaje:</strong> 5V DC</p>
+                        <p><strong>Consumo:</strong> ~320mA máximo (todos los segmentos al 100%)</p>
+                        <p><strong>Brillo:</strong> Ajustable por software (16 niveles)</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Características</h3>
+                        <p><strong>Cascade:</strong> Conecta múltiples módulos en cadena</p>
+                        <p><strong>Test mode:</strong> Encender todos los segmentos</p>
+                        <p><strong>Shutdown:</strong> Modo bajo consumo</p>
+                        <p><strong>BCD Decode:</strong> O modo directo por segmentos</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pinout-table-section">
+                <h2>🔌 Pinout Módulo MAX7219 (5 pines)</h2>
+                <table class="pinout-table">
+                    <thead>
+                        <tr><th>Pin</th><th>Nombre</th><th>Función</th><th>Descripción</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="pin-num">1</td><td class="pin-name">VCC</td><td>Alimentación</td><td>+5V DC</td></tr>
+                        <tr><td class="pin-num">2</td><td class="pin-name">GND</td><td>Tierra</td><td>0V</td></tr>
+                        <tr><td class="pin-num">3</td><td class="pin-name">DIN</td><td>Data In</td><td>Datos SPI (MOSI del Arduino)</td></tr>
+                        <tr><td class="pin-num">4</td><td class="pin-name">CS (LOAD)</td><td>Chip Select</td><td>Latch de datos (activo bajo)</td></tr>
+                        <tr><td class="pin-num">5</td><td class="pin-name">CLK</td><td>Clock</td><td>Reloj SPI (SCK del Arduino)</td></tr>
+                    </tbody>
+                </table>
+                <p style="margin-top: 10px; color: #95a5a6;"><strong>Nota:</strong> Algunos módulos tienen pines adicionales DOUT para cascadeo.</p>
+            </div>
+
+            <div class="pinout-table-section">
+                <h2>🔗 Conexión a Arduino Uno</h2>
+                <table class="pinout-table">
+                    <thead>
+                        <tr><th>MAX7219 Pin</th><th>Arduino Pin</th><th>Notas</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="pin-name">VCC</td><td>5V</td><td>Alimentación (puede requerir fuente externa si varios módulos)</td></tr>
+                        <tr><td class="pin-name">GND</td><td>GND</td><td>Tierra común</td></tr>
+                        <tr><td class="pin-name">DIN</td><td>Pin 11 (MOSI)</td><td>Datos SPI (o cualquier pin con software SPI)</td></tr>
+                        <tr><td class="pin-name">CS (LOAD)</td><td>Pin 10 (SS)</td><td>Chip Select (configurable)</td></tr>
+                        <tr><td class="pin-name">CLK</td><td>Pin 13 (SCK)</td><td>Reloj SPI (o cualquier pin con software SPI)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pinout-table-section">
+                <h2>🔗 Cascadeo (múltiples módulos)</h2>
+                <table class="pinout-table">
+                    <thead>
+                        <tr><th>Conexión</th><th>Primer Módulo</th><th>Segundo Módulo</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>VCC</td><td>5V Arduino</td><td>VCC del 1er módulo</td></tr>
+                        <tr><td>GND</td><td>GND Arduino</td><td>GND del 1er módulo</td></tr>
+                        <tr><td>DIN</td><td>Pin 11 Arduino</td><td><strong>DOUT</strong> del 1er módulo</td></tr>
+                        <tr><td>CS</td><td>Pin 10 Arduino</td><td>CS del 1er módulo (paralelo)</td></tr>
+                        <tr><td>CLK</td><td>Pin 13 Arduino</td><td>CLK del 1er módulo (paralelo)</td></tr>
+                    </tbody>
+                </table>
+                <p style="margin-top: 10px; color: #f39c12;"><strong>💡 Tip:</strong> Puedes conectar hasta 8 módulos (64 dígitos) en cascada compartiendo VCC, GND, CS y CLK.</p>
+            </div>
+
+            <div class="info-section">
+                <div class="info-card">
+                    <h3>🔧 Configuración Inicial</h3>
+                    <p>Antes de mostrar datos, debes inicializar el MAX7219: salir de shutdown mode, configurar intensidad (0-15), configurar límite de dígitos (1-8), y opcionalmente el modo decodificador BCD.</p>
+                </div>
+                <div class="info-card">
+                    <h3>📚 Librería Arduino</h3>
+                    <p>Usa <strong>LedControl.h</strong> (la más popular). Ejemplo: <code>LedControl lc = LedControl(DIN, CLK, CS, 1);</code> donde el último parámetro es número de módulos cascadeados.</p>
+                </div>
+                <div class="info-card">
+                    <h3>💡 Ajuste de brillo</h3>
+                    <p>El MAX7219 permite 16 niveles de intensidad (0-15). Usa el comando <code>setIntensity()</code>. Nivel 0 = muy tenue, 15 = brillo máximo. Recomendado: 8 para uso en interiores.</p>
+                </div>
+                <div class="info-card">
+                    <h3>🔢 Modo BCD vs Directo</h3>
+                    <p><strong>BCD:</strong> Facilita mostrar números 0-9, -, E, H, L, P (1 byte por dígito). <strong>Directo:</strong> Control individual de cada segmento (útil para letras personalizadas o símbolos).</p>
+                </div>
+            </div>
+
+            <div class="back-button-container">
+                <a href="index-displays.html" class="back-btn">← Volver a Displays</a>
+                <a href="../index-pinouts.html" class="back-btn">📌 Todos los Pinouts</a>
+                <a href="../../index-principal.html" class="back-btn">🏠 Inicio</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container"><p>&copy; 2025 ElectroTools. MAX7219 7-Segment Display Pinout Reference.</p></div>
+    </footer>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

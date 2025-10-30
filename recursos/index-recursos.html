@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Recursos - ElectroTools</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pinouts.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index-principal.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                    <span class="logo-icon">⚡</span>
+                    <h1>ElectroTools</h1>
+                </a>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav class="nav" id="mainNav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../index-principal.html#inicio" class="nav-link">Inicio</a>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="../calculadoras/index-calculadoras.html" class="nav-link">
+                            Calculadoras <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="../calculadoras/index-calculadoras.html">Ver todas las Calculadoras</a></li>
+                            <li><a href="../calculadoras/color-code.html">Código de colores</a></li>
+                            <li><a href="../calculadoras/buscar-color-resistencia.html">Buscar colores</a></li>
+                            <li><a href="../calculadoras/ley-de-ohm.html">Ley de Ohm</a></li>
+                            <li><a href="../calculadoras/filtros.html">Filtros RC/RL/RLC</a></li>
+                            <li><a href="../calculadoras/divisor-resistivo.html">Divisor resistivo</a></li>
+                            <li><a href="../calculadoras/serie-paralelo.html">Serie-Paralelo</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="../pinouts/index-pinouts.html" class="nav-link">
+                            Pinouts <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="../pinouts/index-pinouts.html">Ver todos los Pinouts</a></li>
+                            <li><a href="../pinouts/arduino/index-arduino.html">Arduino</a></li>
+                            <li><a href="../pinouts/raspberry/index-raspberry.html">Raspberry Pi</a></li>
+                            <li><a href="../pinouts/displays/index-displays.html">Displays</a></li>
+                            <li><a href="../pinouts/jacks-conectores/index-jacks.html">Jacks y Conectores</a></li>
+                            <li><a href="../pinouts/sensores-modulos/index-sensores.html">Sensores y Modulos</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="index-recursos.html" class="nav-link">
+                            Recursos <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="datasheet/index-datasheet.html">Datasheets</a></li>
+                            <li><a href="tutoriales/index-tutoriales.html">Tutoriales</a></li>
+                            <li><a href="herramientas/index-herramientas.html">Herramientas</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="../index-principal.html#acerca" class="nav-link">Acerca de nosotros</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="main-content pinouts-page">
+        <div class="pinouts-container">
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <a href="../index-principal.html">Inicio</a> → 
+                <span>Recursos</span>
+            </div>
+
+            <!-- Header de la sección -->
+            <div class="pinouts-header">
+                <h1>📚 Centro de Recursos Electrónicos</h1>
+                <p class="subtitle">Encuentra hojas de datos, tutoriales y herramientas para tus proyectos</p>
+            </div>
+
+            <!-- Grid de recursos -->
+            <div class="pinouts-grid arduino-boards-grid">
+                
+                <!-- Tarjeta 1: Datasheets -->
+                <div class="pinout-card arduino-card">
+                    <div class="card-image">
+                        <img src="../img/datesheet.png" alt="Datasheets" style="max-width: 100%; height: auto;">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">📘 Datasheets más buscados</h3>
+                        <p class="card-description">
+                            Accede rápidamente a las hojas de datos técnicas de los componentes 
+                            electrónicos más consultados y utilizados en proyectos.
+                        </p>
+                        <div class="card-tags">
+                            <span class="tag">Top 50</span>
+                            <span class="tag">Componentes</span>
+                            <span class="tag">Especificaciones</span>
+                        </div>
+                        <div class="specs">
+                            <p><strong>Categorías:</strong> ICs, Transistores, Reguladores</p>
+                            <p><strong>Formatos:</strong> PDF descargables</p>
+                            <p><strong>Fuente:</strong> Fabricantes oficiales</p>
+                        </div>
+                    </div>
+                    <a href="datasheet/index-datasheet.html" class="card-button">Ver Datasheets →</a>
+                </div>
+
+                <!-- Tarjeta 2: Tutoriales -->
+                <div class="pinout-card arduino-card">
+                    <div class="card-image">
+                        <img src="../img/tutorial.png" alt="Tutoriales" style="max-width: 100%; height: auto;">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">🎥 Tutoriales y guías prácticas</h3>
+                        <p class="card-description">
+                            Aprende electrónica paso a paso con videos explicativos, guías prácticas 
+                            y proyectos completos para todos los niveles.
+                        </p>
+                        <div class="card-tags">
+                            <span class="tag">Videos</span>
+                            <span class="tag">Proyectos</span>
+                            <span class="tag">Paso a paso</span>
+                        </div>
+                        <div class="specs">
+                            <p><strong>Temas:</strong> Arduino, Raspberry Pi, Sensores</p>
+                            <p><strong>Nivel:</strong> Principiante a avanzado</p>
+                            <p><strong>Formato:</strong> Videos y artículos</p>
+                        </div>
+                    </div>
+                    <a href="tutoriales/index-tutoriales.html" class="card-button">Ver Tutoriales →</a>
+                </div>
+
+                <!-- Tarjeta 3: Herramientas -->
+                <div class="pinout-card arduino-card">
+                    <div class="card-image">
+                        <img src="../img/pinouts/arduino.svg" alt="Herramientas" style="max-width: 100%; height: auto;">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">🛠️ Herramientas y simuladores</h3>
+                        <p class="card-description">
+                            Simuladores de circuitos, herramientas de diseño PCB, calculadoras 
+                            especializadas y software útil para tus proyectos electrónicos.
+                        </p>
+                        <div class="card-tags">
+                            <span class="tag">Simuladores</span>
+                            <span class="tag">PCB Design</span>
+                            <span class="tag">Software</span>
+                        </div>
+                        <div class="specs">
+                            <p><strong>Tipos:</strong> Online y descargables</p>
+                            <p><strong>Incluye:</strong> Fritzing, Tinkercad, KiCad</p>
+                            <p><strong>Licencias:</strong> Gratuitas y open source</p>
+                        </div>
+                    </div>
+                    <a href="herramientas/index-herramientas.html" class="card-button">Ver Herramientas →</a>
+                </div>
+
+            </div>
+
+            <!-- Información adicional -->
+            <div class="info-section">
+                <div class="info-card">
+                    <h3>📖 Acerca de Recursos</h3>
+                    <p>
+                        Esta sección recopila los recursos técnicos más útiles para estudiantes, 
+                        makers y profesionales de la electrónica. Todos los enlaces son externos 
+                        y se mantienen actualizados regularmente.
+                    </p>
+                </div>
+                <div class="info-card">
+                    <h3>🔍 Búsqueda rápida</h3>
+                    <p>
+                        Utiliza las secciones organizadas para encontrar rápidamente lo que necesitas: 
+                        datasheets de componentes específicos, tutoriales por tema, o herramientas 
+                        por categoría.
+                    </p>
+                </div>
+                <div class="info-card">
+                    <h3>💡 Sugerencias</h3>
+                    <p>
+                        ¿Falta algún recurso importante? ¿Encontraste un tutorial útil? 
+                        Contáctanos para sugerir nuevos recursos que puedan ayudar a la comunidad.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Botones de navegación -->
+            <div class="back-button-container">
+                <a href="../index-principal.html" class="back-btn">🏠 Ir al Inicio</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ElectroTools. Centro de recursos electrónicos para referencia técnica.</p>
+        </div>
+    </footer>
+
+    <script src="../js/pinouts.js"></script>
+</body>
+</html>

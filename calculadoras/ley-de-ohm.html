@@ -1,0 +1,280 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Ley de Ohm - ElectroTools</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/ley-de-ohm.css">
+</head>
+<body>
+    <!-- Header fijo -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index-principal.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                    <span class="logo-icon">⚡</span>
+                    <h1>ElectroTools</h1>
+                </a>
+            </div>
+            
+            <!-- Botón hamburguesa para móvil -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- Navegación principal -->
+            <nav class="nav" id="mainNav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../index-principal.html#inicio" class="nav-link">Inicio</a>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="index-calculadoras.html" class="nav-link">
+                            Calculadoras <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="index-calculadoras.html">Ver todas las Calculadoras</a></li>
+                            <li><a href="color-code.html">Código de colores</a></li>
+                            <li><a href="buscar-color-resistencia.html">Buscar colores</a></li>
+                            <li><a href="ley-de-ohm.html">Ley de Ohm</a></li>
+                            <li><a href="filtros.html">Filtros RC/RL/RLC</a></li>
+                            <li><a href="divisor-resistivo.html">Divisor resistivo</a></li>
+                            <li><a href="serie-paralelo.html">Serie-Paralelo</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="../pinouts/index-pinouts.html" class="nav-link">
+                            Pinouts <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="../pinouts/index-pinouts.html">Ver todos los Pinouts</a></li>
+                            <li><a href="../pinouts/arduino/index-arduino.html">Arduino</a></li>
+                            <li><a href="../pinouts/raspberry/index-raspberry.html">Raspberry Pi</a></li>
+                            <li><a href="../pinouts/displays/index-displays.html">Displays</a></li>
+                            <li><a href="../pinouts/jacks-conectores/index-jacks.html">Jacks y Conectores</a></li>
+                            <li><a href="../pinouts/sensores.html">Sensores</a></li>
+                            <li><a href="../pinouts/modulos-comunicacion.html">Módulos de Comunicación</a></li>
+                            <li><a href="../pinouts/componentes-basicos.html">Componentes Básicos</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="../recursos/index-recursos.html" class="nav-link">Recursos <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="../recursos/datasheet/index-datasheet.html">Datasheets</a></li>
+                            <li><a href="../recursos/tutoriales/index-tutoriales.html">Tutoriales</a></li>
+                            <li><a href="../recursos/herramientas/index-herramientas.html">Herramientas</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="../index.html#acerca" class="nav-link">Acerca de nosotros</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="main-content calculator-page">
+        <div class="calculator-container">
+            <div class="calculator-header">
+                <h1>⚡ Calculadora de la Ley de Ohm</h1>
+                <p>Ingresa dos valores conocidos y calcula automáticamente el tercero</p>
+            </div>
+
+            <!-- Contenedor principal con dos columnas -->
+            <div class="main-wrapper">
+                <!-- Columna izquierda: Circuito -->
+                <div class="circuit-section">
+                    <div class="circuit-card">
+                        <h2>Circuito Básico</h2>
+                        
+                        <!-- Circuito con imagen -->
+                        <div class="circuit-container">
+                            <!-- Imagen del circuito base -->
+                            <img src="../img/circuito-base.png" alt="Circuito básico" class="circuit-image">
+                            
+                            <!-- Input de Voltaje (lado izquierdo) -->
+                            <div class="input-wrapper voltage-input-wrapper">
+                                <label for="voltage">V (Voltios)</label>
+                                <input 
+                                    type="number" 
+                                    id="voltage" 
+                                    placeholder="0.00"
+                                    step="0.01"
+                                    class="circuit-input"
+                                >
+                            </div>
+
+                            <!-- Input de Corriente (arriba, centro) -->
+                            <div class="input-wrapper current-input-wrapper">
+                                <label for="current">I (Amperios)</label>
+                                <input 
+                                    type="number" 
+                                    id="current" 
+                                    placeholder="0.00"
+                                    step="0.01"
+                                    class="circuit-input"
+                                >
+                            </div>
+
+                            <!-- Input de Resistencia (lado derecho) -->
+                            <div class="input-wrapper resistance-input-wrapper">
+                                <label for="resistance">R (Ohmios)</label>
+                                <input 
+                                    type="number" 
+                                    id="resistance" 
+                                    placeholder="0.00"
+                                    step="0.01"
+                                    class="circuit-input"
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Resultado de Potencia -->
+                        <div class="power-result">
+                            <h3>Potencia Calculada</h3>
+                            <div class="power-value" id="powerResult">
+                                <span class="power-number">0.00</span>
+                                <span class="power-unit">W (Vatios)</span>
+                            </div>
+                            <small class="power-formula">P = V × I</small>
+                        </div>
+
+                        <!-- Botón limpiar -->
+                        <button id="clearBtn" class="clear-btn">🗑️ Limpiar Valores</button>
+                    </div>
+                </div>
+
+                <!-- Columna derecha: Fórmulas y referencia -->
+                <div class="reference-section">
+                    <!-- Círculo de Ohm -->
+                    <div class="ohm-circle-card">
+                        <h3>Círculo de la Ley de Ohm</h3>
+                        <div class="ohm-circle-container">
+                            <img src="../img/circuito-ohm.png" alt="Círculo de la Ley de Ohm" class="ohm-circle-image">
+                        </div>
+                        <p class="circle-description">Tapa la variable que quieres calcular y multiplica o divide las otras dos</p>
+                    </div>
+
+                    <!-- Fórmulas principales -->
+                    <div class="formulas-card">
+                        <h3>📐 Fórmulas Principales</h3>
+                        <div class="formulas-list">
+                            <div class="formula-item">
+                                <span class="formula">V = I × R</span>
+                                <span class="formula-desc">Voltaje</span>
+                            </div>
+                            <div class="formula-item">
+                                <span class="formula">I = V / R</span>
+                                <span class="formula-desc">Corriente</span>
+                            </div>
+                            <div class="formula-item">
+                                <span class="formula">R = V / I</span>
+                                <span class="formula-desc">Resistencia</span>
+                            </div>
+                            <div class="formula-item">
+                                <span class="formula">P = V × I</span>
+                                <span class="formula-desc">Potencia</span>
+                            </div>
+                            <div class="formula-item">
+                                <span class="formula">G = 1 / R</span>
+                                <span class="formula-desc">Conductancia</span>
+                            </div>
+                            <div class="formula-item">
+                                <span class="formula">R = ρ × (L / A)</span>
+                                <span class="formula-desc">Resistividad</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Variables -->
+                    <div class="variables-card">
+                        <h3>📚 Significado de Variables</h3>
+                        <div class="variables-list">
+                            <div class="variable-item">
+                                <span class="var-symbol">V:</span>
+                                <span class="var-name">Voltaje (Voltios)</span>
+                            </div>
+                            <div class="variable-item">
+                                <span class="var-symbol">I:</span>
+                                <span class="var-name">Corriente (Amperios)</span>
+                            </div>
+                            <div class="variable-item">
+                                <span class="var-symbol">R:</span>
+                                <span class="var-name">Resistencia (Ohmios Ω)</span>
+                            </div>
+                            <div class="variable-item">
+                                <span class="var-symbol">P:</span>
+                                <span class="var-name">Potencia (Vatios W)</span>
+                            </div>
+                            <div class="variable-item">
+                                <span class="var-symbol">G:</span>
+                                <span class="var-name">Conductancia (Siemens S)</span>
+                            </div>
+                            <div class="variable-item">
+                                <span class="var-symbol">ρ:</span>
+                                <span class="var-name">Resistividad (Ω·m)</span>
+                            </div>
+                            <div class="variable-item">
+                                <span class="var-symbol">L:</span>
+                                <span class="var-name">Longitud del conductor (m)</span>
+                            </div>
+                            <div class="variable-item">
+                                <span class="var-symbol">A:</span>
+                                <span class="var-name">Área de sección transversal (m²)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón volver -->
+            <!--div class="back-button-container">
+                <a href="../index.html#calculadoras" class="back-btn">
+                    ← Volver al Menú de Calculadoras
+                </a>
+            </div>!-->
+
+            <!-- Sección informativa -->
+            <div class="info-section">
+                <h2>💡 Cómo usar esta calculadora</h2>
+                <div class="info-grid">
+                    <div class="info-box">
+                        <span class="info-number">1</span>
+                        <h4>Ingresa dos valores</h4>
+                        <p>Introduce cualquier combinación de dos valores conocidos: Voltaje, Corriente o Resistencia</p>
+                    </div>
+                    <div class="info-box">
+                        <span class="info-number">2</span>
+                        <h4>Cálculo automático</h4>
+                        <p>El tercer valor se calculará automáticamente usando la Ley de Ohm</p>
+                    </div>
+                    <div class="info-box">
+                        <span class="info-number">3</span>
+                        <h4>Potencia incluida</h4>
+                        <p>La potencia (P) se calcula en tiempo real cuando tienes V e I disponibles</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ElectroTools. Todos los derechos reservados.</p>
+            <p>Calculadora de la Ley de Ohm</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/ley-de-ohm.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LDR Fotoresistencia Pinout - ElectroTools</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/pinouts.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../../index-principal.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                    <span class="logo-icon">⚡</span>
+                    <h1>ElectroTools</h1>
+                </a>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav class="nav" id="mainNav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../../index-principal.html#inicio" class="nav-link">Inicio</a>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="../../calculadoras/index-calculadoras.html" class="nav-link">
+                            Calculadoras <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="../../calculadoras/index-calculadoras.html">Ver todas las Calculadoras</a></li>
+                            <li><a href="../../calculadoras/color-code.html">Código de colores</a></li>
+                            <li><a href="../../calculadoras/buscar-color-resistencia.html">Buscar colores</a></li>
+                            <li><a href="../../calculadoras/ley-de-ohm.html">Ley de Ohm</a></li>
+                            <li><a href="../../calculadoras/filtros.html">Filtros RC/RL/RLC</a></li>
+                            <li><a href="../../calculadoras/divisor-resistivo.html">Divisor resistivo</a></li>
+                            <li><a href="../../calculadoras/serie-paralelo.html">Serie-Paralelo</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="../index-pinouts.html" class="nav-link">
+                            Pinouts <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="../index-pinouts.html">Ver todos los Pinouts</a></li>
+                            <li><a href="../arduino/index-arduino.html">Arduino</a></li>
+                            <li><a href="../raspberry/index-raspberry.html">Raspberry Pi</a></li>
+                            <li><a href="../displays/index-displays.html">Displays</a></li>
+                            <li><a href="../jacks-conectores/index-jacks.html">Jacks y Conectores</a></li>
+                            <li><a href="index-sensores.html">Sensores y Modulos</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="../../recursos/index-recursos.html" class="nav-link">Recursos <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="../../recursos/index-recursos.html">Ver todos los Recursos</a></li>
+                            <li><a href="../../recursos/datasheet/index-datasheet.html">Datasheets</a></li>
+                            <li><a href="../../recursos/tutoriales/index-tutoriales.html">Tutoriales</a></li>
+                            <li><a href="../../recursos/herramientas/index-herramientas.html">Herramientas</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="../../index-principal.html#acerca" class="nav-link">Acerca de nosotros</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="pinout-detail-container">
+            <div class="breadcrumb">
+                <a href="../../index-principal.html">Inicio</a> → 
+                <a href="../index-pinouts.html">Pinouts</a> → 
+                <a href="index-sensores.html">Sensores y Modulos</a> → 
+                <span>LDR</span>
+            </div>
+
+            <div class="detail-header">
+                <h1>☀️ LDR (Fotoresistencia)</h1>
+                <p class="detail-subtitle">Resistencia Dependiente de Luz - Light Dependent Resistor</p>
+            </div>
+
+            <div class="pinout-image-section">
+                <div class="image-placeholder-large">
+                    <p style="font-size: 4rem; margin: 0;">☀️</p>
+                    <p style="font-size: 1.1rem; color: #95a5a6; margin-top: 15px; font-weight: 500;">[ESPACIO PARA IMAGEN: ldr.png]</p>
+                    <p style="font-size: 0.9rem; color: #7f8c8d; margin-top: 8px;">Diagrama de conexión LDR con divisor resistivo</p>
+                </div>
+            </div>
+
+            <div class="pinout-content">
+                <div class="pinout-table-section">
+                    <h2>📌 Conexión LDR con Divisor Resistivo</h2>
+                    <table class="pinout-table">
+                        <thead>
+                            <tr>
+                                <th>Conexión</th>
+                                <th>Componente</th>
+                                <th>Pin Arduino</th>
+                                <th>Notas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Terminal 1 LDR</strong></td>
+                                <td>5V (VCC)</td>
+                                <td>5V Arduino</td>
+                                <td>Pin superior del LDR</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Terminal 2 LDR</strong></td>
+                                <td>Pin analógico + Resistencia</td>
+                                <td>A0 (u otro analógico)</td>
+                                <td>Punto medio del divisor resistivo</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Resistencia 10kΩ</strong></td>
+                                <td>Entre Terminal 2 y GND</td>
+                                <td>GND Arduino</td>
+                                <td>Resistencia pull-down (rango: 1kΩ - 100kΩ)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2 style="margin-top: 40px;">🔌 Esquema de Conexión</h2>
+                    <div class="info-card" style="background: #34495e; color: #ecf0f1; padding: 20px; font-family: monospace;">
+                        <pre style="color: #ecf0f1; font-size: 0.9rem; line-height: 1.6;">
+        5V ────┬──── Terminal 1 LDR
+               │
+               │     (LDR varía con luz)
+               │
+               ├──── Terminal 2 LDR ──────── A0 (Arduino)
+               │
+             [10kΩ]  (Resistencia fija)
+               │
+        GND ───┴──────────────────────────── GND (Arduino)
+        </pre>
+                        <p style="margin-top: 15px; font-family: 'Segoe UI', sans-serif;">Este circuito forma un <strong>divisor de voltaje</strong>. El voltaje en A0 varía según la resistencia del LDR:</p>
+                        <p style="margin-top: 10px;">• <strong>Con luz:</strong> LDR baja resistencia (ej: 1kΩ) → A0 lee ~4.5V (valor ADC alto ~920)</p>
+                        <p style="margin-top: 5px;">• <strong>Oscuridad:</strong> LDR alta resistencia (ej: 1MΩ) → A0 lee ~0.05V (valor ADC bajo ~10)</p>
+                    </div>
+                </div>
+
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>🔍 ¿Qué es una Fotoresistencia?</h3>
+                        <p>La LDR (Light Dependent Resistor) o <strong>fotoresistencia</strong> es un componente <strong>pasivo</strong> (no requiere alimentación activa) cuya resistencia eléctrica varía según la intensidad de luz que recibe.</p>
+                        <p style="margin-top: 10px;"><strong>Material:</strong> Sulfuro de cadmio (CdS) - semiconductor fotoconductor</p>
+                        <p style="margin-top: 10px;"><strong>Comportamiento:</strong></p>
+                        <ul style="margin-top: 10px; line-height: 1.8;">
+                            <li><strong>Con luz intensa:</strong> Electrones liberados → Resistencia BAJA (100Ω - 1kΩ)</li>
+                            <li><strong>En oscuridad:</strong> Pocos electrones libres → Resistencia ALTA (1MΩ - 10MΩ)</li>
+                        </ul>
+                        <p style="margin-top: 10px;">⚠️ No tiene polaridad (puedes conectarla en cualquier dirección).</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>⚙️ Especificaciones Típicas</h3>
+                        <p><strong>Resistencia en oscuridad:</strong> 1MΩ - 10MΩ (varía por modelo)<br>
+                        <strong>Resistencia con luz brillante:</strong> 100Ω - 1kΩ<br>
+                        <strong>Resistencia a 10 lux (luz tenue):</strong> 10kΩ - 50kΩ<br>
+                        <strong>Voltaje máximo:</strong> 150V DC (pero usamos 5V)<br>
+                        <strong>Potencia máxima:</strong> 100mW - 200mW<br>
+                        <strong>Tiempo de respuesta:</strong> 8-12ms (subida), 80-100ms (bajada)<br>
+                        <strong>Espectro sensible:</strong> 400-700nm (luz visible, pico ~540nm verde)<br>
+                        <strong>Temperatura operativa:</strong> -30°C a +70°C<br>
+                        <strong>Dimensiones típicas:</strong> 5mm - 20mm de diámetro</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>🔧 Selección de Resistencia Pull-Down</h3>
+                        <p>El valor de la resistencia fija (10kΩ en el ejemplo) afecta la <strong>sensibilidad</strong> del circuito:</p>
+                        <p style="margin-top: 10px;"><strong>1kΩ:</strong> Rango reducido, bueno para luz muy brillante (exterior, sol directo)</p>
+                        <p style="margin-top: 10px;"><strong>10kΩ (RECOMENDADO):</strong> Rango balanceado, ideal para interiores (luz ambiente típica)</p>
+                        <p style="margin-top: 10px;"><strong>100kΩ:</strong> Alta sensibilidad, detecta pequeños cambios de luz (interiores oscuros)</p>
+                        <p style="margin-top: 10px;"><strong>Fórmula del divisor resistivo:</strong></p>
+                        <div style="background: #2c3e50; padding: 12px; border-radius: 6px; margin-top: 10px; color: #f1c40f; font-family: monospace;">
+                            V<sub>out</sub> = V<sub>cc</sub> × (R<sub>pull-down</sub> / (R<sub>LDR</sub> + R<sub>pull-down</sub>))
+                        </div>
+                        <p style="margin-top: 10px;">Experimenta con diferentes valores para encontrar el rango óptimo para tu aplicación.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>⚠️ Limitaciones y Consideraciones</h3>
+                        <p><strong>Respuesta lenta:</strong> El LDR tarda 80-100ms en ajustarse a oscuridad. No apto para detección rápida de destellos.</p>
+                        <p style="margin-top: 10px;"><strong>Histéresis:</strong> Lecturas diferentes según si luz aumenta o disminuye (memoria térmica del material).</p>
+                        <p style="margin-top: 10px;"><strong>Deriva térmica:</strong> Temperatura ambiente afecta la resistencia (±5% por 10°C).</p>
+                        <p style="margin-top: 10px;"><strong>Espectro limitado:</strong> No detecta UV ni IR (para eso usa fotodiodos específicos).</p>
+                        <p style="margin-top: 10px;"><strong>Envejecimiento:</strong> Pierde sensibilidad con los años (sulfuro de cadmio se degrada).</p>
+                        <p style="margin-top: 10px;"><strong>Cadmio tóxico:</strong> Material RoHS restringido. Alternativas modernas: fotodiodos, fototransistores.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>💻 Código Arduino Básico</h3>
+                        <pre style="background: #2c3e50; padding: 15px; border-radius: 8px; overflow-x: auto; color: #ecf0f1; font-size: 0.85rem;">
+#define LDR_PIN A0
+#define LED_PIN 13
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(LED_PIN, OUTPUT);
+}
+
+void loop() {
+  int ldrValue = analogRead(LDR_PIN);
+  
+  // Convertir ADC (0-1023) a voltaje (0-5V)
+  float voltage = ldrValue * (5.0 / 1023.0);
+  
+  Serial.print("LDR: ");
+  Serial.print(ldrValue);
+  Serial.print(" | Voltaje: ");
+  Serial.print(voltage);
+  Serial.println(" V");
+  
+  // Encender LED si oscurece (valor bajo)
+  if (ldrValue < 300) {
+    digitalWrite(LED_PIN, HIGH);
+    Serial.println("Oscuro - LED ON");
+  } else {
+    digitalWrite(LED_PIN, LOW);
+    Serial.println("Luz - LED OFF");
+  }
+  
+  delay(500);
+}</pre>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>🎚️ Calibración y Valores de Referencia</h3>
+                        <p>Valores típicos del ADC (0-1023) con resistencia pull-down de 10kΩ:</p>
+                        <ul style="margin-top: 10px; line-height: 1.8;">
+                            <li><strong>Luz solar directa:</strong> 900-1023 (muy brillante)</li>
+                            <li><strong>Oficina iluminada:</strong> 600-800 (luz ambiente normal)</li>
+                            <li><strong>Habitación con luz tenue:</strong> 300-500 (penumbra)</li>
+                            <li><strong>Habitación oscura:</strong> 50-200 (luz muy baja)</li>
+                            <li><strong>Oscuridad total:</strong> 0-50 (noche cerrada)</li>
+                        </ul>
+                        <p style="margin-top: 10px;"><strong>Calibración:</strong> Usa Serial Monitor para ver valores en tu entorno específico y ajusta umbrales en código.</p>
+                    </div>
+                </div>
+
+                <div class="info-card" style="margin-top: 30px; background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%); color: #2c3e50;">
+                    <h3>🎯 Aplicaciones Comunes</h3>
+                    <ul style="line-height: 1.8; margin-top: 15px;">
+                        <li><strong>Luces automáticas:</strong> Encender luces al anochecer (farolas, jardines)</li>
+                        <li><strong>Alarma diurna:</strong> Detectar apertura de cajas/puertas por cambio de luz</li>
+                        <li><strong>Seguidor solar:</strong> Robots que siguen la fuente de luz más intensa</li>
+                        <li><strong>Reloj despertador inteligente:</strong> Despertar gradualmente con luz amanecer simulado</li>
+                        <li><strong>Cámara estenopeica:</strong> Medidor de luz para fotografía analógica</li>
+                        <li><strong>Ahorro energético:</strong> Apagar pantallas cuando nadie está presente (combinado con PIR)</li>
+                        <li><strong>Automatización del hogar:</strong> Ajustar brillo de LEDs según luz ambiente</li>
+                    </ul>
+                </div>
+
+                <div class="info-card" style="margin-top: 20px; background: #3498db; color: white;">
+                    <h3 style="color: white;">💡 Alternativas Modernas al LDR</h3>
+                    <p style="margin-top: 10px;"><strong>Fotodiodo (BPW34):</strong> Respuesta rápida (<1µs), sensible a IR, lineal, más preciso que LDR</p>
+                    <p style="margin-top: 10px;"><strong>Fototransistor (LTR-301):</strong> Amplificación integrada, respuesta rápida, menos deriva térmica</p>
+                    <p style="margin-top: 10px;"><strong>Sensor digital BH1750:</strong> Salida I2C directa en lux, compensación de temperatura, rango 1-65535 lux</p>
+                    <p style="margin-top: 10px;"><strong>TSL2561:</strong> Sensor de luz ambiental digital I2C, respuesta infrarroja ajustable, bajo consumo</p>
+                    <p style="margin-top: 10px;">✅ Para proyectos nuevos, considera sensores digitales (mayor precisión, fácil lectura, sin resistencias externas).</p>
+                </div>
+            </div>
+
+            <div class="back-button-container">
+                <a href="index-sensores.html" class="back-btn">← Volver a Sensores y Modulos</a>
+                <a href="../index-pinouts.html" class="back-btn">← Volver a Pinouts</a>
+                <a href="../../index-principal.html" class="back-btn">🏠 Inicio</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ElectroTools. Pinout LDR - Fotoresistencia (Light Dependent Resistor).</p>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+</body>
+</html>

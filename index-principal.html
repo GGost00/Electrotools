@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroTools - Portal de Electrónica</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header fijo -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">⚡</span>
+                <h1>ElectroTools</h1>
+            </div>
+            
+            <!-- Botón hamburguesa para móvil -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- Navegación principal -->
+            <nav class="nav" id="mainNav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#inicio" class="nav-link">Inicio</a>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="calculadoras/index-calculadoras.html" class="nav-link">
+                            Calculadoras <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="calculadoras/index-calculadoras.html">Ver todas las Calculadoras</a></li>
+                            <li><a href="calculadoras/color-code.html">Código de colores</a></li>
+                            <li><a href="calculadoras/buscar-color-resistencia.html">Buscar colores</a></li>
+                            <li><a href="calculadoras/ley-de-ohm.html">Ley de Ohm</a></li>
+                            <li><a href="calculadoras/filtros.html">Filtros RC/RL/RLC</a></li>
+                            <li><a href="calculadoras/divisor-resistivo.html">Divisor resistivo</a></li>
+                            <li><a href="calculadoras/serie-paralelo.html">Serie-Paralelo</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="pinouts/index-pinouts.html" class="nav-link">
+                            Pinouts <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="pinouts/index-pinouts.html">Ver todos los Pinouts</a></li>
+                            <li><a href="pinouts/arduino/index-arduino.html">Arduino</a></li>
+                            <li><a href="pinouts/raspberry/index-raspberry.html">Raspberry Pi</a></li>
+                            <li><a href="pinouts/displays/index-displays.html">Displays</a></li>
+                            <li><a href="pinouts/jacks-conectores/index-jacks.html">Jacks y Conectores</a></li>
+                            <li><a href="pinouts/sensores-modulos/index-sensores.html">Sensores y Modulos</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="recursos/index-recursos.html" class="nav-link">
+                            Recursos <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="recursos/index-recursos.html">Ver todos los Recursos</a></li>
+                            <li><a href="recursos/datasheet/index-datasheet.html">Datasheets</a></li>
+                            <li><a href="recursos/tutoriales/index-tutoriales.html">Tutoriales</a></li>
+                            <li><a href="recursos/herramientas/index-herramientas.html">Herramientas</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="#acerca" class="nav-link">Acerca de nosotros</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <section id="inicio" class="hero">
+            <div class="container">
+                <h2>Bienvenido a ElectroTools</h2>
+                <p class="subtitle">Tu portal completo de herramientas y recursos para electrónica</p>
+                <div class="hero-cards">
+                    <div class="card">
+                        <div class="card-icon">🧮</div>
+                        <h3>Calculadoras</h3>
+                        <p>Herramientas de cálculo rápido para proyectos electrónicos</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">📌</div>
+                        <h3>Pinouts</h3>
+                        <p>Diagramas de pines detallados de placas y componentes</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">📚</div>
+                        <h3>Recursos</h3>
+                        <p>Documentación, tutoriales y herramientas útiles</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="calculadoras" class="section">
+            <div class="container">
+                <h2>🧮 Calculadoras Electrónicas</h2>
+                <p>Realiza cálculos precisos para tus proyectos - 7 herramientas disponibles</p>
+                <div class="grid">
+                    <a href="calculadoras/color-code.html" style="text-decoration: none; color: inherit;">
+                        <div class="feature-card">
+                            <span class="feature-icon">🎨</span>
+                            <h3>Código de colores</h3>
+                            <p>Decodifica resistencias de 4, 5 y 6 bandas</p>
+                        </div>
+                    </a>
+                    <a href="calculadoras/buscar-color-resistencia.html" style="text-decoration: none; color: inherit;">
+                        <div class="feature-card">
+                            <span class="feature-icon">🔍</span>
+                            <h3>Buscar colores</h3>
+                            <p>Encuentra los colores para tu valor de resistencia</p>
+                        </div>
+                    </a>
+                    <a href="calculadoras/ley-de-ohm.html" style="text-decoration: none; color: inherit;">
+                        <div class="feature-card">
+                            <span class="feature-icon">⚡</span>
+                            <h3>Ley de Ohm</h3>
+                            <p>Calcula voltaje, corriente, resistencia y potencia</p>
+                        </div>
+                    </a>
+                    <a href="calculadoras/filtros.html" style="text-decoration: none; color: inherit;">
+                        <div class="feature-card">
+                            <span class="feature-icon">📡</span>
+                            <h3>Filtros RC/RL/RLC</h3>
+                            <p>Diseña filtros pasa-bajas, pasa-altas y resonantes</p>
+                        </div>
+                    </a>
+                    <a href="calculadoras/divisor-resistivo.html" style="text-decoration: none; color: inherit;">
+                        <div class="feature-card">
+                            <span class="feature-icon">🔌</span>
+                            <h3>Divisor resistivo</h3>
+                            <p>Diseña divisores de tensión con 2 resistencias</p>
+                        </div>
+                    </a>
+                    <a href="calculadoras/serie-paralelo.html" style="text-decoration: none; color: inherit;">
+                        <div class="feature-card">
+                            <span class="feature-icon">�</span>
+                            <h3>Serie-Paralelo</h3>
+                            <p>Calcula resistencias, capacitores e inductores</p>
+                        </div>
+                    </a>
+                </div>
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="calculadoras/index-calculadoras.html" class="cta-button" style="display: inline-block; padding: 15px 40px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);">
+                        Ver todas las Calculadoras →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="pinouts" class="section section-alt">
+            <div class="container">
+                <h2>📌 Pinouts y Diagramas</h2>
+                <p>Encuentra la información de pines que necesitas - 40+ diagramas disponibles</p>
+                <div class="grid">
+                    <a href="pinouts/arduino/index-arduino.html" style="text-decoration: none; color: inherit;">
+                        <div class="feature-card">
+                            <span class="feature-icon">🤖</span>
+                            <h3>Arduino</h3>
+                            <p>Uno, Mega, Nano y Leonardo - 4 placas</p>
+                        </div>
+                    </a>
+                    <a href="pinouts/raspberry/index-raspberry.html" style="text-decoration: none; color: inherit;">
+                        <div class="feature-card">
+                            <span class="feature-icon">🍓</span>
+                            <h3>Raspberry Pi</h3>
+                            <p>Pi 4, Pi Zero, Pi Pico - GPIO completo</p>
+                        </div>
+                    </a>
+                    <a href="pinouts/displays/index-displays.html" style="text-decoration: none; color: inherit;">
+                        <div class="feature-card">
+                            <span class="feature-icon">📺</span>
+                            <h3>Displays</h3>
+                            <p>LCD, OLED, TFT, Nextion - 6 pantallas</p>
+                        </div>
+                    </a>
+                    <a href="pinouts/jacks-conectores/index-jacks.html" style="text-decoration: none; color: inherit;">
+                        <div class="feature-card">
+                            <span class="feature-icon">🔌</span>
+                            <h3>Jacks y Conectores</h3>
+                            <p>USB, HDMI, RJ45, Audio, JST - 7 tipos</p>
+                        </div>
+                    </a>
+                    <a href="pinouts/sensores-modulos/index-sensores.html" style="text-decoration: none; color: inherit;">
+                        <div class="feature-card">
+                            <span class="feature-icon">🔬</span>
+                            <h3>Sensores y Módulos</h3>
+                            <p>DHT11, HC-SR04, MPU6050, RFID - 7 sensores</p>
+                        </div>
+                    </a>
+                </div>
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="pinouts/index-pinouts.html" class="cta-button" style="display: inline-block; padding: 15px 40px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);">
+                        Ver todos los Pinouts →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="recursos" class="section">
+            <div class="container">
+                <h2>📚 Recursos y Documentación</h2>
+                <p>Aprende y mejora tus habilidades - Más de 70 recursos disponibles</p>
+                <div class="grid">
+                    <a href="recursos/datasheet/index-datasheet.html" style="text-decoration: none; color: inherit;">
+                        <div class="feature-card">
+                            <span class="feature-icon">📄</span>
+                            <h3>Datasheets</h3>
+                            <p>Top 50 hojas de datos: NE555, ATmega328P, ESP32, L298N y más</p>
+                        </div>
+                    </a>
+                    <a href="recursos/tutoriales/index-tutoriales.html" style="text-decoration: none; color: inherit;">
+                        <div class="feature-card">
+                            <span class="feature-icon">�</span>
+                            <h3>Tutoriales</h3>
+                            <p>24 videos de Arduino, Raspberry Pi, sensores y proyectos completos</p>
+                        </div>
+                    </a>
+                    <a href="recursos/herramientas/index-herramientas.html" style="text-decoration: none; color: inherit;">
+                        <div class="feature-card">
+                            <span class="feature-icon">🛠️</span>
+                            <h3>Herramientas</h3>
+                            <p>Simuladores, software PCB y herramientas de diseño (próximamente)</p>
+                        </div>
+                    </a>
+                </div>
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="recursos/index-recursos.html" class="cta-button" style="display: inline-block; padding: 15px 40px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);">
+                        Explorar todos los Recursos →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="acerca" class="section section-alt">
+            <div class="container">
+                <h2>🚀 Acerca de ElectroTools</h2>
+                <div class="about-content">
+                    <p>ElectroTools es tu plataforma completa de referencia para diseño y proyectos electrónicos. Creado para estudiantes, makers y profesionales que buscan herramientas prácticas y recursos confiables.</p>
+                    <p>Nuestra misión es facilitar el diseño, la construcción y el aprendizaje en el mundo de la electrónica mediante herramientas intuitivas, documentación clara y recursos de calidad. <strong>Todo completamente gratis y sin publicidad.</strong></p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>7</h3>
+                            <p>Calculadoras especializadas</p>
+                        </div>
+                        <div class="stat">
+                            <h3>40+</h3>
+                            <p>Pinouts detallados</p>
+                        </div>
+                        <div class="stat">
+                            <h3>74</h3>
+                            <p>Recursos educativos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ElectroTools. Todos los derechos reservados.</p>
+            <p>Portal de herramientas y recursos para electrónica</p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

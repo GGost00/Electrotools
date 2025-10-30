@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JST Connector Pinout - ElectroTools</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/pinouts.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../../index-principal.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                    <span class="logo-icon">⚡</span>
+                    <h1>ElectroTools</h1>
+                </a>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav" id="mainNav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="../../index-principal.html#inicio" class="nav-link">Inicio</a></li>
+                    <li class="nav-item has-dropdown">
+                        <a href="../../calculadoras/index-calculadoras.html" class="nav-link">Calculadoras <span class="arrow">▼</span></a>
+                        <ul class="dropdown">
+                            <li><a href="../../calculadoras/index-calculadoras.html">Ver todas las Calculadoras</a></li>
+                            <li><a href="../../calculadoras/color-code.html">Código de colores</a></li>
+                            <li><a href="../../calculadoras/buscar-color-resistencia.html">Buscar colores</a></li>
+                            <li><a href="../../calculadoras/ley-de-ohm.html">Ley de Ohm</a></li>
+                            <li><a href="../../calculadoras/filtros.html">Filtros RC/RL/RLC</a></li>
+                            <li><a href="../../calculadoras/divisor-resistivo.html">Divisor resistivo</a></li>
+                            <li><a href="../../calculadoras/serie-paralelo.html">Serie-Paralelo</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="../index-pinouts.html" class="nav-link">
+                            Pinouts <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="../index-pinouts.html">Ver todos los Pinouts</a></li>
+                            <li><a href="../arduino/index-arduino.html">Arduino</a></li>
+                            <li><a href="../raspberry/index-raspberry.html">Raspberry Pi</a></li>
+                            <li><a href="../displays/index-displays.html">Displays</a></li>
+                            <li><a href="../jacks-conectores/index-jacks.html">Jacks y Conectores</a></li>
+                            <li><a href="../sensores-modulos/index-sensores.html">Sensores y Modulos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="../../recursos/index-recursos.html" class="nav-link">Recursos <span class="arrow">▼</span></a>
+                        <ul class="dropdown">
+                            <li><a href="../../recursos/index-recursos.html">Ver todos los Recursos</a></li>
+                            <li><a href="../../recursos/datasheet/index-datasheet.html">Datasheets</a></li>
+                            <li><a href="../../recursos/tutoriales/index-tutoriales.html">Tutoriales</a></li>
+                            <li><a href="../../recursos/herramientas/index-herramientas.html">Herramientas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="../../index-principal.html#acerca" class="nav-link">Acerca de nosotros</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content pinout-detail-page">
+        <div class="pinout-detail-container">
+            <div class="breadcrumb">
+                <a href="../../index-principal.html">Inicio</a> → 
+                <a href="../index-pinouts.html">Pinouts</a> → 
+                <a href="index-jacks.html">Jacks y Conectores</a> → 
+                <span>JST</span>
+            </div>
+
+            <div class="pinout-header">
+                <h1>🔌 JST Connector Pinout</h1>
+                <p class="subtitle">Familia de conectores compactos para electrónica</p>
+            </div>
+
+            <div class="pinout-image-section">
+                <div class="image-placeholder">
+                    <p style="font-size: 4rem; margin: 0;">🔌</p>
+                    <p style="font-size: 1.1rem; color: #95a5a6; margin-top: 15px;">Coloca aquí el diagrama de conectores JST</p>
+                    <p style="font-size: 0.9rem; color: #7f8c8d; margin-top: 5px;">Ruta: <code>../../img/jst.png</code></p>
+                </div>
+            </div>
+
+            <div class="spec-section">
+                <h2>📋 Familia de Conectores JST</h2>
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <h3>JST-XH (2.5mm)</h3>
+                        <p><strong>Pitch:</strong> 2.5mm entre pines</p>
+                        <p><strong>Corriente:</strong> 3A por pin</p>
+                        <p><strong>Voltaje:</strong> 250V AC/DC</p>
+                        <p><strong>Uso:</strong> Baterías LiPo balanceador, RC</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>JST-PH (2.0mm)</h3>
+                        <p><strong>Pitch:</strong> 2.0mm (más compacto)</p>
+                        <p><strong>Corriente:</strong> 2A por pin</p>
+                        <p><strong>Voltaje:</strong> 100V AC/DC</p>
+                        <p><strong>Uso:</strong> Baterías LiPo, sensores, drones</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>JST-SH (1.0mm)</h3>
+                        <p><strong>Pitch:</strong> 1.0mm (muy pequeño)</p>
+                        <p><strong>Corriente:</strong> 1A por pin</p>
+                        <p><strong>Voltaje:</strong> 50V AC/DC</p>
+                        <p><strong>Uso:</strong> Sensores I2C, SPI, UART compactos</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>JST-ZH (1.5mm)</h3>
+                        <p><strong>Pitch:</strong> 1.5mm</p>
+                        <p><strong>Corriente:</strong> 1A por pin</p>
+                        <p><strong>Voltaje:</strong> 50V AC/DC</p>
+                        <p><strong>Uso:</strong> Sensores, displays pequeños</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pinout-table-section">
+                <h2>🔌 JST-PH 2.0mm (Baterías LiPo - 2 pines)</h2>
+                <p style="margin-bottom: 15px; color: #f39c12;"><strong>⚠️ Polaridad crítica:</strong> Invertir puede destruir batería y circuito.</p>
+                <table class="pinout-table">
+                    <thead>
+                        <tr><th>Pin</th><th>Cable</th><th>Función</th><th>Voltaje típico</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="pin-num">1</td><td style="background: #ff0000; color: white;">🔴 Rojo</td><td>+ Positivo (VBAT)</td><td>3.7V (1S), 7.4V (2S), 11.1V (3S)</td></tr>
+                        <tr><td class="pin-num">2</td><td style="background: #000; color: white;">⚫ Negro</td><td>- Negativo (GND)</td><td>0V (tierra)</td></tr>
+                    </tbody>
+                </table>
+                <p style="margin-top: 10px; color: #2ecc71;"><strong>Nota:</strong> Las baterías LiPo usan JST-PH para descarga y JST-XH para balanceo (connector blanco más grande).</p>
+            </div>
+
+            <div class="pinout-table-section">
+                <h2>🔌 JST-XH 2.5mm (Balanceador LiPo - 3S ejemplo)</h2>
+                <p style="margin-bottom: 15px;">Conector balanceador para batería 3S (11.1V nominal):</p>
+                <table class="pinout-table">
+                    <thead>
+                        <tr><th>Pin</th><th>Función</th><th>Voltaje</th><th>Descripción</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="pin-num">1</td><td>GND (-)</td><td>0V</td><td>Negativo batería</td></tr>
+                        <tr><td class="pin-num">2</td><td>Cell 1</td><td>3.7V</td><td>Primera celda</td></tr>
+                        <tr><td class="pin-num">3</td><td>Cell 2</td><td>7.4V</td><td>Segunda celda (acumulativo)</td></tr>
+                        <tr><td class="pin-num">4</td><td>Cell 3</td><td>11.1V</td><td>Tercera celda (total)</td></tr>
+                    </tbody>
+                </table>
+                <p style="margin-top: 10px; color: #95a5a6;"><strong>Pines 2S:</strong> 3 pines (GND, Cell1, Cell2). <strong>4S:</strong> 5 pines. <strong>6S:</strong> 7 pines.</p>
+            </div>
+
+            <div class="pinout-table-section">
+                <h2>🔌 JST-SH 1.0mm (Sensores I2C - 4 pines)</h2>
+                <p style="margin-bottom: 15px;">Típico en sensores Grove, Qwiic, STEMMA QT:</p>
+                <table class="pinout-table">
+                    <thead>
+                        <tr><th>Pin</th><th>Cable</th><th>Función</th><th>Voltaje</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="pin-num">1</td><td style="background: #000; color: white;">⚫ Negro</td><td>GND</td><td>0V</td></tr>
+                        <tr><td class="pin-num">2</td><td style="background: #ff0000; color: white;">🔴 Rojo</td><td>VCC</td><td>3.3V o 5V</td></tr>
+                        <tr><td class="pin-num">3</td><td style="background: #0066ff; color: white;">🔵 Azul</td><td>SDA (I2C Data)</td><td>Datos bidireccionales</td></tr>
+                        <tr><td class="pin-num">4</td><td style="background: #ffff00; color: black;">🟡 Amarillo</td><td>SCL (I2C Clock)</td><td>Reloj</td></tr>
+                    </tbody>
+                </table>
+                <p style="margin-top: 10px; color: #2ecc71;"><strong>Sistemas compatibles:</strong> Qwiic (SparkFun), STEMMA QT (Adafruit), Grove I2C (Seeed).</p>
+            </div>
+
+            <div class="pinout-table-section">
+                <h2>📊 Comparación de Series JST</h2>
+                <table class="pinout-table">
+                    <thead>
+                        <tr><th>Serie</th><th>Pitch</th><th>Corriente</th><th>Pines típicos</th><th>Aplicación principal</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>JST-GH</strong></td><td>1.25mm</td><td>1A</td><td>2-15</td><td>Pixhawk drones, compacto</td></tr>
+                        <tr><td><strong>JST-SH</strong></td><td>1.0mm</td><td>1A</td><td>2-20</td><td>Sensores I2C, SPI, ultra compacto</td></tr>
+                        <tr><td><strong>JST-ZH</strong></td><td>1.5mm</td><td>1A</td><td>2-12</td><td>Electrónica compacta</td></tr>
+                        <tr><td><strong>JST-PH</strong></td><td>2.0mm</td><td>2A</td><td>2-16</td><td><strong>Baterías LiPo (descarga)</strong></td></tr>
+                        <tr><td><strong>JST-XH</strong></td><td>2.5mm</td><td>3A</td><td>2-12</td><td><strong>Balanceadores LiPo</strong></td></tr>
+                        <tr><td><strong>JST-VH</strong></td><td>3.96mm</td><td>10A</td><td>2-10</td><td>Alta corriente</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="info-section">
+                <div class="info-card">
+                    <h3>⚠️ JST vs Dupont vs Molex</h3>
+                    <p><strong>JST:</strong> Conector con traba (seguro), cables específicos. <strong>Dupont:</strong> Sin traba, fácil desconexión, breadboard. <strong>Molex:</strong> Similar a JST (competidor). <strong>NO son intercambiables</strong> aunque parezcan similares.</p>
+                </div>
+                <div class="info-card">
+                    <h3>🔋 Polaridad en Baterías LiPo</h3>
+                    <p><strong>CRÍTICO:</strong> Conectores JST-PH de baterías LiPo <strong>no tienen protección mecánica contra polaridad invertida</strong>. Siempre verificar con multímetro antes de conectar. Rojo=+, Negro=GND. Invertir puede causar incendio.</p>
+                </div>
+                <div class="info-card">
+                    <h3>🛠️ Crimping de JST</h3>
+                    <p>Requiere herramienta de crimping específica (PA-09, SN-28B, Engineer PA-20). Los contactos son <strong>muy pequeños</strong> (difícil soldar). Comprar cables pre-hechos es más confiable. Kits de conectores JST con contactos disponibles en AliExpress/Amazon.</p>
+                </div>
+                <div class="info-card">
+                    <h3>🔌 Sistemas Modulares</h3>
+                    <p><strong>Qwiic (SparkFun):</strong> JST-SH 1mm 4-pin I2C, 3.3V. <strong>STEMMA QT (Adafruit):</strong> Compatible con Qwiic. <strong>Grove (Seeed):</strong> JST-SH 4-pin, varios protocolos. Permite conectar sensores sin soldadura.</p>
+                </div>
+            </div>
+
+            <div class="back-button-container">
+                <a href="index-jacks.html" class="back-btn">← Volver a Jacks y Conectores</a>
+                <a href="../index-pinouts.html" class="back-btn">📌 Todos los Pinouts</a>
+                <a href="../../index-principal.html" class="back-btn">🏠 Inicio</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container"><p>&copy; 2025 ElectroTools. JST Connector Pinout Reference.</p></div>
+    </footer>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

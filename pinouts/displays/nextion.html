@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nextion HMI - ElectroTools</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/pinouts.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../../index-principal.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                    <span class="logo-icon">⚡</span>
+                    <h1>ElectroTools</h1>
+                </a>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav" id="mainNav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="../../index-principal.html#inicio" class="nav-link">Inicio</a></li>
+                    <li class="nav-item has-dropdown">
+                        <a href="../../calculadoras/index-calculadoras.html" class="nav-link">Calculadoras <span class="arrow">▼</span></a>
+                        <ul class="dropdown">
+                            <li><a href="../../calculadoras/index-calculadoras.html">Ver todas las Calculadoras</a></li>
+                            <li><a href="../../calculadoras/color-code.html">Código de colores</a></li>
+                            <li><a href="../../calculadoras/buscar-color-resistencia.html">Buscar colores</a></li>
+                            <li><a href="../../calculadoras/ley-de-ohm.html">Ley de Ohm</a></li>
+                            <li><a href="../../calculadoras/filtros.html">Filtros RC/RL/RLC</a></li>
+                            <li><a href="../../calculadoras/divisor-resistivo.html">Divisor resistivo</a></li>
+                            <li><a href="../../calculadoras/serie-paralelo.html">Serie-Paralelo</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="../index-pinouts.html" class="nav-link">
+                            Pinouts <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="../index-pinouts.html">Ver todos los Pinouts</a></li>
+                            <li><a href="../arduino/index-arduino.html">Arduino</a></li>
+                            <li><a href="../raspberry/index-raspberry.html">Raspberry Pi</a></li>
+                            <li><a href="../displays/index-displays.html">Displays</a></li>
+                            <li><a href="../jacks-conectores/index-jacks.html">Jacks y Conectores</a></li>
+                            <li><a href="../sensores-modulos/index-sensores.html">Sensores y Modulos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="../../recursos/index-recursos.html" class="nav-link">Recursos <span class="arrow">▼</span></a>
+                        <ul class="dropdown">
+                            <li><a href="../../recursos/index-recursos.html">Ver todos los Recursos</a></li>
+                            <li><a href="../../recursos/datasheet/index-datasheet.html">Datasheets</a></li>
+                            <li><a href="../../recursos/tutoriales/index-tutoriales.html">Tutoriales</a></li>
+                            <li><a href="../../recursos/herramientas/index-herramientas.html">Herramientas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="../../index-principal.html#acerca" class="nav-link">Acerca de nosotros</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content pinout-detail-page">
+        <div class="pinout-detail-container">
+            <div class="breadcrumb">
+                <a href="../../index-principal.html">Inicio</a> → 
+                <a href="../index-pinouts.html">Pinouts</a> → 
+                <a href="index-displays.html">Displays</a> → 
+                <span>Nextion</span>
+            </div>
+
+            <div class="pinout-header">
+                <h1>🖼️ Nextion HMI Display</h1>
+                <p class="subtitle">Display táctil inteligente con interfaz UART</p>
+            </div>
+
+            <div class="pinout-image-section">
+                <div class="image-placeholder">
+                    <p style="font-size: 4rem; margin: 0;">🖼️</p>
+                    <p style="font-size: 1.1rem; color: #95a5a6; margin-top: 15px;">Coloca aquí el diagrama de conexión</p>
+                    <p style="font-size: 0.9rem; color: #7f8c8d; margin-top: 5px;">Ruta: <code>../../img/nextion.png</code></p>
+                </div>
+            </div>
+
+            <div class="spec-section">
+                <h2>📋 Especificaciones Técnicas</h2>
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <h3>Display</h3>
+                        <p><strong>Tipo:</strong> TFT LCD táctil resistivo</p>
+                        <p><strong>Tamaños:</strong> 2.4", 2.8", 3.2", 3.5", 4.3", 5.0", 7.0"</p>
+                        <p><strong>Colores:</strong> 65K (RGB565)</p>
+                        <p><strong>Touch:</strong> 4 hilos resistivo</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Interfaz</h3>
+                        <p><strong>Comunicación:</strong> UART (Serial TTL)</p>
+                        <p><strong>Baudrate:</strong> 2400 - 115200 bps (9600 por defecto)</p>
+                        <p><strong>Pines:</strong> 4 (TX, RX, VCC, GND)</p>
+                        <p><strong>Protocolo:</strong> Comandos ASCII terminados en 0xFF 0xFF 0xFF</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Alimentación</h3>
+                        <p><strong>Voltaje:</strong> 5V DC (±10%)</p>
+                        <p><strong>Consumo:</strong> ~200-500mA (según tamaño y backlight)</p>
+                        <p><strong>Conector:</strong> 4 pines (2.54mm pitch)</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Procesador Interno</h3>
+                        <p><strong>MCU:</strong> Integrado (independiente)</p>
+                        <p><strong>Flash:</strong> 4-16 MB (según modelo)</p>
+                        <p><strong>Programación:</strong> Nextion Editor (GUI)</p>
+                        <p><strong>Fuentes:</strong> ASCII, Unicode, personalizadas</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pinout-table-section">
+                <h2>🔌 Pinout (4 pines)</h2>
+                <table class="pinout-table">
+                    <thead>
+                        <tr><th>Pin</th><th>Nombre</th><th>Función</th><th>Descripción</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="pin-num">1</td><td class="pin-name">GND</td><td>Tierra</td><td>0V (común con microcontrolador)</td></tr>
+                        <tr><td class="pin-num">2</td><td class="pin-name">TX</td><td>Transmit</td><td>Salida del Nextion → RX del Arduino</td></tr>
+                        <tr><td class="pin-num">3</td><td class="pin-name">RX</td><td>Receive</td><td>Entrada del Nextion ← TX del Arduino</td></tr>
+                        <tr><td class="pin-num">4</td><td class="pin-name">VCC</td><td>Alimentación</td><td>+5V DC (requiere fuente externa >500mA)</td></tr>
+                    </tbody>
+                </table>
+                <p style="margin-top: 10px; color: #95a5a6;"><strong>⚠️ Importante:</strong> Los modelos grandes (5", 7") requieren fuentes de 1A o más.</p>
+            </div>
+
+            <div class="pinout-table-section">
+                <h2>🔗 Conexión a Arduino Uno</h2>
+                <table class="pinout-table">
+                    <thead>
+                        <tr><th>Nextion Pin</th><th>Arduino Pin</th><th>Notas</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="pin-name">GND</td><td>GND</td><td>Tierra común (importante para UART)</td></tr>
+                        <tr><td class="pin-name">TX</td><td>Pin 2 (RX Software Serial)</td><td>Nextion envía datos aquí</td></tr>
+                        <tr><td class="pin-name">RX</td><td>Pin 3 (TX Software Serial)</td><td>Nextion recibe comandos aquí</td></tr>
+                        <tr><td class="pin-name">VCC</td><td>Fuente externa 5V</td><td><strong>NO usar 5V de Arduino</strong> (insuficiente corriente)</td></tr>
+                    </tbody>
+                </table>
+                <p style="margin-top: 10px; color: #e74c3c;"><strong>⚠️ Alimentación:</strong> Usa fuente externa de 5V/1A mínimo. El USB de Arduino no es suficiente.</p>
+            </div>
+
+            <div class="info-section">
+                <div class="info-card">
+                    <h3>🖥️ Display Inteligente</h3>
+                    <p>A diferencia de LCD/OLED simples, Nextion tiene su <strong>propio procesador</strong>. Tú diseñas la interfaz en <strong>Nextion Editor</strong> (gráfica, botones, sliders) y el Arduino solo envía/recibe datos vía serial.</p>
+                </div>
+                <div class="info-card">
+                    <h3>📡 Protocolo Serial</h3>
+                    <p>Comandos son strings ASCII terminados en <code>0xFF 0xFF 0xFF</code>. Ejemplo para cambiar texto: <code>t0.txt="Hola"</code> seguido de 3 bytes 0xFF. Baudrate configurable (9600 común).</p>
+                </div>
+                <div class="info-card">
+                    <h3>📚 Librería Arduino</h3>
+                    <p>Usa <strong>SoftwareSerial</strong> para comunicación o <strong>ITEADLIB_Arduino_Nextion</strong> oficial. Ejemplo básico: <code>Serial.print("page 0"); Serial.write(0xFF); Serial.write(0xFF); Serial.write(0xFF);</code></p>
+                </div>
+                <div class="info-card">
+                    <h3>💾 Programación</h3>
+                    <p>Descarga <strong>Nextion Editor</strong> gratis. Diseña la interfaz drag-and-drop, compila a .tft, carga en microSD, inserta en Nextion y enciende para actualizar firmware.</p>
+                </div>
+            </div>
+
+            <div class="back-button-container">
+                <a href="index-displays.html" class="back-btn">← Volver a Displays</a>
+                <a href="../index-pinouts.html" class="back-btn">📌 Todos los Pinouts</a>
+                <a href="../../index-principal.html" class="back-btn">🏠 Inicio</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container"><p>&copy; 2025 ElectroTools. Nextion HMI Pinout Reference.</p></div>
+    </footer>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

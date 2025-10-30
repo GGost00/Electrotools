@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinouts Arduino - ElectroTools</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/pinouts.css">
+</head>
+<body>
+    <!-- Header simplificado -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../../index-principal.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                    <span class="logo-icon">⚡</span>
+                    <h1>ElectroTools</h1>
+                </a>
+            </div>
+            
+            <!-- Botón hamburguesa para móvil -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- Navegación principal -->
+            <nav class="nav" id="mainNav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../../index-principal.html#inicio" class="nav-link">Inicio</a>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="../../calculadoras/index-calculadoras.html" class="nav-link">
+                            Calculadoras <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="../../calculadoras/index-calculadoras.html">Ver todas las Calculadoras</a></li>
+                            <li><a href="../../calculadoras/color-code.html">Código de colores</a></li>
+                            <li><a href="../../calculadoras/buscar-color-resistencia.html">Buscar colores</a></li>
+                            <li><a href="../../calculadoras/ley-de-ohm.html">Ley de Ohm</a></li>
+                            <li><a href="../../calculadoras/filtros.html">Filtros RC/RL/RLC</a></li>
+                            <li><a href="../../calculadoras/divisor-resistivo.html">Divisor resistivo</a></li>
+                            <li><a href="../../calculadoras/serie-paralelo.html">Serie-Paralelo</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="../index-pinouts.html" class="nav-link">
+                            Pinouts <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="../index-pinouts.html">Ver todos los Pinouts</a></li>
+                            <li><a href="../arduino/index-arduino.html">Arduino</a></li>
+                            <li><a href="../raspberry/index-raspberry.html">Raspberry Pi</a></li>
+                            <li><a href="../displays/index-displays.html">Displays</a></li>
+                            <li><a href="../jacks-conectores/index-jacks.html">Jacks y Conectores</a></li>
+                            <li><a href="../sensores-modulos/index-sensores.html">Sensores y Modulos</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="../../recursos/index-recursos.html" class="nav-link">
+                            Recursos <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="../../recursos/index-recursos.html">Ver todos los Recursos</a></li>
+                            <li><a href="../../recursos/datasheet/index-datasheet.html">Datasheets</a></li>
+                            <li><a href="../../recursos/tutoriales/index-tutoriales.html">Tutoriales</a></li>
+                            <li><a href="../../recursos/herramientas/index-herramientas.html">Herramientas</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="../../index.html#acerca" class="nav-link">Acerca de nosotros</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="main-content pinouts-page">
+        <div class="pinouts-container">
+            <!-- Breadcrumb / Navegación -->
+            <div class="breadcrumb">
+                <a href="../../index-principal.html">Inicio</a> → 
+                <a href="../index-pinouts.html">Pinouts</a> → 
+                <span>Arduino</span>
+            </div>
+
+            <!-- Header de la sección -->
+            <div class="pinouts-header">
+                <h1>📟 Pinouts de Placas Arduino</h1>
+                <p class="subtitle">Selecciona la placa para ver su distribución de pines y especificaciones técnicas</p>
+            </div>
+
+            <!-- Grid de placas Arduino -->
+            <div class="pinouts-grid arduino-boards-grid">
+                
+                <!-- Tarjeta 1: Arduino Uno -->
+                <div class="pinout-card arduino-card">
+                    <div class="card-image">
+                        <!-- Imagen de la placa - el usuario colocará la imagen luego -->
+                        <img src="../../img/pinouts/uno.jpg" alt="Arduino Uno" style="max-width: 100%; height: auto;">
+                        <!-- Placeholder para imagen PNG real -->
+                        <!-- <img src="../../img/arduino-uno.png" alt="Arduino Uno Pinout" /> -->
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Arduino Uno</h3>
+                        <p class="card-description">
+                            Microcontrolador ATmega328P. 14 pines digitales I/O (6 con PWM), 
+                            6 entradas analógicas, cristal de 16MHz. Voltaje de operación: 5V.
+                        </p>
+                        <div class="card-tags">
+                            <span class="tag">ATmega328P</span>
+                            <span class="tag">14 Digital</span>
+                            <span class="tag">6 Analógicas</span>
+                        </div>
+                        <div class="specs">
+                            <p><strong>Voltaje:</strong> 5V</p>
+                            <p><strong>Frecuencia:</strong> 16 MHz</p>
+                            <p><strong>Memoria Flash:</strong> 32 KB</p>
+                        </div>
+                    </div>
+                    <a href="uno.html" class="card-button">Ver Pinout Completo →</a>
+                </div>
+
+                <!-- Tarjeta 2: Arduino Mega -->
+                <div class="pinout-card arduino-card">
+                    <div class="card-image">
+                        <!-- Imagen de la placa - el usuario colocará la imagen luego -->
+                        <img src="../../img/pinouts/mega.jpeg" alt="Arduino Mega" style="max-width: 100%; height: auto;">
+                        <!-- Placeholder para imagen PNG real -->
+                        <!-- <img src="../../img/arduino-mega.png" alt="Arduino Mega Pinout" /> -->
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Arduino Mega 2560</h3>
+                        <p class="card-description">
+                            Microcontrolador ATmega2560. 54 pines digitales I/O (15 con PWM), 
+                            16 entradas analógicas, 4 UARTs. Ideal para proyectos complejos.
+                        </p>
+                        <div class="card-tags">
+                            <span class="tag">ATmega2560</span>
+                            <span class="tag">54 Digital</span>
+                            <span class="tag">16 Analógicas</span>
+                        </div>
+                        <div class="specs">
+                            <p><strong>Voltaje:</strong> 5V</p>
+                            <p><strong>Frecuencia:</strong> 16 MHz</p>
+                            <p><strong>Memoria Flash:</strong> 256 KB</p>
+                        </div>
+                    </div>
+                    <a href="mega.html" class="card-button">Ver Pinout Completo →</a>
+                </div>
+
+                <!-- Tarjeta 3: Arduino Nano -->
+                <div class="pinout-card arduino-card">
+                    <div class="card-image">
+                        <!-- Imagen de la placa - el usuario colocará la imagen luego -->
+                        <img src="../../img/pinouts/nano.jpeg" alt="Arduino Nano" style="max-width: 100%; height: auto;">
+                        <!-- Placeholder para imagen PNG real -->
+                        <!-- <img src="../../img/arduino-nano.png" alt="Arduino Nano Pinout" /> -->
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Arduino Nano</h3>
+                        <p class="card-description">
+                            Microcontrolador ATmega328P. Versión compacta del Uno. 14 pines digitales I/O, 
+                            8 entradas analógicas. Perfecto para proyectos con espacio limitado.
+                        </p>
+                        <div class="card-tags">
+                            <span class="tag">ATmega328P</span>
+                            <span class="tag">Compacto</span>
+                            <span class="tag">8 Analógicas</span>
+                        </div>
+                        <div class="specs">
+                            <p><strong>Voltaje:</strong> 5V</p>
+                            <p><strong>Frecuencia:</strong> 16 MHz</p>
+                            <p><strong>Memoria Flash:</strong> 32 KB</p>
+                        </div>
+                    </div>
+                    <a href="nano.html" class="card-button">Ver Pinout Completo →</a>
+                </div>
+
+                <!-- Tarjeta 4: Arduino Leonardo -->
+                <div class="pinout-card arduino-card">
+                    <div class="card-image">
+                        <!-- Imagen de la placa - el usuario colocará la imagen luego -->
+                        <img src="../../img/pinouts/leonardo.jpeg" alt="Arduino Leonardo" style="max-width: 100%; height: auto;">
+                        <!-- Placeholder para imagen PNG real -->
+                        <!-- <img src="../../img/arduino-leonardo.png" alt="Arduino Leonardo Pinout" /> -->
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Arduino Leonardo</h3>
+                        <p class="card-description">
+                            Microcontrolador ATmega32u4 con USB nativo. 20 pines digitales I/O (7 con PWM), 
+                            12 entradas analógicas. Puede emular teclado y mouse.
+                        </p>
+                        <div class="card-tags">
+                            <span class="tag">ATmega32u4</span>
+                            <span class="tag">USB Nativo</span>
+                            <span class="tag">HID</span>
+                        </div>
+                        <div class="specs">
+                            <p><strong>Voltaje:</strong> 5V</p>
+                            <p><strong>Frecuencia:</strong> 16 MHz</p>
+                            <p><strong>Memoria Flash:</strong> 32 KB</p>
+                        </div>
+                    </div>
+                    <a href="leonardo.html" class="card-button">Ver Pinout Completo →</a>
+                </div>
+
+            </div>
+
+            <!-- Información adicional -->
+            <div class="info-section">
+                <div class="info-card">
+                    <h3>ℹ️ Acerca de Arduino</h3>
+                    <p>
+                        Arduino es una plataforma de hardware y software de código abierto diseñada para 
+                        facilitar el prototipado de proyectos electrónicos. Cada placa Arduino tiene 
+                        características únicas que la hacen ideal para diferentes tipos de proyectos.
+                    </p>
+                </div>
+                <div class="info-card">
+                    <h3>⚠️ Voltaje de Operación</h3>
+                    <p>
+                        La mayoría de las placas Arduino operan a 5V, pero algunos pines pueden tolerar 
+                        solo 3.3V. Verifica siempre las especificaciones antes de conectar componentes 
+                        externos para evitar daños a la placa.
+                    </p>
+                </div>
+                <div class="info-card">
+                    <h3>🔌 Pines PWM</h3>
+                    <p>
+                        Los pines con capacidad PWM (Modulación por Ancho de Pulso) permiten generar 
+                        señales analógicas simuladas. Son ideales para controlar brillo de LEDs, 
+                        velocidad de motores y más.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Botones de navegación -->
+            <div class="back-button-container">
+                <a href="../index-pinouts.html" class="back-btn">← Volver a Pinouts</a>
+                <a href="../../index-principal.html" class="back-btn">🏠 Ir al Inicio</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ElectroTools. Pinouts de Arduino para referencia técnica.</p>
+        </div>
+    </footer>
+
+    <script src="../../js/pinouts.js"></script>
+</body>
+</html>

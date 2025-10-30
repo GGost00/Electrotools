@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack de Audio 3.5mm - ElectroTools</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/pinouts.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../../index-principal.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                    <span class="logo-icon">⚡</span>
+                    <h1>ElectroTools</h1>
+                </a>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav" id="mainNav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="../../index-principal.html#inicio" class="nav-link">Inicio</a></li>
+                    <li class="nav-item has-dropdown">
+                        <a href="../../calculadoras/index-calculadoras.html" class="nav-link">Calculadoras <span class="arrow">▼</span></a>
+                        <ul class="dropdown">
+                            <li><a href="../../calculadoras/index-calculadoras.html">Ver todas las Calculadoras</a></li>
+                            <li><a href="../../calculadoras/color-code.html">Código de colores</a></li>
+                            <li><a href="../../calculadoras/buscar-color-resistencia.html">Buscar colores</a></li>
+                            <li><a href="../../calculadoras/ley-de-ohm.html">Ley de Ohm</a></li>
+                            <li><a href="../../calculadoras/filtros.html">Filtros RC/RL/RLC</a></li>
+                            <li><a href="../../calculadoras/divisor-resistivo.html">Divisor resistivo</a></li>
+                            <li><a href="../../calculadoras/serie-paralelo.html">Serie-Paralelo</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="../index-pinouts.html" class="nav-link">
+                            Pinouts <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="../index-pinouts.html">Ver todos los Pinouts</a></li>
+                            <li><a href="../arduino/index-arduino.html">Arduino</a></li>
+                            <li><a href="../raspberry/index-raspberry.html">Raspberry Pi</a></li>
+                            <li><a href="../displays/index-displays.html">Displays</a></li>
+                            <li><a href="../jacks-conectores/index-jacks.html">Jacks y Conectores</a></li>
+                            <li><a href="../sensores-modulos/index-sensores.html">Sensores y Modulos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="../../recursos/index-recursos.html" class="nav-link">Recursos <span class="arrow">▼</span></a>
+                        <ul class="dropdown">
+                            <li><a href="../../recursos/index-recursos.html">Ver todos los Recursos</a></li>
+                            <li><a href="../../recursos/datasheet/index-datasheet.html">Datasheets</a></li>
+                            <li><a href="../../recursos/tutoriales/index-tutoriales.html">Tutoriales</a></li>
+                            <li><a href="../../recursos/herramientas/index-herramientas.html">Herramientas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="../../index-principal.html#acerca" class="nav-link">Acerca de nosotros</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content pinout-detail-page">
+        <div class="pinout-detail-container">
+            <div class="breadcrumb">
+                <a href="../../index-principal.html">Inicio</a> → 
+                <a href="../index-pinouts.html">Pinouts</a> → 
+                <a href="index-jacks.html">Jacks y Conectores</a> → 
+                <span>Jack Audio 3.5mm</span>
+            </div>
+
+            <div class="pinout-header">
+                <h1>🎧 Jack de Audio 3.5mm (TRS/TRRS)</h1>
+                <p class="subtitle">Conector para audio estéreo, micrófono y controles</p>
+            </div>
+
+            <div class="pinout-image-section">
+                <div class="image-placeholder">
+                    <p style="font-size: 4rem; margin: 0;">🎧</p>
+                    <p style="font-size: 1.1rem; color: #95a5a6; margin-top: 15px;">Coloca aquí el diagrama del conector</p>
+                    <p style="font-size: 0.9rem; color: #7f8c8d; margin-top: 5px;">Ruta: <code>../../img/jack-audio.png</code></p>
+                </div>
+            </div>
+
+            <div class="spec-section">
+                <h2>📋 Especificaciones Técnicas</h2>
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <h3>Tamaños Comunes</h3>
+                        <p><strong>3.5mm (1/8"):</strong> Smartphones, tablets, laptops</p>
+                        <p><strong>6.35mm (1/4"):</strong> Equipos audio profesional, guitarras</p>
+                        <p><strong>2.5mm:</strong> Headsets antiguos (menos común)</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Configuraciones</h3>
+                        <p><strong>TS (2 pines):</strong> Mono (Tip, Sleeve)</p>
+                        <p><strong>TRS (3 pines):</strong> Estéreo (Tip, Ring, Sleeve)</p>
+                        <p><strong>TRRS (4 pines):</strong> Estéreo + Mic (Tip, Ring1, Ring2, Sleeve)</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Características Eléctricas</h3>
+                        <p><strong>Impedancia:</strong> 8Ω - 600Ω (típico 32Ω auriculares)</p>
+                        <p><strong>Voltaje máx:</strong> 2V RMS (línea), 50mV (mic)</p>
+                        <p><strong>Corriente:</strong> 10-100mA</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Aplicaciones</h3>
+                        <p><strong>Audio:</strong> Auriculares, altavoces, AUX</p>
+                        <p><strong>Comunicación:</strong> Headsets, manos libres</p>
+                        <p><strong>Instrumentos:</strong> Guitarras, teclados, micrófonos</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pinout-table-section">
+                <h2>🔌 Pinout TRS (Estéreo - 3 contactos)</h2>
+                <table class="pinout-table">
+                    <thead>
+                        <tr><th>Contacto</th><th>Nombre</th><th>Función</th><th>Descripción</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="pin-num">1</td><td class="pin-name">Tip (Punta)</td><td>Canal izquierdo</td><td>Audio Left (señal positiva)</td></tr>
+                        <tr><td class="pin-num">2</td><td class="pin-name">Ring (Anillo)</td><td>Canal derecho</td><td>Audio Right (señal positiva)</td></tr>
+                        <tr><td class="pin-num">3</td><td class="pin-name">Sleeve (Base)</td><td>Tierra común</td><td>GND (referencia 0V)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pinout-table-section">
+                <h2>🔌 Pinout TRRS (Estéreo + Mic - 4 contactos)</h2>
+                <p style="margin-bottom: 15px; color: #e74c3c;"><strong>⚠️ Existen 2 estándares incompatibles:</strong> CTIA (más común) y OMTP (antiguo)</p>
+                
+                <h3 style="margin-top: 20px; color: #2ecc71;">Estándar CTIA (Apple, Samsung, mayoría moderna)</h3>
+                <table class="pinout-table">
+                    <thead>
+                        <tr><th>Contacto</th><th>Nombre</th><th>Función</th><th>Color cable típico</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="pin-num">1</td><td class="pin-name">Tip</td><td>Audio Left</td><td>Verde</td></tr>
+                        <tr><td class="pin-num">2</td><td class="pin-name">Ring 1</td><td>Audio Right</td><td>Rojo</td></tr>
+                        <tr><td class="pin-num">3</td><td class="pin-name">Ring 2</td><td><strong>GND</strong></td><td>Cobre/Dorado</td></tr>
+                        <tr><td class="pin-num">4</td><td class="pin-name">Sleeve</td><td><strong>Micrófono</strong></td><td>Azul/Blanco</td></tr>
+                    </tbody>
+                </table>
+
+                <h3 style="margin-top: 20px; color: #f39c12;">Estándar OMTP (Nokia antiguo, poco común)</h3>
+                <table class="pinout-table">
+                    <thead>
+                        <tr><th>Contacto</th><th>Nombre</th><th>Función</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="pin-num">1</td><td class="pin-name">Tip</td><td>Audio Left</td></tr>
+                        <tr><td class="pin-num">2</td><td class="pin-name">Ring 1</td><td>Audio Right</td></tr>
+                        <tr><td class="pin-num">3</td><td class="pin-name">Ring 2</td><td><strong>Micrófono</strong> (invertido vs CTIA)</td></tr>
+                        <tr><td class="pin-num">4</td><td class="pin-name">Sleeve</td><td><strong>GND</strong> (invertido vs CTIA)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="info-section">
+                <div class="info-card">
+                    <h3>⚠️ Incompatibilidad CTIA vs OMTP</h3>
+                    <p>Si conectas un headset OMTP en un dispositivo CTIA (o viceversa), el audio funcionará pero el <strong>micrófono no</strong>. Existen adaptadores económicos para convertir entre ambos estándares.</p>
+                </div>
+                <div class="info-card">
+                    <h3>🎛️ Controles en el cable</h3>
+                    <p>Los headsets con botones (play/pause, volumen) usan <strong>resistencias</strong> entre el pin de micrófono y GND. El dispositivo detecta el voltaje para identificar qué botón fue presionado.</p>
+                </div>
+                <div class="info-card">
+                    <h3>🔧 Soldadura</h3>
+                    <p>Al soldar un conector 3.5mm, usa <strong>cable apantallado</strong> (shielded) para reducir ruido. La malla exterior va a Sleeve (GND). Tip y Ring llevan los canales de audio aislados.</p>
+                </div>
+                <div class="info-card">
+                    <h3>🎸 Audio balanceado (TRS)</h3>
+                    <p>En audio profesional, TRS también se usa para <strong>señal balanceada</strong> mono: Tip = señal+, Ring = señal-, Sleeve = GND. Esto reduce ruido en cables largos (estudios, conciertos).</p>
+                </div>
+            </div>
+
+            <div class="back-button-container">
+                <a href="index-jacks.html" class="back-btn">← Volver a Jacks y Conectores</a>
+                <a href="../index-pinouts.html" class="back-btn">📌 Todos los Pinouts</a>
+                <a href="../../index-principal.html" class="back-btn">🏠 Inicio</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container"><p>&copy; 2025 ElectroTools. Audio Jack Pinout Reference.</p></div>
+    </footer>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

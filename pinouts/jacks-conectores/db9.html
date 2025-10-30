@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DB9 Serial RS232 Pinout - ElectroTools</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/pinouts.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../../index-principal.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                    <span class="logo-icon">⚡</span>
+                    <h1>ElectroTools</h1>
+                </a>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav" id="mainNav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="../../index-principal.html#inicio" class="nav-link">Inicio</a></li>
+                    <li class="nav-item has-dropdown">
+                        <a href="../../calculadoras/index-calculadoras.html" class="nav-link">Calculadoras <span class="arrow">▼</span></a>
+                        <ul class="dropdown">
+                            <li><a href="../../calculadoras/index-calculadoras.html">Ver todas las Calculadoras</a></li>
+                            <li><a href="../../calculadoras/color-code.html">Código de colores</a></li>
+                            <li><a href="../../calculadoras/buscar-color-resistencia.html">Buscar colores</a></li>
+                            <li><a href="../../calculadoras/ley-de-ohm.html">Ley de Ohm</a></li>
+                            <li><a href="../../calculadoras/filtros.html">Filtros RC/RL/RLC</a></li>
+                            <li><a href="../../calculadoras/divisor-resistivo.html">Divisor resistivo</a></li>
+                            <li><a href="../../calculadoras/serie-paralelo.html">Serie-Paralelo</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="../index-pinouts.html" class="nav-link">
+                            Pinouts <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="../index-pinouts.html">Ver todos los Pinouts</a></li>
+                            <li><a href="../arduino/index-arduino.html">Arduino</a></li>
+                            <li><a href="../raspberry/index-raspberry.html">Raspberry Pi</a></li>
+                            <li><a href="../displays/index-displays.html">Displays</a></li>
+                            <li><a href="../jacks-conectores/index-jacks.html">Jacks y Conectores</a></li>
+                            <li><a href="../sensores-modulos/index-sensores.html">Sensores y Modulos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="../../recursos/index-recursos.html" class="nav-link">Recursos <span class="arrow">▼</span></a>
+                        <ul class="dropdown">
+                            <li><a href="../../recursos/index-recursos.html">Ver todos los Recursos</a></li>
+                            <li><a href="../../recursos/datasheet/index-datasheet.html">Datasheets</a></li>
+                            <li><a href="../../recursos/tutoriales/index-tutoriales.html">Tutoriales</a></li>
+                            <li><a href="../../recursos/herramientas/index-herramientas.html">Herramientas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="../../index-principal.html#acerca" class="nav-link">Acerca de nosotros</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content pinout-detail-page">
+        <div class="pinout-detail-container">
+            <div class="breadcrumb">
+                <a href="../../index-principal.html">Inicio</a> → 
+                <a href="../index-pinouts.html">Pinouts</a> → 
+                <a href="index-jacks.html">Jacks y Conectores</a> → 
+                <span>DB9 RS232</span>
+            </div>
+
+            <div class="pinout-header">
+                <h1>🔌 DB9 Serial RS232 Pinout</h1>
+                <p class="subtitle">D-Subminiature 9 pines para comunicación serial</p>
+            </div>
+
+            <div class="pinout-image-section">
+                <div class="image-placeholder">
+                    <p style="font-size: 4rem; margin: 0;">🔌</p>
+                    <p style="font-size: 1.1rem; color: #95a5a6; margin-top: 15px;">Coloca aquí el diagrama del conector DB9</p>
+                    <p style="font-size: 0.9rem; color: #7f8c8d; margin-top: 5px;">Ruta: <code>../../img/db9.png</code></p>
+                </div>
+            </div>
+
+            <div class="spec-section">
+                <h2>📋 Especificaciones Técnicas</h2>
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <h3>Conector DB9</h3>
+                        <p><strong>Tipo:</strong> D-Subminiature 9 pines</p>
+                        <p><strong>Forma:</strong> Trapezoidal (evita conexión invertida)</p>
+                        <p><strong>Género:</strong> Macho (pines) / Hembra (sockets)</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Estándar RS232</h3>
+                        <p><strong>Voltaje:</strong> ±3V a ±15V (típico ±12V)</p>
+                        <p><strong>Lógica invertida:</strong> +12V = '0', -12V = '1'</p>
+                        <p><strong>Velocidad:</strong> Hasta 115200 baud</p>
+                        <p><strong>Alcance:</strong> ~15 metros máximo</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>DTE vs DCE</h3>
+                        <p><strong>DTE (Data Terminal Equipment):</strong> PC, terminal</p>
+                        <p><strong>DCE (Data Communications Equipment):</strong> Modem</p>
+                        <p><strong>Diferencia:</strong> TX/RX invertidos entre DTE y DCE</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Aplicaciones</h3>
+                        <p><strong>Industrial:</strong> PLCs, sensores, controladores</p>
+                        <p><strong>Equipos:</strong> Routers, switches (consola)</p>
+                        <p><strong>Legacy:</strong> Ratones, módems antiguos</p>
+                        <p><strong>Actual:</strong> Adaptadores USB-Serial</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pinout-table-section">
+                <h2>🔌 Pinout DB9 DTE (PC / Computadora)</h2>
+                <p style="margin-bottom: 15px; color: #95a5a6;">Vista desde los pines (macho) - Numeración en forma de D:</p>
+                <table class="pinout-table">
+                    <thead>
+                        <tr><th>Pin</th><th>Nombre</th><th>Dirección</th><th>Función</th><th>Descripción</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="pin-num">1</td><td class="pin-name">DCD</td><td>IN ←</td><td>Data Carrier Detect</td><td>Modem detecta portadora</td></tr>
+                        <tr><td class="pin-num">2</td><td class="pin-name">RXD</td><td>IN ←</td><td>Receive Data</td><td><strong>Recepción de datos</strong></td></tr>
+                        <tr><td class="pin-num">3</td><td class="pin-name">TXD</td><td>OUT →</td><td>Transmit Data</td><td><strong>Transmisión de datos</strong></td></tr>
+                        <tr><td class="pin-num">4</td><td class="pin-name">DTR</td><td>OUT →</td><td>Data Terminal Ready</td><td>Terminal listo</td></tr>
+                        <tr><td class="pin-num">5</td><td class="pin-name">GND</td><td>-</td><td>Signal Ground</td><td><strong>Tierra común</strong></td></tr>
+                        <tr><td class="pin-num">6</td><td class="pin-name">DSR</td><td>IN ←</td><td>Data Set Ready</td><td>Modem listo</td></tr>
+                        <tr><td class="pin-num">7</td><td class="pin-name">RTS</td><td>OUT →</td><td>Request To Send</td><td>Control de flujo hardware</td></tr>
+                        <tr><td class="pin-num">8</td><td class="pin-name">CTS</td><td>IN ←</td><td>Clear To Send</td><td>Permiso para enviar</td></tr>
+                        <tr><td class="pin-num">9</td><td class="pin-name">RI</td><td>IN ←</td><td>Ring Indicator</td><td>Modem detecta llamada</td></tr>
+                    </tbody>
+                </table>
+                <p style="margin-top: 10px; color: #2ecc71;"><strong>Mínimo para comunicación:</strong> Solo pins 2 (RX), 3 (TX) y 5 (GND). El resto son control de flujo.</p>
+            </div>
+
+            <div class="pinout-table-section">
+                <h2>🔌 Pinout DB9 DCE (Modem / Dispositivo)</h2>
+                <table class="pinout-table">
+                    <thead>
+                        <tr><th>Pin</th><th>DTE (PC)</th><th>Dirección DTE</th><th>DCE (Modem)</th><th>Dirección DCE</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="pin-num">1</td><td>DCD ←</td><td>IN</td><td>DCD →</td><td>OUT</td></tr>
+                        <tr><td class="pin-num">2</td><td>RXD ←</td><td>IN</td><td>TXD →</td><td>OUT</td></tr>
+                        <tr><td class="pin-num">3</td><td>TXD →</td><td>OUT</td><td>RXD ←</td><td>IN</td></tr>
+                        <tr><td class="pin-num">4</td><td>DTR →</td><td>OUT</td><td>DTR ←</td><td>IN</td></tr>
+                        <tr><td class="pin-num">5</td><td>GND</td><td>-</td><td>GND</td><td>-</td></tr>
+                        <tr><td class="pin-num">6</td><td>DSR ←</td><td>IN</td><td>DSR →</td><td>OUT</td></tr>
+                        <tr><td class="pin-num">7</td><td>RTS →</td><td>OUT</td><td>RTS ←</td><td>IN</td></tr>
+                        <tr><td class="pin-num">8</td><td>CTS ←</td><td>IN</td><td>CTS →</td><td>OUT</td></tr>
+                        <tr><td class="pin-num">9</td><td>RI ←</td><td>IN</td><td>RI →</td><td>OUT</td></tr>
+                    </tbody>
+                </table>
+                <p style="margin-top: 10px; color: #f39c12;"><strong>Importante:</strong> TX y RX están cruzados entre DTE y DCE.</p>
+            </div>
+
+            <div class="pinout-table-section">
+                <h2>🔀 Cable Null Modem (DTE a DTE)</h2>
+                <p style="margin-bottom: 15px;">Para conectar dos PCs directamente (sin modem), usa cable null modem que cruza TX/RX:</p>
+                <table class="pinout-table">
+                    <thead>
+                        <tr><th>PC 1 (DTE)</th><th>↔</th><th>PC 2 (DTE)</th><th>Función</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Pin 2 (RXD)</td><td>↔</td><td>Pin 3 (TXD)</td><td>Cruza recepción con transmisión</td></tr>
+                        <tr><td>Pin 3 (TXD)</td><td>↔</td><td>Pin 2 (RXD)</td><td>Cruza transmisión con recepción</td></tr>
+                        <tr><td>Pin 5 (GND)</td><td>↔</td><td>Pin 5 (GND)</td><td>Tierra común</td></tr>
+                        <tr><td>Pins 4+6 (DTR+DSR)</td><td>↔</td><td>Pins 4+6</td><td>Loopback control flujo (opcional)</td></tr>
+                        <tr><td>Pins 7+8 (RTS+CTS)</td><td>↔</td><td>Pins 7+8</td><td>Loopback control flujo (opcional)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="info-section">
+                <div class="info-card">
+                    <h3>💻 Adaptadores USB a Serial</h3>
+                    <p>Los adaptadores USB-Serial usan chips como <strong>FTDI FT232</strong>, Prolific PL2303, CH340. Crean un puerto COM virtual en Windows (COM3, COM4...) o /dev/ttyUSB0 en Linux. Útiles para equipos modernos sin puerto serial nativo.</p>
+                </div>
+                <div class="info-card">
+                    <h3>⚡ RS232 vs TTL</h3>
+                    <p><strong>RS232 usa ±12V</strong> (niveles bipolares), mientras que <strong>TTL/CMOS usa 0-5V o 0-3.3V</strong>. <strong>NO son compatibles directamente</strong>. Usar conversor MAX232 o similar para conectar Arduino/ESP32 (TTL) a RS232. ¡Conectar directo puede dañar!</p>
+                </div>
+                <div class="info-card">
+                    <h3>🔧 RS232 vs RS422 vs RS485</h3>
+                    <p><strong>RS232:</strong> Un transmisor, un receptor, corta distancia (15m). <strong>RS422:</strong> Diferencial, 1 transmisor múltiples receptores, 1200m. <strong>RS485:</strong> Diferencial bidireccional, multidrop, hasta 32 dispositivos, 1200m, usado en Modbus.</p>
+                </div>
+                <div class="info-card">
+                    <h3>🛠️ Configuración Serial</h3>
+                    <p>Parámetros típicos: <strong>9600 baud, 8 bits datos, sin paridad, 1 stop bit (9600-8N1)</strong>. Otras velocidades comunes: 4800, 19200, 38400, 57600, 115200 baud. Ambos extremos deben usar la misma configuración.</p>
+                </div>
+            </div>
+
+            <div class="back-button-container">
+                <a href="index-jacks.html" class="back-btn">← Volver a Jacks y Conectores</a>
+                <a href="../index-pinouts.html" class="back-btn">📌 Todos los Pinouts</a>
+                <a href="../../index-principal.html" class="back-btn">🏠 Inicio</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container"><p>&copy; 2025 ElectroTools. DB9 RS232 Pinout Reference.</p></div>
+    </footer>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

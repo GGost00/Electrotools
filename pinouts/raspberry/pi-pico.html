@@ -1,0 +1,393 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raspberry Pi Pico Pinout - ElectroTools</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/pinouts.css">
+</head>
+<body>
+    <!-- Header completo con navegación -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../../index-principal.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                    <span class="logo-icon">⚡</span>
+                    <h1>ElectroTools</h1>
+                </a>
+            </div>
+            
+            <!-- Botón hamburguesa para móvil -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- Navegación principal -->
+            <nav class="nav" id="mainNav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../../index-principal.html#inicio" class="nav-link">Inicio</a>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="../../calculadoras/index-calculadoras.html" class="nav-link">
+                            Calculadoras <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="../../calculadoras/index-calculadoras.html">Ver todas las Calculadoras</a></li>
+                            <li><a href="../../calculadoras/color-code.html">Código de colores</a></li>
+                            <li><a href="../../calculadoras/buscar-color-resistencia.html">Buscar colores</a></li>
+                            <li><a href="../../calculadoras/ley-de-ohm.html">Ley de Ohm</a></li>
+                            <li><a href="../../calculadoras/filtros.html">Filtros RC/RL/RLC</a></li>
+                            <li><a href="../../calculadoras/divisor-resistivo.html">Divisor resistivo</a></li>
+                            <li><a href="../../calculadoras/serie-paralelo.html">Serie-Paralelo</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="../index-pinouts.html" class="nav-link">
+                            Pinouts <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="../index-pinouts.html">Ver todos los Pinouts</a></li>
+                            <li><a href="../arduino/index-arduino.html">Arduino</a></li>
+                            <li><a href="../raspberry/index-raspberry.html">Raspberry Pi</a></li>
+                            <li><a href="../displays/index-displays.html">Displays</a></li>
+                            <li><a href="../jacks-conectores/index-jacks.html">Jacks y Conectores</a></li>
+                            <li><a href="../sensores-modulos/index-sensores.html">Sensores y Modulos</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="../../recursos/index-recursos.html" class="nav-link">Recursos <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="../../recursos/index-recursos.html">Ver todos los Recursos</a></li>
+                            <li><a href="../../recursos/datasheet/index-datasheet.html">Datasheets</a></li>
+                            <li><a href="../../recursos/tutoriales/index-tutoriales.html">Tutoriales</a></li>
+                            <li><a href="../../recursos/herramientas/index-herramientas.html">Herramientas</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="../../index-principal.html#acerca" class="nav-link">Acerca de nosotros</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="main-content pinout-detail-page">
+        <div class="pinout-detail-container">
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <a href="../../index-principal.html">Inicio</a> → 
+                <a href="../index-pinouts.html">Pinouts</a> → 
+                <a href="index-raspberry.html">Raspberry Pi</a> → 
+                <span>Pico</span>
+            </div>
+
+            <!-- Header de la página -->
+            <div class="pinout-header">
+                <h1>🍓 Raspberry Pi Pico</h1>
+                <p class="subtitle">Microcontrolador RP2040 con 40 pines GPIO</p>
+            </div>
+
+            <!-- Imagen del pinout -->
+            <div class="pinout-image-section">
+                <div class="image-placeholder">
+                    <img src="../../img/pinouts/raspberry_pi_pico_pinout.png" alt="Raspberry Pi Pico Pinout">
+                </div>
+                <!-- <img src="../../img/raspberry-pi-pico.png" alt="Raspberry Pi Pico Pinout"> -->
+            </div>
+
+            <!-- Especificaciones técnicas -->
+            <div class="spec-section">
+                <h2>📋 Especificaciones Técnicas</h2>
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <h3>Microcontrolador</h3>
+                        <p><strong>Chip:</strong> RP2040</p>
+                        <p><strong>Arquitectura:</strong> Dual-core ARM Cortex-M0+</p>
+                        <p><strong>Frecuencia:</strong> 133 MHz (overclockeable)</p>
+                        <p><strong>Fabricante:</strong> Raspberry Pi Ltd.</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Memoria</h3>
+                        <p><strong>SRAM:</strong> 264 KB</p>
+                        <p><strong>Flash:</strong> 2 MB QSPI</p>
+                        <p><strong>Cache:</strong> 16 KB por core</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Entradas/Salidas</h3>
+                        <p><strong>GPIO:</strong> 26 pines multifunción</p>
+                        <p><strong>ADC:</strong> 3 canales de 12 bits (500 ksps)</p>
+                        <p><strong>PWM:</strong> 16 canales</p>
+                        <p><strong>Pines totales:</strong> 40 (incluye alimentación y GND)</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Comunicación</h3>
+                        <p><strong>I2C:</strong> 2 controladores</p>
+                        <p><strong>SPI:</strong> 2 controladores</p>
+                        <p><strong>UART:</strong> 2 controladores</p>
+                        <p><strong>PIO:</strong> 8 máquinas de estado programables</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Alimentación</h3>
+                        <p><strong>Entrada:</strong> 1.8V - 5.5V (VSYS)</p>
+                        <p><strong>USB:</strong> 5V micro-USB</p>
+                        <p><strong>Regulador:</strong> 3.3V interno</p>
+                        <p><strong>Consumo:</strong> ~1mA en sleep mode</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Características Especiales</h3>
+                        <p><strong>USB:</strong> 1.1 Device/Host</p>
+                        <p><strong>Timer:</strong> 64-bit</p>
+                        <p><strong>RTC:</strong> Incluido (requiere batería externa)</p>
+                        <p><strong>Temperatura:</strong> Sensor interno</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabla de pines GPIO -->
+            <div class="pinout-table-section">
+                <h2>🔌 Mapa de Pines GPIO (40 pines)</h2>
+                <table class="pinout-table">
+                    <thead>
+                        <tr>
+                            <th>Pin Físico</th>
+                            <th>Nombre GPIO</th>
+                            <th>Funciones Alternativas</th>
+                            <th>Pin Físico</th>
+                            <th>Nombre GPIO</th>
+                            <th>Funciones Alternativas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Fila 1 -->
+                        <tr>
+                            <td class="pin-num">1</td>
+                            <td class="pin-name">GP0</td>
+                            <td>I2C0 SDA, SPI0 RX, UART0 TX, PWM0 A</td>
+                            <td class="pin-num">2</td>
+                            <td class="pin-name">GP1</td>
+                            <td>I2C0 SCL, SPI0 CSn, UART0 RX, PWM0 B</td>
+                        </tr>
+                        <!-- Fila 2 -->
+                        <tr>
+                            <td class="pin-num">3</td>
+                            <td class="pin-name">GND</td>
+                            <td>Tierra</td>
+                            <td class="pin-num">4</td>
+                            <td class="pin-name">GP2</td>
+                            <td>I2C1 SDA, SPI0 SCK, UART0 CTS, PWM1 A</td>
+                        </tr>
+                        <!-- Fila 3 -->
+                        <tr>
+                            <td class="pin-num">5</td>
+                            <td class="pin-name">GP3</td>
+                            <td>I2C1 SCL, SPI0 TX, UART0 RTS, PWM1 B</td>
+                            <td class="pin-num">6</td>
+                            <td class="pin-name">GP4</td>
+                            <td>I2C0 SDA, SPI0 RX, UART1 TX, PWM2 A</td>
+                        </tr>
+                        <!-- Fila 4 -->
+                        <tr>
+                            <td class="pin-num">7</td>
+                            <td class="pin-name">GP5</td>
+                            <td>I2C0 SCL, SPI0 CSn, UART1 RX, PWM2 B</td>
+                            <td class="pin-num">8</td>
+                            <td class="pin-name">GND</td>
+                            <td>Tierra</td>
+                        </tr>
+                        <!-- Fila 5 -->
+                        <tr>
+                            <td class="pin-num">9</td>
+                            <td class="pin-name">GP6</td>
+                            <td>I2C1 SDA, SPI0 SCK, UART1 CTS, PWM3 A</td>
+                            <td class="pin-num">10</td>
+                            <td class="pin-name">GP7</td>
+                            <td>I2C1 SCL, SPI0 TX, UART1 RTS, PWM3 B</td>
+                        </tr>
+                        <!-- Fila 6 -->
+                        <tr>
+                            <td class="pin-num">11</td>
+                            <td class="pin-name">GP8</td>
+                            <td>I2C0 SDA, SPI1 RX, UART1 TX, PWM4 A</td>
+                            <td class="pin-num">12</td>
+                            <td class="pin-name">GP9</td>
+                            <td>I2C0 SCL, SPI1 CSn, UART1 RX, PWM4 B</td>
+                        </tr>
+                        <!-- Fila 7 -->
+                        <tr>
+                            <td class="pin-num">13</td>
+                            <td class="pin-name">GND</td>
+                            <td>Tierra</td>
+                            <td class="pin-num">14</td>
+                            <td class="pin-name">GP10</td>
+                            <td>I2C1 SDA, SPI1 SCK, UART1 CTS, PWM5 A</td>
+                        </tr>
+                        <!-- Fila 8 -->
+                        <tr>
+                            <td class="pin-num">15</td>
+                            <td class="pin-name">GP11</td>
+                            <td>I2C1 SCL, SPI1 TX, UART1 RTS, PWM5 B</td>
+                            <td class="pin-num">16</td>
+                            <td class="pin-name">GP12</td>
+                            <td>I2C0 SDA, SPI1 RX, UART0 TX, PWM6 A</td>
+                        </tr>
+                        <!-- Fila 9 -->
+                        <tr>
+                            <td class="pin-num">17</td>
+                            <td class="pin-name">GP13</td>
+                            <td>I2C0 SCL, SPI1 CSn, UART0 RX, PWM6 B</td>
+                            <td class="pin-num">18</td>
+                            <td class="pin-name">GND</td>
+                            <td>Tierra</td>
+                        </tr>
+                        <!-- Fila 10 -->
+                        <tr>
+                            <td class="pin-num">19</td>
+                            <td class="pin-name">GP14</td>
+                            <td>I2C1 SDA, SPI1 SCK, UART0 CTS, PWM7 A</td>
+                            <td class="pin-num">20</td>
+                            <td class="pin-name">GP15</td>
+                            <td>I2C1 SCL, SPI1 TX, UART0 RTS, PWM7 B</td>
+                        </tr>
+                        <!-- Fila 11 -->
+                        <tr>
+                            <td class="pin-num">21</td>
+                            <td class="pin-name">GP16</td>
+                            <td>I2C0 SDA, SPI0 RX, UART0 TX, PWM0 A</td>
+                            <td class="pin-num">22</td>
+                            <td class="pin-name">GP17</td>
+                            <td>I2C0 SCL, SPI0 CSn, UART0 RX, PWM0 B</td>
+                        </tr>
+                        <!-- Fila 12 -->
+                        <tr>
+                            <td class="pin-num">23</td>
+                            <td class="pin-name">GND</td>
+                            <td>Tierra</td>
+                            <td class="pin-num">24</td>
+                            <td class="pin-name">GP18</td>
+                            <td>I2C1 SDA, SPI0 SCK, UART0 CTS, PWM1 A</td>
+                        </tr>
+                        <!-- Fila 13 -->
+                        <tr>
+                            <td class="pin-num">25</td>
+                            <td class="pin-name">GP19</td>
+                            <td>I2C1 SCL, SPI0 TX, UART0 RTS, PWM1 B</td>
+                            <td class="pin-num">26</td>
+                            <td class="pin-name">GP20</td>
+                            <td>I2C0 SDA, SPI0 RX, UART1 TX, PWM2 A</td>
+                        </tr>
+                        <!-- Fila 14 -->
+                        <tr>
+                            <td class="pin-num">27</td>
+                            <td class="pin-name">GP21</td>
+                            <td>I2C0 SCL, SPI0 CSn, UART1 RX, PWM2 B</td>
+                            <td class="pin-num">28</td>
+                            <td class="pin-name">GND</td>
+                            <td>Tierra</td>
+                        </tr>
+                        <!-- Fila 15 -->
+                        <tr>
+                            <td class="pin-num">29</td>
+                            <td class="pin-name">GP22</td>
+                            <td>I2C1 SDA, SPI0 SCK, UART1 CTS, PWM3 A</td>
+                            <td class="pin-num">30</td>
+                            <td class="pin-name">RUN</td>
+                            <td>Reset (activo bajo)</td>
+                        </tr>
+                        <!-- Fila 16 -->
+                        <tr>
+                            <td class="pin-num">31</td>
+                            <td class="pin-name">GP26</td>
+                            <td>I2C1 SCL, SPI1 SCK, UART1 CTS, <strong>ADC0</strong>, PWM5 A</td>
+                            <td class="pin-num">32</td>
+                            <td class="pin-name">GP27</td>
+                            <td>I2C1 SDA, SPI1 TX, UART1 RTS, <strong>ADC1</strong>, PWM5 B</td>
+                        </tr>
+                        <!-- Fila 17 -->
+                        <tr>
+                            <td class="pin-num">33</td>
+                            <td class="pin-name">AGND</td>
+                            <td>Tierra analógica</td>
+                            <td class="pin-num">34</td>
+                            <td class="pin-name">GP28</td>
+                            <td><strong>ADC2</strong>, PWM6 A</td>
+                        </tr>
+                        <!-- Fila 18 -->
+                        <tr>
+                            <td class="pin-num">35</td>
+                            <td class="pin-name">ADC_VREF</td>
+                            <td>Referencia ADC (entrada)</td>
+                            <td class="pin-num">36</td>
+                            <td class="pin-name">3V3(OUT)</td>
+                            <td>Salida regulador 3.3V</td>
+                        </tr>
+                        <!-- Fila 19 -->
+                        <tr>
+                            <td class="pin-num">37</td>
+                            <td class="pin-name">3V3_EN</td>
+                            <td>Habilitar regulador 3.3V</td>
+                            <td class="pin-num">38</td>
+                            <td class="pin-name">GND</td>
+                            <td>Tierra</td>
+                        </tr>
+                        <!-- Fila 20 -->
+                        <tr>
+                            <td class="pin-num">39</td>
+                            <td class="pin-name">VSYS</td>
+                            <td>Entrada alimentación (1.8V-5.5V)</td>
+                            <td class="pin-num">40</td>
+                            <td class="pin-name">VBUS</td>
+                            <td>Salida USB 5V (cuando conectado)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Notas importantes -->
+            <div class="info-section">
+                <div class="info-card">
+                    <h3>⚠️ Voltaje de Operación</h3>
+                    <p>Los GPIO del RP2040 operan a <strong>3.3V</strong>. No son tolerantes a 5V. Conectar señales de 5V directamente puede dañar el chip permanentemente.</p>
+                </div>
+                <div class="info-card">
+                    <h3>🔄 Entradas Analógicas</h3>
+                    <p>El Pico tiene <strong>3 entradas ADC</strong> de 12 bits: GP26 (ADC0), GP27 (ADC1) y GP28 (ADC2). También tiene un canal interno para medir temperatura y otro para VSYS/3.</p>
+                </div>
+                <div class="info-card">
+                    <h3>⚡ PIO (Programmable I/O)</h3>
+                    <p>El RP2040 incluye <strong>8 máquinas de estado PIO</strong> que permiten crear interfaces personalizadas (WS2812, VGA, I2S, etc.) sin usar CPU.</p>
+                </div>
+                <div class="info-card">
+                    <h3>💾 Bootloader BOOTSEL</h3>
+                    <p>Mantén presionado el botón BOOTSEL mientras conectas el USB para entrar en modo de almacenamiento masivo y cargar código .UF2 directamente.</p>
+                </div>
+            </div>
+
+            <!-- Botones de navegación -->
+            <div class="back-button-container">
+                <a href="index-raspberry.html" class="back-btn">← Volver a Raspberry Pi</a>
+                <a href="../index-pinouts.html" class="back-btn">📌 Todos los Pinouts</a>
+                <a href="../../index-principal.html" class="back-btn">🏠 Inicio</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ElectroTools. Raspberry Pi Pico Pinout Reference.</p>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+</body>
+</html>

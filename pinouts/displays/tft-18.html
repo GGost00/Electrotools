@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TFT 1.8" - ElectroTools</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/pinouts.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../../index-principal.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                    <span class="logo-icon">⚡</span>
+                    <h1>ElectroTools</h1>
+                </a>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav" id="mainNav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="../../index-principal.html#inicio" class="nav-link">Inicio</a></li>
+                    <li class="nav-item has-dropdown">
+                        <a href="../../calculadoras/index-calculadoras.html" class="nav-link">Calculadoras <span class="arrow">▼</span></a>
+                        <ul class="dropdown">
+                            <li><a href="../../calculadoras/index-calculadoras.html">Ver todas las Calculadoras</a></li>
+                            <li><a href="../../calculadoras/color-code.html">Código de colores</a></li>
+                            <li><a href="../../calculadoras/buscar-color-resistencia.html">Buscar colores</a></li>
+                            <li><a href="../../calculadoras/ley-de-ohm.html">Ley de Ohm</a></li>
+                            <li><a href="../../calculadoras/filtros.html">Filtros RC/RL/RLC</a></li>
+                            <li><a href="../../calculadoras/divisor-resistivo.html">Divisor resistivo</a></li>
+                            <li><a href="../../calculadoras/serie-paralelo.html">Serie-Paralelo</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="../index-pinouts.html" class="nav-link">
+                            Pinouts <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="../index-pinouts.html">Ver todos los Pinouts</a></li>
+                            <li><a href="../arduino/index-arduino.html">Arduino</a></li>
+                            <li><a href="../raspberry/index-raspberry.html">Raspberry Pi</a></li>
+                            <li><a href="../displays/index-displays.html">Displays</a></li>
+                            <li><a href="../jacks-conectores/index-jacks.html">Jacks y Conectores</a></li>
+                            <li><a href="../sensores-modulos/index-sensores.html">Sensores y Modulos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="../../recursos/index-recursos.html" class="nav-link">Recursos <span class="arrow">▼</span></a>
+                        <ul class="dropdown">
+                            <li><a href="../../recursos/index-recursos.html">Ver todos los Recursos</a></li>
+                            <li><a href="../../recursos/datasheet/index-datasheet.html">Datasheets</a></li>
+                            <li><a href="../../recursos/tutoriales/index-tutoriales.html">Tutoriales</a></li>
+                            <li><a href="../../recursos/herramientas/index-herramientas.html">Herramientas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="../../index-principal.html#acerca" class="nav-link">Acerca de nosotros</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content pinout-detail-page">
+        <div class="pinout-detail-container">
+            <div class="breadcrumb">
+                <a href="../../index-principal.html">Inicio</a> → 
+                <a href="../index-pinouts.html">Pinouts</a> → 
+                <a href="index-displays.html">Displays</a> → 
+                <span>TFT 1.8"</span>
+            </div>
+
+            <div class="pinout-header">
+                <h1>🎨 TFT 1.8" ST7735 (128x160)</h1>
+                <p class="subtitle">Display TFT a color con interfaz SPI y slot microSD</p>
+            </div>
+
+            <div class="pinout-image-section">
+                <div class="image-placeholder">
+                    <p style="font-size: 4rem; margin: 0;">🎨</p>
+                    <p style="font-size: 1.1rem; color: #95a5a6; margin-top: 15px;">Coloca aquí el diagrama de conexión</p>
+                    <p style="font-size: 0.9rem; color: #7f8c8d; margin-top: 5px;">Ruta: <code>../../img/tft-18.png</code></p>
+                </div>
+            </div>
+
+            <div class="spec-section">
+                <h2>📋 Especificaciones Técnicas</h2>
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <h3>Display</h3>
+                        <p><strong>Tipo:</strong> TFT LCD a color</p>
+                        <p><strong>Resolución:</strong> 128×160 píxeles</p>
+                        <p><strong>Tamaño:</strong> 1.8 pulgadas</p>
+                        <p><strong>Colores:</strong> 65K (RGB 565)</p>
+                        <p><strong>Controlador:</strong> ST7735S / ST7735R</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Interfaz</h3>
+                        <p><strong>Comunicación:</strong> SPI (4 cables + control)</p>
+                        <p><strong>Velocidad SPI:</strong> Hasta 15 MHz</p>
+                        <p><strong>Pines totales:</strong> 8-10 (según módulo)</p>
+                        <p><strong>microSD:</strong> Slot integrado (SPI compartido)</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Alimentación</h3>
+                        <p><strong>Voltaje lógico:</strong> 3.3V o 5V (según módulo)</p>
+                        <p><strong>Backlight:</strong> LED blanco (3.3V)</p>
+                        <p><strong>Consumo:</strong> ~50mA (con backlight al 100%)</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Características</h3>
+                        <p><strong>Backlight:</strong> Controlable por PWM</p>
+                        <p><strong>Ángulo visión:</strong> 160°</p>
+                        <p><strong>Refresh rate:</strong> ~60 FPS</p>
+                        <p><strong>Temperatura:</strong> -20°C a +70°C</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pinout-table-section">
+                <h2>🔌 Pinout TFT (8 pines típicos)</h2>
+                <table class="pinout-table">
+                    <thead>
+                        <tr><th>Pin</th><th>Nombre</th><th>Función</th><th>Descripción</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="pin-num">1</td><td class="pin-name">VCC</td><td>Alimentación</td><td>3.3V o 5V (según módulo)</td></tr>
+                        <tr><td class="pin-num">2</td><td class="pin-name">GND</td><td>Tierra</td><td>0V</td></tr>
+                        <tr><td class="pin-num">3</td><td class="pin-name">CS</td><td>Chip Select</td><td>Selección del display (activo bajo)</td></tr>
+                        <tr><td class="pin-num">4</td><td class="pin-name">RESET</td><td>Reset</td><td>Reset hardware (activo bajo)</td></tr>
+                        <tr><td class="pin-num">5</td><td class="pin-name">A0 (DC)</td><td>Data/Command</td><td>0 = Comando, 1 = Dato</td></tr>
+                        <tr><td class="pin-num">6</td><td class="pin-name">SDA (MOSI)</td><td>SPI Data</td><td>Datos del master al slave</td></tr>
+                        <tr><td class="pin-num">7</td><td class="pin-name">SCK</td><td>SPI Clock</td><td>Reloj SPI</td></tr>
+                        <tr><td class="pin-num">8</td><td class="pin-name">LED</td><td>Backlight</td><td>Ánodo del LED (3.3V con resistencia)</td></tr>
+                    </tbody>
+                </table>
+                <p style="margin-top: 10px; color: #95a5a6;"><strong>Nota:</strong> Algunos módulos incluyen pines adicionales para microSD (SD_CS, MISO).</p>
+            </div>
+
+            <div class="pinout-table-section">
+                <h2>🔗 Conexión a Arduino Uno</h2>
+                <table class="pinout-table">
+                    <thead>
+                        <tr><th>TFT Pin</th><th>Arduino Pin</th><th>Notas</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="pin-name">VCC</td><td>5V (o 3.3V)</td><td>Verifica voltaje del módulo</td></tr>
+                        <tr><td class="pin-name">GND</td><td>GND</td><td>Tierra común</td></tr>
+                        <tr><td class="pin-name">CS</td><td>Pin 10</td><td>Chip Select (configurable)</td></tr>
+                        <tr><td class="pin-name">RESET</td><td>Pin 9</td><td>Reset (configurable)</td></tr>
+                        <tr><td class="pin-name">A0 (DC)</td><td>Pin 8</td><td>Data/Command (configurable)</td></tr>
+                        <tr><td class="pin-name">SDA (MOSI)</td><td>Pin 11</td><td>SPI MOSI (hardware)</td></tr>
+                        <tr><td class="pin-name">SCK</td><td>Pin 13</td><td>SPI Clock (hardware)</td></tr>
+                        <tr><td class="pin-name">LED</td><td>3.3V + R100Ω</td><td>Backlight (o PWM en pin 6)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="info-section">
+                <div class="info-card">
+                    <h3>⚠️ Niveles de voltaje</h3>
+                    <p>Algunos módulos TFT trabajan solo con <strong>3.3V</strong> en pines lógicos. Si usas Arduino (5V), necesitas <strong>divisores resistivos</strong> o conversores de nivel. Verifica siempre la datasheet del módulo.</p>
+                </div>
+                <div class="info-card">
+                    <h3>📚 Librería Arduino</h3>
+                    <p>Usa <strong>Adafruit_ST7735</strong> + <strong>Adafruit_GFX</strong>. Ejemplo: <code>Adafruit_ST7735 tft = Adafruit_ST7735(CS, DC, RST);</code> para SPI hardware.</p>
+                </div>
+                <div class="info-card">
+                    <h3>💾 Slot microSD</h3>
+                    <p>El slot microSD comparte los pines SPI (SCK, MOSI, MISO) con el display. Usa un pin CS diferente para la SD (típicamente pin 4 en Arduino). Ambos dispositivos coexisten en el bus SPI.</p>
+                </div>
+                <div class="info-card">
+                    <h3>🎨 Colores RGB565</h3>
+                    <p>El ST7735 usa formato <strong>RGB565</strong> (16 bits): 5 bits rojo, 6 bits verde, 5 bits azul. Total 65,536 colores. Ejemplo: 0xF800 = rojo puro, 0x07E0 = verde, 0x001F = azul.</p>
+                </div>
+            </div>
+
+            <div class="back-button-container">
+                <a href="index-displays.html" class="back-btn">← Volver a Displays</a>
+                <a href="../index-pinouts.html" class="back-btn">📌 Todos los Pinouts</a>
+                <a href="../../index-principal.html" class="back-btn">🏠 Inicio</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container"><p>&copy; 2025 ElectroTools. TFT ST7735 Pinout Reference.</p></div>
+    </footer>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

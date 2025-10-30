@@ -1,0 +1,316 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino Uno Pinout - ElectroTools</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/pinouts.css">
+</head>
+<body>
+    <!-- Header completo con navegación -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../../index-principal.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                    <span class="logo-icon">⚡</span>
+                    <h1>ElectroTools</h1>
+                </a>
+            </div>
+            
+            <!-- Botón hamburguesa para móvil -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- Navegación principal -->
+            <nav class="nav" id="mainNav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../../index-principal.html#inicio" class="nav-link">Inicio</a>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="../../calculadoras/index-calculadoras.html" class="nav-link">
+                            Calculadoras <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="../../calculadoras/index-calculadoras.html">Ver todas las Calculadoras</a></li>
+                            <li><a href="../../calculadoras/color-code.html">Código de colores</a></li>
+                            <li><a href="../../calculadoras/buscar-color-resistencia.html">Buscar colores</a></li>
+                            <li><a href="../../calculadoras/ley-de-ohm.html">Ley de Ohm</a></li>
+                            <li><a href="../../calculadoras/filtros.html">Filtros RC/RL/RLC</a></li>
+                            <li><a href="../../calculadoras/divisor-resistivo.html">Divisor resistivo</a></li>
+                            <li><a href="../../calculadoras/serie-paralelo.html">Serie-Paralelo</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="../index-pinouts.html" class="nav-link">
+                            Pinouts <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="../index-pinouts.html">Ver todos los Pinouts</a></li>
+                            <li><a href="../arduino/index-arduino.html">Arduino</a></li>
+                            <li><a href="../raspberry/index-raspberry.html">Raspberry Pi</a></li>
+                            <li><a href="../displays/index-displays.html">Displays</a></li>
+                            <li><a href="../jacks-conectores/index-jacks.html">Jacks y Conectores</a></li>
+                            <li><a href="../sensores-modulos/index-sensores.html">Sensores y Modulos</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="../../recursos/index-recursos.html" class="nav-link">
+                            Recursos <span class="arrow">▼</span>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="../../recursos/index-recursos.html">Ver todos los Recursos</a></li>
+                            <li><a href="../../recursos/datasheet/index-datasheet.html">Datasheets</a></li>
+                            <li><a href="../../recursos/tutoriales/index-tutoriales.html">Tutoriales</a></li>
+                            <li><a href="../../recursos/herramientas/index-herramientas.html">Herramientas</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="../../index.html#acerca" class="nav-link">Acerca de nosotros</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="main-content pinouts-page">
+        <div class="pinouts-container">
+            <!-- Breadcrumb / Navegación -->
+            <div class="breadcrumb">
+                <a href="../../index-principal.html">Inicio</a> → 
+                <a href="../index-pinouts.html">Pinouts</a> → 
+                <a href="index-arduino.html">Arduino</a> → 
+                <span>Uno</span>
+            </div>
+
+            <!-- Header de la sección -->
+            <div class="pinouts-header">
+                <h1>📟 Arduino Uno - Pinout Completo</h1>
+                <p class="subtitle">Diagrama de distribución de pines y especificaciones técnicas del Arduino Uno</p>
+            </div>
+
+            <!-- Contenedor del pinout -->
+            <div class="pinout-detail-container">
+                <!-- Imagen del pinout -->
+                <div class="pinout-image-wrapper">
+                    <h2>Diagrama de Pines</h2>
+                    <!-- Imagen aquí - El usuario debe colocar la imagen PNG -->
+                    <div class="image-placeholder">
+                        <img src="../../img/pinouts/uno_pin.png" alt="Arduino Uno Pinout" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                    </div>
+                </div>
+
+                <!-- Especificaciones técnicas -->
+                <div class="pinout-specs">
+                    <h2>Especificaciones Técnicas</h2>
+                    
+                    <div class="spec-section">
+                        <h3>Microcontrolador</h3>
+                        <ul>
+                            <li><strong>Chip:</strong> ATmega328P</li>
+                            <li><strong>Voltaje de operación:</strong> 5V</li>
+                            <li><strong>Voltaje de entrada (recomendado):</strong> 7-12V</li>
+                            <li><strong>Voltaje de entrada (límite):</strong> 6-20V</li>
+                        </ul>
+                    </div>
+
+                    <div class="spec-section">
+                        <h3>Entradas/Salidas Digitales</h3>
+                        <ul>
+                            <li><strong>Pines I/O digitales:</strong> 14 (D0-D13)</li>
+                            <li><strong>Pines PWM:</strong> 6 (D3, D5, D6, D9, D10, D11)</li>
+                            <li><strong>Corriente máxima por pin I/O:</strong> 20 mA</li>
+                            <li><strong>Corriente máxima pin 3.3V:</strong> 50 mA</li>
+                        </ul>
+                    </div>
+
+                    <div class="spec-section">
+                        <h3>Entradas Analógicas</h3>
+                        <ul>
+                            <li><strong>Pines analógicos:</strong> 6 (A0-A5)</li>
+                            <li><strong>Resolución ADC:</strong> 10 bits (0-1023)</li>
+                            <li><strong>Voltaje de referencia:</strong> 5V (por defecto)</li>
+                        </ul>
+                    </div>
+
+                    <div class="spec-section">
+                        <h3>Memoria</h3>
+                        <ul>
+                            <li><strong>Flash Memory:</strong> 32 KB (0.5 KB usado por bootloader)</li>
+                            <li><strong>SRAM:</strong> 2 KB</li>
+                            <li><strong>EEPROM:</strong> 1 KB</li>
+                        </ul>
+                    </div>
+
+                    <div class="spec-section">
+                        <h3>Comunicación</h3>
+                        <ul>
+                            <li><strong>UART:</strong> 1 (pines 0 RX, 1 TX)</li>
+                            <li><strong>SPI:</strong> Sí (pines 10 SS, 11 MOSI, 12 MISO, 13 SCK)</li>
+                            <li><strong>I2C/TWI:</strong> Sí (pines A4 SDA, A5 SCL)</li>
+                        </ul>
+                    </div>
+
+                    <div class="spec-section">
+                        <h3>Otros</h3>
+                        <ul>
+                            <li><strong>Frecuencia de reloj:</strong> 16 MHz</li>
+                            <li><strong>LED integrado:</strong> Pin 13</li>
+                            <li><strong>Conexión USB:</strong> USB-B</li>
+                            <li><strong>Conector de alimentación:</strong> Jack DC 2.1mm</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tabla de pines detallada -->
+                <div class="pinout-table-wrapper">
+                    <h2>Tabla de Pines Detallada</h2>
+                    <table class="pinout-table">
+                        <thead>
+                            <tr>
+                                <th>Pin</th>
+                                <th>Función Principal</th>
+                                <th>Funciones Alternativas</th>
+                                <th>Notas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>D0</strong></td>
+                                <td>I/O Digital</td>
+                                <td>RX (UART)</td>
+                                <td>Evitar uso durante comunicación serial</td>
+                            </tr>
+                            <tr>
+                                <td><strong>D1</strong></td>
+                                <td>I/O Digital</td>
+                                <td>TX (UART)</td>
+                                <td>Evitar uso durante comunicación serial</td>
+                            </tr>
+                            <tr>
+                                <td><strong>D2</strong></td>
+                                <td>I/O Digital</td>
+                                <td>INT0 (Interrupción externa)</td>
+                                <td>Puede usarse para interrupciones</td>
+                            </tr>
+                            <tr>
+                                <td><strong>D3</strong></td>
+                                <td>I/O Digital</td>
+                                <td>PWM, INT1</td>
+                                <td>Salida PWM disponible</td>
+                            </tr>
+                            <tr>
+                                <td><strong>D4-D7</strong></td>
+                                <td>I/O Digital</td>
+                                <td>-</td>
+                                <td>Uso general</td>
+                            </tr>
+                            <tr>
+                                <td><strong>D8</strong></td>
+                                <td>I/O Digital</td>
+                                <td>-</td>
+                                <td>Uso general</td>
+                            </tr>
+                            <tr>
+                                <td><strong>D9</strong></td>
+                                <td>I/O Digital</td>
+                                <td>PWM</td>
+                                <td>Salida PWM disponible</td>
+                            </tr>
+                            <tr>
+                                <td><strong>D10</strong></td>
+                                <td>I/O Digital</td>
+                                <td>PWM, SS (SPI)</td>
+                                <td>Chip Select para SPI</td>
+                            </tr>
+                            <tr>
+                                <td><strong>D11</strong></td>
+                                <td>I/O Digital</td>
+                                <td>PWM, MOSI (SPI)</td>
+                                <td>Master Out Slave In para SPI</td>
+                            </tr>
+                            <tr>
+                                <td><strong>D12</strong></td>
+                                <td>I/O Digital</td>
+                                <td>MISO (SPI)</td>
+                                <td>Master In Slave Out para SPI</td>
+                            </tr>
+                            <tr>
+                                <td><strong>D13</strong></td>
+                                <td>I/O Digital</td>
+                                <td>PWM, SCK (SPI), LED</td>
+                                <td>LED integrado conectado</td>
+                            </tr>
+                            <tr>
+                                <td><strong>A0-A5</strong></td>
+                                <td>Entrada Analógica</td>
+                                <td>I/O Digital</td>
+                                <td>También pueden usarse como pines digitales</td>
+                            </tr>
+                            <tr>
+                                <td><strong>A4</strong></td>
+                                <td>Entrada Analógica</td>
+                                <td>SDA (I2C)</td>
+                                <td>Línea de datos I2C</td>
+                            </tr>
+                            <tr>
+                                <td><strong>A5</strong></td>
+                                <td>Entrada Analógica</td>
+                                <td>SCL (I2C)</td>
+                                <td>Línea de reloj I2C</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Notas importantes -->
+                <div class="info-section">
+                    <div class="info-card">
+                        <h3>⚠️ Advertencias Importantes</h3>
+                        <ul>
+                            <li>No exceder 5V en los pines I/O</li>
+                            <li>Corriente máxima total de todos los pines: 200 mA</li>
+                            <li>Los pines 0 y 1 se usan para programación USB, evitar interferencias</li>
+                            <li>El pin 13 tiene un LED integrado que puede afectar su uso</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3>💡 Tips de Uso</h3>
+                        <ul>
+                            <li>Usar resistencias pull-up/pull-down para entradas digitales</li>
+                            <li>Los pines analógicos también funcionan como digitales (D14-D19)</li>
+                            <li>PWM útil para control de LEDs y motores</li>
+                            <li>AREF permite voltaje de referencia externo para ADC</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botones de navegación -->
+            <div class="back-button-container">
+                <a href="index-arduino.html" class="back-btn">← Volver a Arduino</a>
+                <a href="../index-pinouts.html" class="back-btn">📌 Todos los Pinouts</a>
+                <a href="../../index-principal.html" class="back-btn">🏠 Inicio</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ElectroTools. Arduino Uno Pinout Reference.</p>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+</body>
+</html>
