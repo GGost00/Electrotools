@@ -1,0 +1,46 @@
+<svg width="350" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo -->
+  <rect width="350" height="200" fill="#f8f9fa"/>
+  
+  <!-- Título -->
+  <text x="175" y="25" text-anchor="middle" font-size="18" font-weight="bold" fill="#2c3e50">Conexión en Serie</text>
+  
+  <!-- Línea izquierda -->
+  <line x1="20" y1="100" x2="60" y2="100" stroke="#2c3e50" stroke-width="3"/>
+  
+  <!-- Componente 1 (R1/C1) -->
+  <rect x="60" y="80" width="60" height="40" fill="none" stroke="#e74c3c" stroke-width="3" rx="5"/>
+  <text x="90" y="105" text-anchor="middle" font-size="16" font-weight="bold" fill="#e74c3c">R1</text>
+  
+  <!-- Línea entre componentes -->
+  <line x1="120" y1="100" x2="170" y2="100" stroke="#2c3e50" stroke-width="3"/>
+  
+  <!-- Componente 2 (R2/C2) -->
+  <rect x="170" y="80" width="60" height="40" fill="none" stroke="#3498db" stroke-width="3" rx="5"/>
+  <text x="200" y="105" text-anchor="middle" font-size="16" font-weight="bold" fill="#3498db">R2</text>
+  
+  <!-- Línea derecha -->
+  <line x1="230" y1="100" x2="290" y2="100" stroke="#2c3e50" stroke-width="3"/>
+  
+  <!-- Puntos de conexión -->
+  <circle cx="20" cy="100" r="5" fill="#2ecc71"/>
+  <circle cx="290" cy="100" r="5" fill="#e74c3c"/>
+  
+  <!-- Etiquetas -->
+  <text x="15" y="90" font-size="14" fill="#2ecc71">+</text>
+  <text x="288" y="90" font-size="14" fill="#e74c3c">−</text>
+  
+  <!-- Indicador de corriente -->
+  <defs>
+    <marker id="arrow-serie" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#9b59b6"/>
+    </marker>
+  </defs>
+  <line x1="140" y1="60" x2="180" y2="60" stroke="#9b59b6" stroke-width="2" marker-end="url(#arrow-serie)"/>
+  <text x="155" y="50" text-anchor="middle" font-size="14" font-style="italic" fill="#9b59b6">I</text>
+  
+  <!-- Nota -->
+  <text x="175" y="175" text-anchor="middle" font-size="12" fill="#7f8c8d">
+    Los componentes están conectados uno después del otro
+  </text>
+</svg>
